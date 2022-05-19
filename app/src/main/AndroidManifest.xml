@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AIDentist">
         <activity
+            android:name=".ui.camera.CameraActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.auth.SignUpActivity"
             android:exported="false" />
         <activity
