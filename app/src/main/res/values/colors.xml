@@ -9,4 +9,5 @@
     <color name="quil_grey">#D4D4D4</color>
     <color name="cloudy_grey">#686868</color>
     <color name="black">#FF000000</color>
+    <color name="water">#EFF1FF</color>
 </resources>
