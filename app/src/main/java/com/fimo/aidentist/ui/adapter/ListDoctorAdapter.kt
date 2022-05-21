@@ -1,60 +1,109 @@
 package com.fimo.aidentist.ui.adapter
 
+import android.content.Intent
+import android.graphics.Camera
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.fimo.aidentist.R
-import com.fimo.aidentist.data.Doctor
+import com.fimo.aidentist.ui.camera.CameraActivity
 
-class ListDoctorAdapter(private val listDoctor: ArrayList<Doctor>) :
-    RecyclerView.Adapter<ListDoctorAdapter.ListViewHolder>() {
+class ListDoctorAdapter : RecyclerView.Adapter<ListDoctorAdapter.ViewHolder>() {
+    private val name = arrayOf(
+        "Jake Wharton",
+        "Amit Shekhar",
+        "Romain Guy",
+        "Chris Banes",
+        "David",
+        "Ravi Tamada",
+        "Deny Prasetyo",
+        "Budi Oktaviyan",
+        "Hendi Santika",
+        "Sidiq Permana",
+    )
 
-    private lateinit var mListener: onItemClickListener
+    private val category = arrayOf(
+        "Endodontist",
+        "Oral Surgeon",
+        "Periodontist",
+        "Category 4",
+        "Category 5",
+        "Category 6",
+        "Category 7",
+        "Category 8",
+        "Category 9",
+        "Category 10",
+    )
 
-    interface onItemClickListener {
-        fun onItemClick(position: Int)
-    }
+    private val rating = arrayOf(
+        "2.3",
+        "4.4",
+        "3.2",
+        "5.0",
+        "4.1",
+        "1.8",
+        "4.8",
+        "1.1",
+        "0.0",
+        "2.9",
+    )
 
-    fun setOnItemClickListener(listener: onItemClickListener) {
-        mListener = listener
-    }
+    private val schedule = arrayOf(
+        "07.00am - 03.00am",
+        "08.00am - 04.00am",
+        "09.00am - 05.00am",
+        "10.00am - 06.00am",
+        "11.00am - 07.00am",
+        "12.00am - 08.00am",
+        "08.00am - 04.00am",
+        "09.00am - 05.00am",
+        "10.00am - 06.00am",
+        "11.00am - 07.00am",
+    )
 
-    inner class ListViewHolder(itemView: View, listener: onItemClickListener) :
-        RecyclerView.ViewHolder(itemView) {
-        var imgPhoto: ImageView = itemView.findViewById(R.id.itemPhoto)
-        var name: TextView = itemView.findViewById(R.id.itemName)
-        var category: TextView = itemView.findViewById(R.id.itemCategory)
-        var rating: TextView = itemView.findViewById(R.id.itemRating)
-        var schedule: TextView = itemView.findViewById(R.id.itemSchedule)
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        var itemName: TextView
+        var itemCategory: TextView
+        var itemRating: TextView
+        var itemSchedule: TextView
 
         init {
+            itemName = itemView.findViewById(R.id.itemName)
+            itemCategory = itemView.findViewById(R.id.itemCategory)
+            itemRating = itemView.findViewById(R.id.itemRating)
+            itemSchedule = itemView.findViewById(R.id.itemSchedule)
+
             itemView.setOnClickListener {
-                listener.onItemClick(adapterPosition)
+                var position: Int = adapterPosition
+                val context = itemView.context
+                val intent = Intent(context, CameraActivity::class.java).apply {
+                    putExtra("NUMBER", position)
+                    putExtra("NAME", itemName.text)
+                    putExtra("CATEGORY", itemCategory.text)
+                    putExtra("RATING", itemCategory.text)
+                    putExtra("SCHEDULE", itemSchedule.text)
+                }
+                context.startActivity(intent)
             }
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
-        val view: View =
-            LayoutInflater.from(parent.context).inflate(R.layout.item_row_doctor, parent, false)
-        return ListViewHolder(view, mListener)
+    override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
+        val v = LayoutInflater.from(viewGroup.context)
+            .inflate(R.layout.item_row_doctor, viewGroup, false)
+        return ViewHolder(v)
     }
 
-    override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val (name, category, rating, schedule, avatar) = listDoctor[position]
-        holder.name.text = name
-        holder.category.text = category
-        holder.rating.text = rating
-        holder.schedule.text = schedule
-        Glide.with(holder.itemView.context)
-            .load(avatar)
-            .circleCrop()
-            .into(holder.imgPhoto)
+    override fun onBindViewHolder(holder: ViewHolder, i: Int) {
+        holder.itemName.text = name[i]
+        holder.itemCategory.text = category[i]
+        holder.itemRating.text = rating[i]
+        holder.itemSchedule.text = schedule[i]
     }
 
-    override fun getItemCount(): Int = listDoctor.size
+    override fun getItemCount(): Int {
+        return name.size
+    }
 }
