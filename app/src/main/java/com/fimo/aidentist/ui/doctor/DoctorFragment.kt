@@ -1,34 +1,21 @@
 package com.fimo.aidentist.ui.doctor
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.fimo.aidentist.R
+import com.fimo.aidentist.data.Doctor
+import com.fimo.aidentist.ui.adapter.ListDoctorAdapter
+import com.fimo.aidentist.ui.camera.CameraActivity
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [DoctorFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class DoctorFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var rvDoctor: RecyclerView
+    private val list = ArrayList<Doctor>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,25 +23,55 @@ class DoctorFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_doctor, container, false)
+
+        rvDoctor = requireView().findViewById(R.id.rvDoctor)
+        rvDoctor.setHasFixedSize(true)
+
+        list.addAll(listDoctor)
+        showRecyclerList()
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment DoctorFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            DoctorFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    private val listDoctor: ArrayList<Doctor>
+        get() {
+            val dataName = resources.getStringArray(R.array.name)
+            val dataCategory = resources.getStringArray(R.array.category)
+            val dataRating = resources.getStringArray(R.array.rating)
+            val dataSchedule = resources.getStringArray(R.array.schedule)
+            val dataPhoto = resources.obtainTypedArray(R.array.avatar)
+            val listDoctor = ArrayList<Doctor>()
+            for (i in dataName.indices) {
+                val doctor = Doctor(
+                    dataName[i],
+                    dataCategory[i],
+                    dataRating[i],
+                    dataSchedule[i],
+                    dataPhoto.getResourceId(i, -1)
+                )
+                listDoctor.add(doctor)
             }
+            return listDoctor
+        }
+
+    private fun showRecyclerList() {
+        //rvDoctor.layoutManager = LinearLayoutManager(this)
+        val listDoctorAdapter = ListDoctorAdapter(list)
+        rvDoctor.adapter = listDoctorAdapter
+        listDoctorAdapter.setOnItemClickListener(object : ListDoctorAdapter.onItemClickListener {
+            override fun onItemClick(position: Int) {
+                val intent = Intent(activity, CameraActivity::class.java)
+                activity?.startActivity(intent)
+                intent.putExtra("avatar", listDoctor[position].avatar)
+                intent.putExtra(
+                    "userdata",
+                    listDoctor[position].name + "\n"
+                            + listDoctor[position].category + "\n"
+                            + listDoctor[position].category + "\n"
+                            + listDoctor[position].schedule + "\n"
+                )
+                intent.putExtra("name", listDoctor[position].name)
+                startActivity(intent)
+            }
+        })
     }
+
 }
