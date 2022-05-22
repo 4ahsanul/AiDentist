@@ -1,10 +1,10 @@
 package com.fimo.aidentist.ui.adapter
 
 import android.content.Intent
-import android.graphics.Camera
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.fimo.aidentist.R
@@ -63,17 +63,32 @@ class ListDoctorAdapter : RecyclerView.Adapter<ListDoctorAdapter.ViewHolder>() {
         "11.00am - 07.00am",
     )
 
+    private val avatar = arrayOf(
+        R.drawable.avatar1,
+        R.drawable.avatar2,
+        R.drawable.avatar3,
+        R.drawable.avatar4,
+        R.drawable.avatar5,
+        R.drawable.avatar6,
+        R.drawable.avatar7,
+        R.drawable.avatar8,
+        R.drawable.avatar9,
+        R.drawable.avatar10,
+    )
+
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var itemName: TextView
         var itemCategory: TextView
         var itemRating: TextView
         var itemSchedule: TextView
+        var ItemPhoto: ImageView
 
         init {
             itemName = itemView.findViewById(R.id.itemName)
             itemCategory = itemView.findViewById(R.id.itemCategory)
             itemRating = itemView.findViewById(R.id.itemRating)
             itemSchedule = itemView.findViewById(R.id.itemSchedule)
+            ItemPhoto = itemView.findViewById(R.id.itemPhoto)
 
             itemView.setOnClickListener {
                 var position: Int = adapterPosition
