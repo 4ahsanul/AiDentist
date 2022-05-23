@@ -28,7 +28,10 @@
         <entry key="app/src/main/res/drawable/background_indicator_enabled.xml" value="0.172" />
         <entry key="app/src/main/res/drawable/button_text_color_selector.xml" value="0.172" />
         <entry key="app/src/main/res/layout/activity_boarding.xml" value="0.16638336181640628" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.17652130126953128" />
+        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.29777374267578127" />
         <entry key="app/src/main/res/layout/fragment_information.xml" value="0.29791666666666666" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
       </map>
     </option>
   </component>
