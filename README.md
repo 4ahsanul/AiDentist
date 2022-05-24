@@ -1,4 +1,4 @@
 # AiDentist
-![UI App](https://drive.google.com/file/d/1FuQvQDzcG4MnINOvi89WN4Ow_5ZLG0wY/view "AiDentist App")
+![UI App](https://ibb.co/m8fy1yY "AiDentist App")
 
 Desc Project (SOON)
