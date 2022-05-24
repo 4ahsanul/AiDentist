@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="spacing_medium">10dp</dimen>
+    <dimen name="onboarding_item_horizontal_padding">32</dimen>
+    <dimen name="spacing_xxx_medium">10dp</dimen>
+    <dimen name="onboarding_button_height">50dp</dimen>
+</resources>

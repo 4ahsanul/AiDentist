@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_home_coco"
+        android:title="Home" />
+    <item
+        android:id="@+id/doctorFragment"
+        android:icon="@drawable/ic_phone_coco"
+        android:title="Doctor" />
+    <item
+        android:id="@+id/cameraActivity"
+        android:icon="@drawable/ic_camera_hd"
+        android:title="Camera" />
+    <item
+        android:id="@+id/informationFragment"
+        android:icon="@drawable/ic_notification_coco"
+        android:title="Information" />
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_user_coco"
+        android:title="Profile" />
+</menu>
