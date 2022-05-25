@@ -25,9 +25,8 @@ class BoardingActivity : AppCompatActivity() {
 
     private fun setupAction() {
         binding.buttonGetStarted.setOnClickListener {
-            startActivity(Intent(this,SignUpActivity::class.java))
+            startActivity(Intent(this,LoginActivity::class.java))
+            finish()
         }
     }
-
-
 }
