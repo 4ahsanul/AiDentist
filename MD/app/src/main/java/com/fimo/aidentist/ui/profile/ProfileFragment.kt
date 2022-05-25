@@ -16,28 +16,27 @@ import com.fimo.aidentist.ui.auth.LoginActivity
 class ProfileFragment : Fragment() {
     private lateinit var sharedPref: PreferenceHelper
     private var _binding: FragmentProfileBinding? = null
-    private val binding get() = _binding
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentProfileBinding.inflate(layoutInflater, container, false)
-        return binding?.root
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding?.buttonLogout?.setOnClickListener {
+        binding.buttonLogout.setOnClickListener {
             activity?.let {
-                sharedPref.put(Constant.PREF_IS_LOGIN, false)
+                //sharedPref.put(Constant.PREF_IS_LOGIN, false)
                 val intent = Intent(it, LoginActivity::class.java)
                 it.startActivity(intent)
                 Toast.makeText(activity, "LOGOUT SUCCESS", Toast.LENGTH_SHORT).show()
 //                sharedPref.clear()
-//                sharedPref.clear()
-//                activity?.finish()
+                activity?.finish()
             }
         }
     }
