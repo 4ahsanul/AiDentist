@@ -1,4 +1,6 @@
 # AiDentist
-![UI App](https://ibb.co/m8fy1yY "AiDentist App")
+<p align="center">
+  <img src="assets/thumbnail.png"/>
+</p>
 
 Desc Project (SOON)
