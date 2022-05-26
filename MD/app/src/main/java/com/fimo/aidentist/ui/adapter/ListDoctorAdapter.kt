@@ -22,7 +22,9 @@ class ListDoctorAdapter : RecyclerView.Adapter<ListDoctorAdapter.ViewHolder>() {
         "Budi Oktaviyan",
         "Hendi Santika",
         "Sidiq Permana",
-        "Jenifer Law"
+        "Jenifer Law",
+        "Prandu Wanata",
+        "Jessicato"
     )
 
     private val category = arrayOf(
@@ -36,7 +38,9 @@ class ListDoctorAdapter : RecyclerView.Adapter<ListDoctorAdapter.ViewHolder>() {
         "Category 8",
         "Category 9",
         "Category 10",
-        "Category 10"
+        "Category 11",
+        "Category 12",
+        "Category 13",
     )
 
     private val rating = arrayOf(
@@ -50,7 +54,9 @@ class ListDoctorAdapter : RecyclerView.Adapter<ListDoctorAdapter.ViewHolder>() {
         "1.1",
         "0.0",
         "2.9",
-        "3.9"
+        "3.9",
+        "4.0",
+        "4.7",
     )
 
     private val schedule = arrayOf(
@@ -65,6 +71,9 @@ class ListDoctorAdapter : RecyclerView.Adapter<ListDoctorAdapter.ViewHolder>() {
         "10.00am - 06.00am",
         "11.00am - 07.00am",
         "10.30.00am - 07.00am",
+        "07.00am - 07.00am",
+        "08.00am - 12.00am",
+        "11.00am - 01.00am",
     )
 
     private val avatar = arrayOf(
