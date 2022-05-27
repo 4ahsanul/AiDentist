@@ -16,6 +16,7 @@
             android:orientation="vertical"
             android:padding="10dp">
 
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/infoData"
                 android:layout_width="match_parent"
@@ -159,6 +160,7 @@
                     app:cardCornerRadius="10dp">
 
                     <LinearLayout
+                        android:id="@+id/dailyTreatment"
                         android:layout_width="105dp"
                         android:layout_height="150dp"
                         android:background="@color/pastel_magenta"
@@ -179,7 +181,7 @@
                             android:layout_marginTop="10dp"
                             android:fontFamily="@font/nunito_regular"
                             android:padding="10dp"
-                            android:text="Water\nReminder"
+                            android:text="Daily\nTreatment"
                             android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textSize="14sp" />

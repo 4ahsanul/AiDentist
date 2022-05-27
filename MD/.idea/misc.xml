@@ -11,10 +11,28 @@
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/fragment_home.xml" value="0.2351851851851852" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/fragment_profile.xml" value="0.2351851851851852" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/item_row_doctor.xml" value="0.264" />
+        <entry key="app/src/main/res/drawable/bottom_nav_colors.xml" value="0.174" />
+        <entry key="app/src/main/res/drawable/box_category.xml" value="0.174" />
+        <entry key="app/src/main/res/drawable/box_doctor_list.xml" value="0.174" />
+        <entry key="app/src/main/res/drawable/card_border.xml" value="0.5286972045898438" />
+        <entry key="app/src/main/res/drawable/circle.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_boarding.xml" value="0.17685185185185184" />
+        <entry key="app/src/main/res/layout/activity_camera.xml" value="0.29791666666666666" />
+        <entry key="app/src/main/res/layout/activity_daily_treatment.xml" value="0.2454391479492187" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.29791666666666666" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.14322916666666666" />
+        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.27897435897435896" />
+        <entry key="app/src/main/res/layout/fragment_doctor.xml" value="0.26484222412109376" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.21884409586588552" />
+        <entry key="app/src/main/res/layout/fragment_information.xml" value="0.27897435897435896" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.29791666666666666" />
+        <entry key="app/src/main/res/layout/item_row_date.xml" value="0.3103541056315108" />
+        <entry key="app/src/main/res/layout/item_row_doctor.xml" value="0.29791666666666666" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.27897435897435896" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16_PREVIEW" project-jdk-name="16" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

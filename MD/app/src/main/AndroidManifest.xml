@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AIDentist">
         <activity
+            android:name=".ui.treatment.DailyTreatmentActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.boarding.BoardingActivity"
             android:exported="true"
             android:theme="@style/Theme.App.Starting">
@@ -30,8 +33,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false"></activity>
     </application>
 
 </manifest>
