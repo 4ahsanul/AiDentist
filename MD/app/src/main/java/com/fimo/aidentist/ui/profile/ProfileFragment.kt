@@ -29,6 +29,8 @@ class ProfileFragment : Fragment() {
             val intent = Intent(activity, LoginActivity::class.java)
             startActivity(intent)
             Toast.makeText(activity, "LOGOUT PREFERENCE SUCCESS", Toast.LENGTH_SHORT).show()
+            sharedPref.clear()
+            activity?.finish()
         }
         return binding.root
     }
