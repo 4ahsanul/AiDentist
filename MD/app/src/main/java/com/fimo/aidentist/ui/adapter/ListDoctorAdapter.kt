@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.fimo.aidentist.R
-import com.fimo.aidentist.ui.camera.CameraActivity
+import com.fimo.aidentist.ui.doctor.DoctorProfileActivity
 
 class ListDoctorAdapter : RecyclerView.Adapter<ListDoctorAdapter.ViewHolder>() {
     private val name = arrayOf(
@@ -106,7 +106,7 @@ class ListDoctorAdapter : RecyclerView.Adapter<ListDoctorAdapter.ViewHolder>() {
             itemView.setOnClickListener {
                 var position: Int = adapterPosition
                 val context = itemView.context
-                val intent = Intent(context, CameraActivity::class.java).apply {
+                val intent = Intent(context, DoctorProfileActivity::class.java).apply {
                     putExtra("NUMBER", position)
                     putExtra("NAME", itemName.text)
                     putExtra("CATEGORY", itemCategory.text)

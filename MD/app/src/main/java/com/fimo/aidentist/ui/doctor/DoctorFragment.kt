@@ -33,6 +33,8 @@ class DoctorFragment : Fragment() {
             layoutManager = LinearLayoutManager(activity)
             adapter = ListDoctorAdapter()
         }
+
+
     }
 
 }

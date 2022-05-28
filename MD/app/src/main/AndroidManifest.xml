@@ -10,8 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AIDentist">
         <activity
-            android:name=".ui.treatment.DailyTreatmentActivity"
+            android:name=".ui.doctor.DoctorProfileActivity"
             android:exported="false" />
+        <activity
+            android:name=".ui.treatment.DailyTreatmentActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".ui.boarding.BoardingActivity"
             android:exported="true"
