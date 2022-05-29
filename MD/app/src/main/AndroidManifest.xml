@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AIDentist">
         <activity
+            android:name=".ui.consultation.OnlineConsultationActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.doctor.DoctorProfileActivity"
             android:exported="false" />
         <activity
@@ -37,7 +40,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
     </application>
 
 </manifest>
