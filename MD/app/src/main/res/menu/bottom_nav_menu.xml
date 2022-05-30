@@ -6,9 +6,9 @@
         android:icon="@drawable/ic_home_coco"
         android:title="Home" />
     <item
-        android:id="@+id/doctorFragment"
-        android:icon="@drawable/ic_phone_coco"
-        android:title="Doctor" />
+        android:id="@+id/messageFragment"
+        android:icon="@drawable/ic_chat_hd"
+        android:title="Message" />
     <item
         android:id="@+id/cameraActivity"
         android:icon="@drawable/ic_camera_hd"
