@@ -60,8 +60,6 @@
             android:src="@drawable/ic_baseline_videocam_24">
         </ImageButton>
 
-
-
     </androidx.appcompat.widget.Toolbar>
 
     <RelativeLayout

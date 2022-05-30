@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="56dp"
+    android:layout_height="23dp"
+    android:layout_gravity="center"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    card_view:cardCornerRadius="4dp">
+
+    <TextView
+        android:id="@+id/hour"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="08:00"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/nunito_regular"
+        android:gravity="center">
+
+    </TextView>
+
+</androidx.cardview.widget.CardView>

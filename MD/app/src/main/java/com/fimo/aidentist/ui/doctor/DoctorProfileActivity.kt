@@ -7,6 +7,7 @@ import com.fimo.aidentist.R
 import com.fimo.aidentist.databinding.ActivityDoctorProfileBinding
 import com.fimo.aidentist.ui.adapter.DateAdapter
 import com.fimo.aidentist.ui.adapter.MessageAdapter
+import com.fimo.aidentist.ui.consultation.OfflineConsultationActivity
 import com.fimo.aidentist.ui.consultation.OnlineConsultationActivity
 
 class DoctorProfileActivity : AppCompatActivity() {
@@ -23,6 +24,11 @@ class DoctorProfileActivity : AppCompatActivity() {
 
         binding.onlineConsultation.setOnClickListener {
             val intent =  Intent(this ,OnlineConsultationActivity::class.java )
+            startActivity(intent)
+        }
+
+        binding.offlineConsultation.setOnClickListener {
+            val intent = Intent(this,OfflineConsultationActivity::class.java)
             startActivity(intent)
         }
 
