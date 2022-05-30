@@ -10,6 +10,7 @@
                     <solid android:color="@color/light_cornflower" />
                 </shape>
             </item>
+
             <item>
                 <shape
                     android:shape="rectangle">

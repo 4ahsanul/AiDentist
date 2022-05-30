@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.doctor.DoctorProfileActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="@color/black">
+
+        </ImageButton>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/nunito_bold"
+
+            android:text="Doctor Profile"
+            android:textColor="@color/black">
+
+        </TextView>
+    </androidx.appcompat.widget.Toolbar>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/doctorProfile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/avatar1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:id="@+id/doctorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Doctor Strange"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/doctorProfile">
+
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="23dp"
+        android:layout_marginTop="14dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/doctorName">
+
+        <TextView
+            android:id="@+id/verified"
+            android:layout_width="83dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/border_medium_radius"
+            android:drawableLeft="@drawable/ic_baseline_verified_24"
+            android:text="Verified"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@+id/treatment_goals"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="83dp"
+            android:layout_gravity="center"
+            android:paddingStart="15dp"
+            android:drawablePadding="5dp"
+            android:gravity="center|left"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="45dp"
+            android:background="@drawable/border_medium_radius"
+            android:drawableLeft="@drawable/ic_rating_coco_19"
+            android:text="4.9"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@+id/treatment_goals"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/isOnline"
+            android:layout_width="83dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/border_medium_radius"
+            android:gravity="center"
+            android:drawableLeft="@drawable/ic_baseline_circle_19_green"
+            android:paddingLeft="15dp"
+            android:text="Online"
+            app:layout_constraintEnd_toStartOf="@+id/treatment_goals"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/nunito_semibold"
+        android:lineSpacingExtra="4dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae euismod quam. Praesent non ultricies purus, tristique fringilla turpis. Curabitur rhoncus lacinia nibh nec eleifend. Vivamus sed placerat neque, non varius lectus. Mauris leo ligula, rhoncus eu ipsum vitae, scelerisque egestas tortor\n\n. Phasellus scelerisque sodales ante sollicitudin fringilla. In tempor massa nec nulla volutpat dignissim ac in sem.
+Etiam quis pharetra enim. Morbi tempus posuere arcu, ut mattis mi accumsan nec. Proin venenatis bibendum massa. Integer gravida, dolor vel fringilla lacinia."
+        android:textColor="@color/cloudy_grey"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/nunito_extrabold"
+        android:text="@string/available_consultation"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="22dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <Button
+            android:id="@+id/online_consultation"
+            android:layout_width="144dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:background="@drawable/background_button_accent_v2"
+            android:backgroundTint="@color/cloudy_grey"
+            android:fontFamily="@font/nunito_regular"
+            android:text="Online\nConsultation"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="13sp">
+        </Button>
+
+        <Button
+            android:id="@+id/offline_consultation"
+            android:layout_width="144dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/background_button_accent_v2"
+            android:fontFamily="@font/nunito_regular"
+            android:text="Offline\nConsultation"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="13sp">
+
+        </Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="top"
+            android:paddingBottom="10dp"
+            android:src="@drawable/ic_baseline_circle_24_black">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Sebelum melakukan konsultasi, pastikan jenis konsultasi yang anda pilih berdasarkan kebutuhan anda.">
+
+        </TextView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

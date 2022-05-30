@@ -9,6 +9,7 @@
     <string name="title_on_boarding_third_slide">Appointment</string>
     <string name="description_on_boarding_third_slide">Get Dentist Appointment  anytime and anywhere you like</string>
     <string name="title_button_get_started">Get Started</string>
+    <string name="available_consultation">Available Consultation</string>
 
     <!--  Database Local  -->
     <string-array name="name">

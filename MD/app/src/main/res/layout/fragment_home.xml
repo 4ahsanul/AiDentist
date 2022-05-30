@@ -6,15 +6,66 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/white"
+        app:elevation="0dp">
+
+        <FrameLayout
+            android:id="@+id/toolbar_profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userProfile"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/avatar10">
+                </de.hdodenhof.circleimageview.CircleImageView>
+
+                <TextView
+                    android:id="@+id/user_name_toolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:text=" Hi Joko Santoso"
+                    android:fontFamily="@font/nunito_bold">
+                </TextView>
+                <TextView
+                    android:id="@+id/user_location"
+                    android:layout_width="match_parent"
+                    android:gravity="right"
+                    android:layout_height="wrap_content"
+                    android:text="Jalan Haengnidan "
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/nunito_bold"
+                    app:drawableRightCompat="@drawable/ic_location">
+                </TextView>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </FrameLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="10dp">
+
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/infoData"
@@ -159,6 +210,7 @@
                     app:cardCornerRadius="10dp">
 
                     <LinearLayout
+                        android:id="@+id/dailyTreatment"
                         android:layout_width="105dp"
                         android:layout_height="150dp"
                         android:background="@color/pastel_magenta"
@@ -179,7 +231,7 @@
                             android:layout_marginTop="10dp"
                             android:fontFamily="@font/nunito_regular"
                             android:padding="10dp"
-                            android:text="Water\nReminder"
+                            android:text="Self\nCare"
                             android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textSize="14sp" />

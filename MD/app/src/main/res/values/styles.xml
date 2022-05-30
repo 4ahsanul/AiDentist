@@ -51,4 +51,9 @@
         <item name="android:textColor">@drawable/button_text_color_selector</item>
     </style>
 
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/cloudy_grey</item>
+        <item name="colorControlActivated">#ffc922</item>
+    </style>
+
 </resources>
