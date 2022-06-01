@@ -8,15 +8,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.fimo.aidentist.R
 import com.fimo.aidentist.data.Doctor
-import com.fimo.aidentist.databinding.ActivityDoctorBinding
 import com.fimo.aidentist.ui.adapter.ListDoctorAdapter
 
 class DoctorActivity : AppCompatActivity() {
-
     private lateinit var rvDoctors: RecyclerView
-    private lateinit var binding: ActivityDoctorBinding
-    private var list: ArrayList<Doctor> = arrayListOf()
-    private var listDoctorAdapter = ListDoctorAdapter(list)
 
     //Inisialisasi Variable
     private lateinit var dataName: Array<String>
@@ -24,23 +19,23 @@ class DoctorActivity : AppCompatActivity() {
     private lateinit var dataRating: Array<String>
     private lateinit var dataSchedule: Array<String>
     private lateinit var dataAvatar: TypedArray
+    private var list: ArrayList<Doctor> = arrayListOf()
+    private var listDoctorAdapter = ListDoctorAdapter(list)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //binding = ActivityDoctorBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_doctor)
 
-        //rvDoctors = binding.rvDoctor
-        rvDoctors = findViewById(R.id.rvDoctor)
+        rvDoctors = findViewById(R.id.rvDoctors)
         rvDoctors.setHasFixedSize(true)
 
         addItem()
         showRecyclerList()
     }
 
-    private fun showSelectedUser(data: Doctor) {
+    private fun showSelectedDoctor(data: Doctor) {
         val moveObjectWithIntent = Intent(this@DoctorActivity, DoctorProfileActivity::class.java)
-//        moveObjectWithIntent.putExtra(DoctorProfileActivity.EXTRA_USER, ,data)
+//        moveObjectWithIntent.putExtra(DoctorProfileActivity.EXTRA_USER, data)
 //        startActivity(moveObjectWithIntent)
     }
 
@@ -54,7 +49,7 @@ class DoctorActivity : AppCompatActivity() {
 
     private fun addItem(): ArrayList<Doctor> {
         prepare()
-        for (i in dataName.indices){
+        for (i in dataName.indices) {
             val doctor = Doctor(
                 dataName[i],
                 dataCategory[i],
@@ -71,10 +66,8 @@ class DoctorActivity : AppCompatActivity() {
     private fun showRecyclerList() {
         rvDoctors.layoutManager = LinearLayoutManager(this)
         rvDoctors.adapter = listDoctorAdapter
-        listDoctorAdapter.setOnItemClickCallback(object : ListDoctorAdapter.OnItemClickCallBack {
-            override fun onItemClicked(data: Doctor) {
-                return showSelectedUser(data)
-            }
+        listDoctorAdapter.setOnItemClickCallback(object: ListDoctorAdapter.OnItemClickCallBack {
+            override fun onItemClicked(data: Doctor) = showSelectedDoctor(data)
         })
     }
 }
