@@ -12,6 +12,7 @@ import android.widget.Button
 import com.fimo.aidentist.R
 import com.fimo.aidentist.databinding.FragmentHomeBinding
 import com.fimo.aidentist.ui.auth.LoginActivity
+import com.fimo.aidentist.ui.doctor.DoctorActivity
 import com.fimo.aidentist.ui.treatment.DailyTreatmentActivity
 
 // TODO: Rename parameter arguments, choose names that match
@@ -54,6 +55,11 @@ class HomeFragment : Fragment(), DialogInterface.OnClickListener {
 
         binding.dailyTreatment.setOnClickListener{
             val intent = Intent (activity, DailyTreatmentActivity::class.java)
+            activity?.startActivity(intent)
+        }
+
+        binding.dentistAppointment.setOnClickListener{
+            val intent = Intent (activity, DoctorActivity::class.java)
             activity?.startActivity(intent)
         }
         return view
