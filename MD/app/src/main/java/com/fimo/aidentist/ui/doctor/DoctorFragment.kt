@@ -8,11 +8,11 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.fimo.aidentist.databinding.FragmentDoctorBinding
-import com.fimo.aidentist.ui.adapter.ListDoctorAdapter
+import com.fimo.aidentist.ui.adapter.ListDoctorFragmentAdapter
 
 class DoctorFragment : Fragment() {
     private var layoutManager: RecyclerView.LayoutManager?= null
-    private var adapter: RecyclerView.Adapter<ListDoctorAdapter.ViewHolder>? = null
+    private var adapter: RecyclerView.Adapter<ListDoctorFragmentAdapter.ViewHolder>? = null
     private var _binding: FragmentDoctorBinding? = null
     private val binding get() = _binding!!
 
@@ -31,7 +31,7 @@ class DoctorFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.rvDoctor.apply {
             layoutManager = LinearLayoutManager(activity)
-            adapter = ListDoctorAdapter()
+            adapter = ListDoctorFragmentAdapter()
         }
 
 
