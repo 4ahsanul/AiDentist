@@ -17,6 +17,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
+            android:id="@+id/button_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/white"
@@ -25,7 +26,7 @@
         </ImageButton>
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/doctor_name"
+            android:id="@+id/doctorProfile"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="40dp"
@@ -34,6 +35,7 @@
         </de.hdodenhof.circleimageview.CircleImageView>
 
         <TextView
+            android:id="@+id/doctorName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
