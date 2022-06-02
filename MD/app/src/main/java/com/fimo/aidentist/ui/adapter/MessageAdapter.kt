@@ -13,7 +13,7 @@ class MessageAdapter(private val currentUserName: String?) :
     RecyclerView.Adapter<MessageAdapter.ViewHolder>() {
 
 
-    private val userName = "Dr.Jokowi"
+    private val userName = "Dr. Jung Jae-Sung"
 
 
     private val avatar = R.drawable.avatar10
