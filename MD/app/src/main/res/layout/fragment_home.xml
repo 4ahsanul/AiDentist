@@ -107,7 +107,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/nunito_regular"
-                            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet diam massa, id ultrices metus." />
+                            android:text="• Pastikan Anda mengunggah foto gigi yang diambil menggunakan kamera." />
                     </LinearLayout>
 
                     <LinearLayout
@@ -120,7 +120,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/nunito_regular"
-                            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet diam massa, id ultrices metus." />
+                            android:text="• Gambar yang akan digunakan adalah bagian depan gigi." />
                     </LinearLayout>
 
                     <LinearLayout
@@ -133,7 +133,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/nunito_regular"
-                            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet diam massa, id ultrices metus." />
+                            android:text="• Pastikan saat pengambilan gambar mengikuti guideline." />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

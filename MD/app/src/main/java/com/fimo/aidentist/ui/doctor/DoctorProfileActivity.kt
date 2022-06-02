@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.fimo.aidentist.data.Doctor
 import com.fimo.aidentist.databinding.ActivityDoctorProfileBinding
+import com.fimo.aidentist.ui.adapter.ListDoctorAdapter
 import com.fimo.aidentist.ui.adapter.MessageAdapter
 import com.fimo.aidentist.ui.consultation.OfflineConsultationActivity
 import com.fimo.aidentist.ui.consultation.OnlineConsultationActivity
@@ -47,6 +48,7 @@ class DoctorProfileActivity : AppCompatActivity() {
 
         binding.buttonBack.setOnClickListener {
             val intent = Intent(this, DoctorActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
             finish()
         }

@@ -27,6 +27,7 @@ class OfflineConsultationActivity : AppCompatActivity() {
 
         binding.buttonBack.setOnClickListener {
             val intent = Intent(this, DoctorProfileActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
             finish()
         }
