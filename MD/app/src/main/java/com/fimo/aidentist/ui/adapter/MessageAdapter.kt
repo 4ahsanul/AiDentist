@@ -9,10 +9,11 @@ import com.bumptech.glide.Glide
 import com.fimo.aidentist.R
 import com.fimo.aidentist.databinding.ItemMessageBinding
 
-class MessageAdapter(private val currentUserName: String?) :RecyclerView.Adapter<MessageAdapter.ViewHolder>()  {
+class MessageAdapter(private val currentUserName: String?) :
+    RecyclerView.Adapter<MessageAdapter.ViewHolder>() {
 
 
-    private val userName = "Dr.Jokowi"
+    private val userName = "Dr. Jung Jae-Sung"
 
 
     private val avatar = R.drawable.avatar10
@@ -23,15 +24,16 @@ class MessageAdapter(private val currentUserName: String?) :RecyclerView.Adapter
     )
 
     private val message = arrayOf(
-        "Hy",
-        "Kamu lagi ngapain johnny",
+        "Siang",
+        "Ada yang bisa saya bantu?",
     )
 
-    inner class ViewHolder(private val binding: ItemMessageBinding) :RecyclerView.ViewHolder(binding.root){
-            val fotoProfil = binding.ivMessenger
-            val namaProfil = binding.tvMessenger
-            val pesan = binding.tvMessage
-            val time = binding.tvTimestamp
+    inner class ViewHolder(private val binding: ItemMessageBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        val fotoProfil = binding.ivMessenger
+        val namaProfil = binding.tvMessenger
+        val pesan = binding.tvMessage
+        val time = binding.tvTimestamp
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MessageAdapter.ViewHolder {
@@ -40,7 +42,6 @@ class MessageAdapter(private val currentUserName: String?) :RecyclerView.Adapter
         val binding = ItemMessageBinding.bind(view)
         return ViewHolder(binding)
     }
-
 
 
     override fun onBindViewHolder(holder: MessageAdapter.ViewHolder, position: Int) {

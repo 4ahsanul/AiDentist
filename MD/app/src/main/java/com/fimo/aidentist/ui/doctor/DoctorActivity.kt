@@ -6,11 +6,14 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.fimo.aidentist.MainActivity
 import com.fimo.aidentist.R
 import com.fimo.aidentist.data.Doctor
+import com.fimo.aidentist.databinding.ActivityDoctorBinding
 import com.fimo.aidentist.ui.adapter.ListDoctorAdapter
 
 class DoctorActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityDoctorBinding
     private lateinit var rvDoctors: RecyclerView
 
     //Inisialisasi Variable
@@ -24,10 +27,18 @@ class DoctorActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_doctor)
+        binding = ActivityDoctorBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        rvDoctors = findViewById(R.id.rvDoctors)
+        rvDoctors = binding.rvDoctors
         rvDoctors.setHasFixedSize(true)
+
+        binding.buttonBack.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+            finish()
+        }
 
         addItem()
         showRecyclerList()
