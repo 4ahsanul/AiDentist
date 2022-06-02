@@ -35,8 +35,8 @@ class DoctorActivity : AppCompatActivity() {
 
     private fun showSelectedDoctor(data: Doctor) {
         val moveObjectWithIntent = Intent(this@DoctorActivity, DoctorProfileActivity::class.java)
-//        moveObjectWithIntent.putExtra(DoctorProfileActivity.EXTRA_USER, data)
-//        startActivity(moveObjectWithIntent)
+        moveObjectWithIntent.putExtra(DoctorProfileActivity.EXTRA_USER, data)
+        startActivity(moveObjectWithIntent)
     }
 
     private fun prepare() {
