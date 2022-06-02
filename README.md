@@ -22,7 +22,7 @@
 
 ## Team Member
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)</br>
-(ML) M2120J1528 - Andre Citro Febriliyan Lanyak - Institut Teknologi Telkom Purwokerto</br>
+(ML) M2120J1528 - [ Andre Citro Febriliyan Lanyak](https://github.com/andretkj1) - Institut Teknologi Telkom Purwokerto</br>
 (ML) M2120F1522 - Muhammad Rahaji Jhaerol - Institut Teknologi Telkom Purwokerto</br></br>
 ![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)</br>
 (MD) A2120F1521 - [Filfimo Yulfiz Ahsanul Hulqi](https://github.com/4ahsanul) - Institut Teknologi Telkom Purwokerto </br>
