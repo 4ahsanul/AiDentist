@@ -8,9 +8,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.fimo.aidentist.R
 import com.fimo.aidentist.data.Doctor
+import com.fimo.aidentist.databinding.ActivityDoctorBinding
 import com.fimo.aidentist.ui.adapter.ListDoctorAdapter
 
 class DoctorActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityDoctorBinding
     private lateinit var rvDoctors: RecyclerView
 
     //Inisialisasi Variable
@@ -24,9 +26,10 @@ class DoctorActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_doctor)
+        binding = ActivityDoctorBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        rvDoctors = findViewById(R.id.rvDoctors)
+        rvDoctors = binding.rvDoctors
         rvDoctors.setHasFixedSize(true)
 
         addItem()
