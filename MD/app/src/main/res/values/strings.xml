@@ -26,7 +26,6 @@
 
     <string name="information_image">Gambar Informasi</string>
     <string name="information_title">Judul</string>
-    <string name="lorem_less">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet diam massa, id ultrices metus.</string>
     <string name="see_more">Selengkapnya</string>
 
     <string name="edit_button">Edit Button</string>
@@ -52,6 +51,7 @@
     <string name="rate">Rating</string>
     <string name="schedule">Schedule</string>
     <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae euismod quam. Praesent non ultricies purus, tristique fringilla turpis. Curabitur rhoncus lacinia nibh nec eleifend. Vivamus sed placerat neque, non varius lectus. Mauris leo ligula, rhoncus eu ipsum vitae, scelerisque egestas tortor\n\n. Phasellus scelerisque sodales ante sollicitudin fringilla. In tempor massa nec nulla volutpat dignissim ac in sem. Etiam quis pharetra enim. Morbi tempus posuere arcu, ut mattis mi accumsan nec. Proin venenatis bibendum massa. Integer gravida, dolor vel fringilla lacinia.</string>
+    <string name="lorem_less">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet diam massa, id ultrices metus.</string>
 
     <string name="online_consultation">Online\nConsultation</string>
     <string name="offline_consultation">Offline\nConsultation</string>
