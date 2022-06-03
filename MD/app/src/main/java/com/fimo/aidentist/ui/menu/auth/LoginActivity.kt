@@ -1,4 +1,4 @@
-package com.fimo.aidentist.ui.auth
+package com.fimo.aidentist.ui.menu.auth
 
 import android.content.Intent
 import android.os.Build

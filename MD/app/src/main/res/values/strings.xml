@@ -2,40 +2,132 @@
     <string name="app_name">AIDentist</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_on_boarding_first_slide">Early Screening</string>
-    <string name="description_on_boarding_first_slide">Identify The Type of Oral Disease  by Taking a Photo, Ai Dentist  Will Screening and Analyse</string>
-    <string name="title_on_boarding_second_slide">Daily Treatment</string>
-    <string name="description_on_boarding_second_slide">Daily Treatment Suggestion Before and After Dental-Checkup</string>
-    <string name="title_on_boarding_third_slide">Appointment</string>
-    <string name="description_on_boarding_third_slide">Get Dentist Appointment  anytime and anywhere you like</string>
+
     <string name="title_button_get_started">Get Started</string>
+    <string name="title_on_boarding_first_slide">Early Screening</string>
+    <string name="title_on_boarding_second_slide">Daily Treatment</string>
+    <string name="title_on_boarding_third_slide">Appointment</string>
+
+    <string name="description_on_boarding_first_slide">Identify The Type of Oral Disease  by Taking a Photo, Ai Dentist  Will Screening and Analyse</string>
+    <string name="description_on_boarding_second_slide">Daily Treatment Suggestion Before and After Dental-Checkup</string>
+    <string name="description_on_boarding_third_slide">Get Dentist Appointment  anytime and anywhere you like</string>
+
+    <string name="back_button">Tombol Kembali</string>
+
+    <string name="image_guide">Gambar Arahan</string>
+    <string name="guide1">• Pastikan Anda mengunggah foto gigi yang diambil menggunakan kamera.</string>
+    <string name="guide2">• Gambar yang akan digunakan adalah bagian depan gigi.</string>
+    <string name="guide3">• Pastikan saat pengambilan gambar mengikuti guideline.</string>
+
+    <string name="services">Services</string>
+    <string name="self_care">Self\nCare</string>
+    <string name="medicine_reminder">Medicine\nReminder</string>
+    <string name="information">Information</string>
+
+    <string name="information_image">Gambar Informasi</string>
+    <string name="information_title">Judul</string>
+    <string name="see_more">Selengkapnya</string>
+
+    <string name="edit_button">Edit Button</string>
+    <string name="camera">Kamera</string>
+    <string name="switch_camera">Ganti Kamera</string>
+
+    <string name="month_year">May 2020</string>
+    <string name="days_progress">4 Days</string>
+    <string name="estimated_time">Estimated Time</string>
+    <string name="estimated_days">5 Days</string>
+    <string name="treatment">Treatment</string>
+    <string name="estimated_goals">5 Goals</string>
+    <string name="estimated_warn">VISIT THE DENTIST IF IT STILL CONTINUE PAST THE ESTIMATED TIME</string>
+
     <string name="available_consultation">Available Consultation</string>
+    <string name="today_treatment">Today Treatment</string>
+    <string name="dentist_appointment">Dentist Appointment</string>
+    <string name="doctor_image">Gambar Dokter</string>
+    <string name="doctor_profile">Doctor Profile</string>
+    <string name="doctor_name">Doctor Strange</string>
+    <string name="verified">Verified</string>
+    <string name="online">Online</string>
+    <string name="rate">Rating</string>
+    <string name="schedule">Schedule</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae euismod quam. Praesent non ultricies purus, tristique fringilla turpis. Curabitur rhoncus lacinia nibh nec eleifend. Vivamus sed placerat neque, non varius lectus. Mauris leo ligula, rhoncus eu ipsum vitae, scelerisque egestas tortor\n\n. Phasellus scelerisque sodales ante sollicitudin fringilla. In tempor massa nec nulla volutpat dignissim ac in sem. Etiam quis pharetra enim. Morbi tempus posuere arcu, ut mattis mi accumsan nec. Proin venenatis bibendum massa. Integer gravida, dolor vel fringilla lacinia.</string>
+    <string name="lorem_less">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet diam massa, id ultrices metus.</string>
+
+    <string name="online_consultation">Online\nConsultation</string>
+    <string name="offline_consultation">Offline\nConsultation</string>
+    <string name="poin">Poin</string>
+    <string name="tos_cosultation">Sebelum melakukan konsultasi, pastikan jenis konsultasi yang anda pilih berdasarkan kebutuhan anda.</string>
+
+    <string name="welcome_image_login">Welcome Image Login</string>
+    <string name="login">Login</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="button_login">Masuk</string>
+    <string name="dont_have_acc">Belum punya akun?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="offline_consultation_toolbar">Offline Consultation</string>
+    <string name="doctor_name_dummy">Hand Oko</string>
+
+    <string name="welcome_image_signup">Welcome Image SignUp</string>
+    <string name="name_hint">Nama</string>
+    <string name="button_signup">Daftar</string>
+    <string name="have_acc">Sudah Punya Akun?</string>
+    <string name="greetings_user">Hi Joko Santoso</string>
+    <string name="user_location">Jalan Haengnidan</string>
+
+    <string name="endodontist">Endodontist</string>
+    <string name="location">Lokasi</string>
+    <string name="clinic_name">Klinik Denta Medica</string>
+    <string name="clinic_location">Rappocini, Kota Makassar</string>
+    <string name="clinic">Rumah Sakit</string>
+    <string name="date_and_time">Tanggal dan waktu</string>
+    <string name="month">April 2022</string>
+    <string name="choose_date">Pilih slot waktu</string>
+    <string name="book">Book</string>
+
+    <string name="phone">Telepon</string>
+    <string name="phone_call">Panggilan Video</string>
+    <string name="hint_chat">Say something...</string>
+    <string name="open_camera">Buka Kamera</string>
+    <string name="send_message">Kirim Pesan</string>
+
+    <string name="message">Message</string>
+
+    <string name="dummy_user_name">Joko Santoso</string>
+    <string name="gender">Jenis Kelamin</string>
+    <string name="transaction_history">Transaction History</string>
+    <string name="other">Other</string>
+    <string name="log_out">Log Out</string>
+
+    <string name="days">Sun</string>
+    <string name="date">2</string>
+    <string name="clock">08:00</string>
 
     <!--  Database Local  -->
     <string-array name="name">
-        <item>Jake Wharton</item>
-        <item>Amit Shekhar</item>
-        <item>Romain Guy</item>
-        <item>Chris Banes</item>
-        <item>David</item>
-        <item>Ravi Tamada</item>
-        <item>Deny Prasetyo</item>
-        <item>Budi Oktaviyan</item>
-        <item>Hendi Santika</item>
-        <item>Sidiq Permana</item>
+        <item>Jung Jae-Sung</item>
+        <item>Ji Sung</item>
+        <item>Lee See-Young</item>
+        <item>Lee Kyu-Hyung</item>
+        <item>Hwang Hee</item>
+        <item>Jung Min-A</item>
+        <item>Kwon Hwa-Woon</item>
+        <item>Oh Hyun-Joong</item>
+        <item>Kim Hye-Eun</item>
+        <item>Moon Hak-Jin</item>
     </string-array>
 
     <string-array name="category">
         <item>Endodontist</item>
         <item>Oral Surgeon</item>
         <item>Periodontist</item>
-        <item>Category 4</item>
-        <item>Category 5</item>
-        <item>Category 6</item>
-        <item>Category 7</item>
-        <item>Category 8</item>
-        <item>Category 9</item>
-        <item>Category 10</item>
+        <item>Prosthodontist</item>
+        <item>Pedodontist</item>
+        <item>Orthopaedics</item>
+        <item>Periodontology</item>
+        <item>Radiology</item>
+        <item>Oral Pathology</item>
+        <item>Preventive Dentistry</item>
     </string-array>
 
     <string-array name="rating">
@@ -52,20 +144,20 @@
     </string-array>
 
     <string-array name="schedule">
-        <item>07.00am - 03.00am</item>
-        <item>08.00am - 04.00am</item>
-        <item>09.00am - 05.00am</item>
-        <item>10.00am - 06.00am</item>
-        <item>11.00am - 07.00am</item>
-        <item>12.00am - 08.00am</item>
-        <item>08.00am - 04.00am</item>
-        <item>09.00am - 05.00am</item>
-        <item>10.00am - 06.00am</item>
-        <item>11.00am - 07.00am</item>
+        <item>07.00 am - 03.00 pm</item>
+        <item>08.00 am - 04.00 pm</item>
+        <item>09.00 am - 05.00 pm</item>
+        <item>10.00 am - 06.00 pm</item>
+        <item>11.00 am - 07.00 pm</item>
+        <item>12.00 am - 08.00 pm</item>
+        <item>08.00 am - 04.00 pm</item>
+        <item>09.00 am - 05.00 pm</item>
+        <item>10.00 am - 06.00 pm</item>
+        <item>11.00 am - 07.00 pm</item>
     </string-array>
 
     <string-array name="avatar">
-        <item>@drawable/avatar1</item>
+        <item>@drawable/avatar10</item>
         <item>@drawable/avatar2</item>
         <item>@drawable/avatar3</item>
         <item>@drawable/avatar4</item>
@@ -74,6 +166,6 @@
         <item>@drawable/avatar7</item>
         <item>@drawable/avatar8</item>
         <item>@drawable/avatar9</item>
-        <item>@drawable/avatar10</item>
+        <item>@drawable/avatar1</item>
     </string-array>
 </resources>

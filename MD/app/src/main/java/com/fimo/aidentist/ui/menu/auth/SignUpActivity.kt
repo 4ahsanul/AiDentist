@@ -1,4 +1,4 @@
-package com.fimo.aidentist.ui.auth
+package com.fimo.aidentist.ui.menu.auth
 
 import android.content.Intent
 import android.os.Build
@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowInsets
 import android.view.WindowManager
-import com.fimo.aidentist.R
 import com.fimo.aidentist.databinding.ActivitySignUpBinding
 
 class SignUpActivity : AppCompatActivity() {

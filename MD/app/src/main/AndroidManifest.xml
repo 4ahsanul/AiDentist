@@ -10,19 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AIDentist">
         <activity
-            android:name=".ui.doctor.DoctorActivity"
+            android:name="com.fimo.aidentist.ui.menu.doctor.DoctorActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.consultation.OfflineConsultationActivity"
+            android:name="com.fimo.aidentist.ui.menu.consultation.OfflineConsultationActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.consultation.OnlineConsultationActivity"
+            android:name="com.fimo.aidentist.ui.menu.consultation.OnlineConsultationActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.doctor.DoctorProfileActivity"
+            android:name="com.fimo.aidentist.ui.menu.doctor.DoctorProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.treatment.DailyTreatmentActivity"
+            android:name="com.fimo.aidentist.ui.menu.treatment.DailyTreatmentActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
         <activity
@@ -36,13 +36,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.camera.CameraActivity"
+            android:name="com.fimo.aidentist.ui.navigation.camera.CameraActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.auth.SignUpActivity"
+            android:name="com.fimo.aidentist.ui.menu.auth.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.auth.LoginActivity"
+            android:name="com.fimo.aidentist.ui.menu.auth.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

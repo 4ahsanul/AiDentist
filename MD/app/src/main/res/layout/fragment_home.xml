@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".ui.navigation.home.HomeFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -25,7 +25,7 @@
                     android:id="@+id/userProfile"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/avatar10">
+                    android:src="@drawable/ic_avatar_profile_hd">
                 </de.hdodenhof.circleimageview.CircleImageView>
 
                 <TextView
@@ -33,15 +33,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="25dp"
-                    android:text=" Hi Joko Santoso"
+                    android:text="@string/greetings_user"
                     android:fontFamily="@font/nunito_bold">
                 </TextView>
                 <TextView
                     android:id="@+id/user_location"
                     android:layout_width="match_parent"
-                    android:gravity="right"
+                    android:gravity="end"
                     android:layout_height="wrap_content"
-                    android:text="Jalan Haengnidan "
+                    android:text="@string/user_location"
                     android:layout_marginEnd="20dp"
                     android:fontFamily="@font/nunito_bold"
                     app:drawableRightCompat="@drawable/ic_location">
@@ -62,7 +62,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="10dp">
 
@@ -94,7 +94,8 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:src="@drawable/ic_image_preview_hd" />
+                            android:src="@drawable/ic_image_preview_hd"
+                            android:contentDescription="@string/image_guide"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -107,7 +108,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/nunito_regular"
-                            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet diam massa, id ultrices metus." />
+                            android:text="@string/guide1" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -120,7 +121,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/nunito_regular"
-                            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet diam massa, id ultrices metus." />
+                            android:text="@string/guide2" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -133,7 +134,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/nunito_regular"
-                            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet diam massa, id ultrices metus." />
+                            android:text="@string/guide3" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -146,7 +147,7 @@
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="318dp"
                 android:fontFamily="@font/nunito_extrabold"
-                android:text="Services"
+                android:text="@string/services"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toTopOf="@+id/menu"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -186,7 +187,8 @@
                             android:layout_height="64dp"
                             android:layout_marginTop="10dp"
                             android:padding="10dp"
-                            android:src="@drawable/ic_dentist_hd" />
+                            android:src="@drawable/ic_dentist_hd"
+                            android:contentDescription="@string/dentist_appointment"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -194,7 +196,7 @@
                             android:layout_marginTop="10dp"
                             android:fontFamily="@font/nunito_regular"
                             android:padding="10dp"
-                            android:text="Dentist\nAppointment"
+                            android:text="@string/dentist_appointment"
                             android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textSize="14sp" />
@@ -224,7 +226,8 @@
                             android:layout_marginTop="10dp"
                             android:padding="10dp"
                             android:src="@drawable/ic_cup_coco"
-                            app:tint="@color/white" />
+                            app:tint="@color/white"
+                            android:contentDescription="@string/self_care"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -232,7 +235,7 @@
                             android:layout_marginTop="10dp"
                             android:fontFamily="@font/nunito_regular"
                             android:padding="10dp"
-                            android:text="Self\nCare"
+                            android:text="@string/self_care"
                             android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textSize="14sp" />
@@ -260,7 +263,8 @@
                             android:layout_height="64dp"
                             android:layout_marginTop="10dp"
                             android:padding="10dp"
-                            android:src="@drawable/ic_time_service" />
+                            android:src="@drawable/ic_time_service"
+                            android:contentDescription="@string/medicine_reminder"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -268,7 +272,7 @@
                             android:layout_marginTop="10dp"
                             android:fontFamily="@font/nunito_regular"
                             android:padding="10dp"
-                            android:text="Medicine\nReminder"
+                            android:text="@string/medicine_reminder"
                             android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textSize="14sp" />
