@@ -103,6 +103,19 @@
     <string name="date">2</string>
     <string name="clock">08:00</string>
     <string name="early_screening">Early Screening</string>
+    <string name="discoloration">Discoloration</string>
+    <string name="periodontal">Periodontal</string>
+    <string name="_35">35%</string>
+    <string name="_66">66%</string>
+    <string name="dental_statistik">Dental Statistik</string>
+    <string name="likely_periodontal">*Likely Periodontal</string>
+    <string name="icon_dental_statistik">Icon Dental Statistik</string>
+    <string name="prediction">Prediction</string>
+    <string name="apakah_berbahaya">Apakah Berbahaya?</string>
+    <string name="similiar">Similiar</string>
+    <string name="desc_disease_string">Cavities are permanently damaged areas in the hard surface of your teeth that develop into tiny openings or holes.</string>
+    <string name="desc_berbahaya">Jika dibiarkan terus menerus, bercak putih akan berubah menjadi bercak kecoklatan yang menyebar dan membentuk lubang pada gigi. Jika tidak ditangani, karies ini dapat menyebabkan nyeri, gigi tanggal, infeksi berbahaya, dan bahkan kematian.</string>
+    <string name="disease">Disease</string>
 
     <!--  Database Local  -->
     <string-array name="name">

@@ -252,6 +252,7 @@
                     app:cardCornerRadius="10dp">
 
                     <LinearLayout
+                        android:id="@+id/medicine_reminder"
                         android:layout_width="105dp"
                         android:layout_height="150dp"
                         android:background="@color/orange_peel"
@@ -262,9 +263,9 @@
                             android:layout_width="64dp"
                             android:layout_height="64dp"
                             android:layout_marginTop="10dp"
+                            android:contentDescription="@string/medicine_reminder"
                             android:padding="10dp"
-                            android:src="@drawable/ic_time_service"
-                            android:contentDescription="@string/medicine_reminder"/>
+                            android:src="@drawable/ic_time_service" />
 
                         <TextView
                             android:layout_width="wrap_content"

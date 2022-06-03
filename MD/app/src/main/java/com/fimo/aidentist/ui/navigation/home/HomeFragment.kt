@@ -7,7 +7,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentTransaction
+import com.fimo.aidentist.R
 import com.fimo.aidentist.databinding.FragmentHomeBinding
+import com.fimo.aidentist.ui.analisis.AnalisisFragment
 import com.fimo.aidentist.ui.menu.doctor.DoctorActivity
 import com.fimo.aidentist.ui.menu.treatment.DailyTreatmentActivity
 
@@ -34,6 +37,10 @@ class HomeFragment : Fragment(), DialogInterface.OnClickListener {
             activity?.startActivity(intent)
         }
 
+        binding.medicineReminder.setOnClickListener{
+            
+        }
+
         binding.dentistAppointment.setOnClickListener{
             val intent = Intent (activity, DoctorActivity::class.java)
             activity?.startActivity(intent)
@@ -46,6 +53,8 @@ class HomeFragment : Fragment(), DialogInterface.OnClickListener {
         super.onDestroy()
         _binding = null
     }
+
+
 
 
     override fun onClick(dialog: DialogInterface?, which: Int) {
