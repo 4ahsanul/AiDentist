@@ -9,7 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.fimo.aidentist.databinding.FragmentHomeBinding
 import com.fimo.aidentist.ui.menu.doctor.DoctorActivity
-import com.fimo.aidentist.ui.treatment.DailyTreatmentActivity
+import com.fimo.aidentist.ui.menu.treatment.DailyTreatmentActivity
 
 class HomeFragment : Fragment(), DialogInterface.OnClickListener {
 

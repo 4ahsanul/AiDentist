@@ -22,7 +22,7 @@
             android:name="com.fimo.aidentist.ui.menu.doctor.DoctorProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.treatment.DailyTreatmentActivity"
+            android:name="com.fimo.aidentist.ui.menu.treatment.DailyTreatmentActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
         <activity

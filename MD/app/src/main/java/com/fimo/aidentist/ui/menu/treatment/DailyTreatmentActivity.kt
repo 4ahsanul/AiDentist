@@ -1,4 +1,4 @@
-package com.fimo.aidentist.ui.treatment
+package com.fimo.aidentist.ui.menu.treatment
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
