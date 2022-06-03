@@ -6,6 +6,7 @@
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/drawable/box.xml" value="0.1" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/drawable/box_doctor_list.xml" value="0.1" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/drawable/box_home.xml" value="0.1" />
+        <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/drawable/box_nav.xml" value="0.1505" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/drawable/ic_arrow_back.xml" value="0.123" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/drawable/ic_camera_hd.xml" value="0.123" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/drawable/ic_chat_hd.xml" value="0.123" />
@@ -17,6 +18,7 @@
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/activity_main.xml" value="0.25104166666666666" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/activity_offline_consultation.xml" value="0.23703703703703705" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/activity_online_consultation.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/activity_sign_up.xml" value="0.25104166666666666" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/fragment_doctor.xml" value="0.264" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/fragment_home.xml" value="0.2351851851851852" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/fragment_information.xml" value="0.2662037037037037" />
