@@ -14,6 +14,21 @@
 
     <string name="back_button">Tombol Kembali</string>
 
+    <string name="image_guide">Gambar Arahan</string>
+    <string name="guide1">• Pastikan Anda mengunggah foto gigi yang diambil menggunakan kamera.</string>
+    <string name="guide2">• Gambar yang akan digunakan adalah bagian depan gigi.</string>
+    <string name="guide3">• Pastikan saat pengambilan gambar mengikuti guideline.</string>
+
+    <string name="services">Services</string>
+    <string name="self_care">Self\nCare</string>
+    <string name="medicine_reminder">Medicine\nReminder</string>
+    <string name="information">Information</string>
+
+    <string name="information_image">Gambar Informasi</string>
+    <string name="information_title">Judul</string>
+    <string name="lorem_less">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet diam massa, id ultrices metus.</string>
+    <string name="see_more">Selengkapnya</string>
+
     <string name="edit_button">Edit Button</string>
     <string name="camera">Kamera</string>
     <string name="switch_camera">Ganti Kamera</string>
@@ -53,6 +68,13 @@
     <string name="offline_consultation_toolbar">Offline Consultation</string>
     <string name="doctor_name_dummy">Hand Oko</string>
 
+    <string name="welcome_image_signup">Welcome Image SignUp</string>
+    <string name="name_hint">Nama</string>
+    <string name="button_signup">Daftar</string>
+    <string name="have_acc">Sudah Punya Akun?</string>
+    <string name="greetings_user">Hi Joko Santoso</string>
+    <string name="user_location">Jalan Haengnidan</string>
+
     <string name="endodontist">Endodontist</string>
     <string name="location">Lokasi</string>
     <string name="clinic_name">Klinik Denta Medica</string>
@@ -68,28 +90,6 @@
     <string name="hint_chat">Say something...</string>
     <string name="open_camera">Buka Kamera</string>
     <string name="send_message">Kirim Pesan</string>
-
-    <string name="welcome_image_signup">Welcome Image SignUp</string>
-    <string name="name_hint">Nama</string>
-    <string name="button_signup">Daftar</string>
-    <string name="have_acc">Sudah Punya Akun?</string>
-    <string name="greetings_user">Hi Joko Santoso</string>
-    <string name="user_location">Jalan Haengnidan</string>
-
-    <string name="image_guide">Gambar Arahan</string>
-    <string name="guide1">• Pastikan Anda mengunggah foto gigi yang diambil menggunakan kamera.</string>
-    <string name="guide2">• Gambar yang akan digunakan adalah bagian depan gigi.</string>
-    <string name="guide3">• Pastikan saat pengambilan gambar mengikuti guideline.</string>
-
-    <string name="services">Services</string>
-    <string name="self_care">Self\nCare</string>
-    <string name="medicine_reminder">Medicine\nReminder</string>
-    <string name="information">Information</string>
-
-    <string name="information_image">Gambar Informasi</string>
-    <string name="information_title">Judul</string>
-    <string name="lorem_less">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet diam massa, id ultrices metus.</string>
-    <string name="see_more">Selengkapnya</string>
 
     <string name="message">Message</string>
 
