@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.consultation.OfflineConsultationActivity">
-
+    tools:context=".ui.menu.consultation.OfflineConsultationActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -23,7 +22,7 @@
             android:background="@color/white"
             android:src="@drawable/ic_arrow_back"
             app:tint="@color/black"
-            android:contentDescription="Gambar Profile dokter">
+            android:contentDescription="@string/back_button">
         </ImageButton>
 
 
@@ -32,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="35dp"
             android:fontFamily="@font/nunito_bold"
-            android:text="Offline Consultation"
+            android:text="@string/offline_consultation_toolbar"
             android:textColor="@color/black">
         </TextView>
 
@@ -63,11 +62,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
+            android:layout_gravity="start"
             android:layout_marginStart="80dp"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/nunito_bold"
-            android:text="Hand Oko"
+            android:text="@string/doctor_name_dummy"
             android:textColor="@color/black">
         </TextView>
 
@@ -79,7 +78,7 @@
             android:layout_marginTop="10dp"
             android:gravity="end"
             android:fontFamily="@font/nunito_regular"
-            android:text="Online"
+            android:text="@string/online"
             android:textColor="@color/black"
             app:drawableLeftCompat="@drawable/ic_baseline_circle_19_green"
             android:drawablePadding="5dp">
@@ -88,11 +87,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
+            android:layout_gravity="start"
             android:layout_marginStart="80dp"
             android:layout_marginTop="45dp"
             android:fontFamily="@font/nunito_semibold"
-            android:text="Endodontist"
+            android:text="@string/endodontist"
             android:textColor="@color/black">
         </TextView>
 
@@ -102,7 +101,7 @@
             android:layout_height="wrap_content"
             android:numStars="5"
             android:rating="3"
-            android:layout_gravity="left"
+            android:layout_gravity="start"
             android:layout_marginStart="80dp"
             android:layout_marginTop="70dp"
             android:theme="@style/RatingBar">
@@ -126,7 +125,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Lokasi"
+            android:text="@string/location"
             android:layout_marginTop="10dp"
             android:layout_marginStart="18dp"
             android:fontFamily="@font/nunito_semibold"
@@ -137,7 +136,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Klinik Denta Medica"
+            android:text="@string/clinic_name"
             android:layout_marginTop="40dp"
             android:layout_marginStart="18dp"
             android:fontFamily="@font/nunito_regular"
@@ -148,7 +147,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Rappocini, Kota Makassar"
+            android:text="@string/clinic_location"
             android:layout_marginTop="58dp"
             android:layout_marginStart="18dp"
             android:fontFamily="@font/nunito_regular"
@@ -162,7 +161,7 @@
             android:layout_height="wrap_content"
             android:numStars="5"
             android:rating="3"
-            android:layout_gravity="left"
+            android:layout_gravity="start"
             android:layout_marginStart="18dp"
             android:layout_marginTop="82dp"
             android:theme="@style/RatingBar">
@@ -177,6 +176,7 @@
             app:cardElevation="9dp"
             android:layout_marginEnd="24dp">
             <ImageView
+                android:contentDescription="@string/clinic"
                 android:layout_width="66dp"
                 android:layout_height="66dp"
                 android:scaleType="centerCrop"
@@ -204,7 +204,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tanggal dan waktu"
+            android:text="@string/date_and_time"
             android:layout_marginTop="10dp"
             android:layout_marginStart="18dp"
             android:fontFamily="@font/nunito_semibold"
@@ -215,7 +215,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="April 2022"
+            android:text="@string/month"
             android:layout_marginTop="35dp"
             android:fontFamily="@font/nunito_semibold"
             android:textColor="@color/black"
@@ -265,7 +265,7 @@
             android:id="@+id/slot_waktu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pilih slot waktu"
+            android:text="@string/choose_date"
             android:textColor="@color/cloudy_grey"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="10dp">
@@ -278,7 +278,7 @@
             android:layout_height="43dp"
             android:layout_gravity="center|end"
             android:layout_marginEnd="23dp"
-            android:text="Book"
+            android:text="@string/book"
             android:textAllCaps="false">
         </Button>
 

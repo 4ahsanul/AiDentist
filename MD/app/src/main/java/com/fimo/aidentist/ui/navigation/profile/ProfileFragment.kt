@@ -1,4 +1,4 @@
-package com.fimo.aidentist.ui.profile
+package com.fimo.aidentist.ui.navigation.profile
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment
 import com.fimo.aidentist.databinding.FragmentProfileBinding
 import com.fimo.aidentist.helper.Constant
 import com.fimo.aidentist.helper.PreferenceHelper
-import com.fimo.aidentist.ui.auth.LoginActivity
+import com.fimo.aidentist.ui.menu.auth.LoginActivity
 
 class ProfileFragment : Fragment() {
     private lateinit var sharedPref: PreferenceHelper

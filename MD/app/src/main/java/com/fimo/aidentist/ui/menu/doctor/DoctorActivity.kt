@@ -1,4 +1,4 @@
-package com.fimo.aidentist.ui.doctor
+package com.fimo.aidentist.ui.menu.doctor
 
 import android.content.Intent
 import android.content.res.TypedArray

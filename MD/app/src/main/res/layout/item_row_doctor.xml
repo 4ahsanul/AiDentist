@@ -28,7 +28,8 @@
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toTopOf="parent"
-            tools:src="@tools:sample/avatars" />
+            tools:src="@tools:sample/avatars"
+            android:contentDescription="@string/doctor_image"/>
 
         <TextView
             android:id="@+id/itemName"
@@ -93,7 +94,8 @@
             android:src="@drawable/ic_rating_coco"
             card_view:layout_constraintBottom_toBottomOf="@+id/itemRating"
             card_view:layout_constraintStart_toEndOf="@+id/itemRating"
-            card_view:layout_constraintTop_toBottomOf="@+id/itemCategory" />
+            card_view:layout_constraintTop_toBottomOf="@+id/itemCategory"
+            android:contentDescription="@string/rate"/>
 
 
         <ImageView
@@ -106,7 +108,8 @@
             android:src="@drawable/ic_clock_coco"
             card_view:layout_constraintBottom_toBottomOf="@+id/itemSchedule"
             card_view:layout_constraintStart_toStartOf="@+id/itemRating"
-            card_view:layout_constraintTop_toBottomOf="@+id/itemRating" />
+            card_view:layout_constraintTop_toBottomOf="@+id/itemRating"
+            android:contentDescription="@string/schedule"/>
 
         <TextView
             android:id="@+id/itemSchedule"

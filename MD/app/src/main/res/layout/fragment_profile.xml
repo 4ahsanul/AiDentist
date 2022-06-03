@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context=".ui.profile.ProfileFragment">
+    tools:context=".ui.navigation.profile.ProfileFragment">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_favorite"
@@ -15,7 +15,7 @@
         android:layout_marginEnd="32dp"
         android:backgroundTint="@color/cornflower"
         android:clickable="true"
-        android:contentDescription="Edit Button"
+        android:contentDescription="@string/edit_button"
         android:focusable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -61,21 +61,9 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Title"
                     android:textColor="@color/black"
                     app:layout_constraintTop_toBottomOf="@id/avatar"
-                    android:text="Joko Santoso"
+                    android:text="@string/dummy_user_name"
                     tools:text="@tools:sample/full_names" />
 
-                <TextView
-                    android:id="@+id/tv_username"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:fontFamily="@font/nunito_light"
-                    android:gravity="center"
-                    android:text="Username"
-                    android:textColor="@color/black"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_name" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -86,14 +74,15 @@
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_marginEnd="10dp"
-                        android:src="@drawable/ic_email_coco" />
+                        android:src="@drawable/ic_email_coco"
+                        android:contentDescription="@string/email_hint"/>
 
                     <TextView
                         android:id="@+id/tv_location"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nunito_light"
-                        android:text="Email" />
+                        android:text="@string/email_hint" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -106,14 +95,15 @@
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_marginEnd="10dp"
-                        android:src="@drawable/ic_phone_coco" />
+                        android:src="@drawable/ic_phone_coco"
+                        android:contentDescription="@string/phone"/>
 
                     <TextView
                         android:id="@+id/tv_phone"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nunito_light"
-                        android:text="No Handphone" />
+                        android:text="@string/phone" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -126,54 +116,15 @@
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_marginEnd="10dp"
-                        android:src="@drawable/ic_user_coco" />
+                        android:src="@drawable/ic_user_coco"
+                        android:contentDescription="@string/gender"/>
 
                     <TextView
                         android:id="@+id/tv_gender"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nunito_light"
-                        android:text="Jenis Kelamin" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_marginEnd="10dp"
-                        android:src="@drawable/ic_age_coco" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/nunito_light"
-                        android:text="Umur" />
-
-                    <ImageView
-                        android:layout_width="5dp"
-                        android:layout_height="5dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="10dp"
-                        android:src="@android:drawable/presence_invisible"
-                        app:tint="@color/cornflower" />
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_marginEnd="10dp"
-                        android:src="@drawable/ic_weight_coco" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/nunito_light"
-                        android:text="Berat Badan" />
+                        android:text="@string/gender" />
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -184,7 +135,7 @@
             android:layout_height="100dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
-            android:src="@drawable/avatar10"
+            android:src="@drawable/ic_avatar_profile_hd"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -199,9 +150,9 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:backgroundTint="@color/light_cornflower"
-        android:drawableLeft="@drawable/ic_history_coco"
+        android:drawableStart="@drawable/ic_history_coco"
         android:fontFamily="@font/nunito_medium"
-        android:text="Transaction History"
+        android:text="@string/transaction_history"
         android:textAllCaps="false"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
@@ -217,9 +168,9 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:backgroundTint="@color/light_cornflower"
-        android:drawableLeft="@drawable/ic_other_coco"
+        android:drawableStart="@drawable/ic_other_coco"
         android:fontFamily="@font/nunito_medium"
-        android:text="Other"
+        android:text="@string/other"
         android:textAllCaps="false"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
@@ -236,7 +187,7 @@
         android:layout_marginEnd="64dp"
         android:backgroundTint="@color/pastel_pink"
         android:fontFamily="@font/nunito_medium"
-        android:text="Log Out"
+        android:text="@string/log_out"
         android:textAllCaps="false"
         android:textColor="@color/red"
         app:layout_constraintEnd_toEndOf="parent"

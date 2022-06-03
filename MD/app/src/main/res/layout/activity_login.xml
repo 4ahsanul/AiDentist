@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="40dp"
-    tools:context=".ui.auth.LoginActivity">
+    tools:context=".ui.menu.auth.LoginActivity">
 
     <ProgressBar
         android:id="@+id/loadingProgress"
@@ -21,7 +21,7 @@
 
     <ImageView
         android:id="@+id/imageViewLogin"
-        android:contentDescription="Welcome Image Login"
+        android:contentDescription="@string/welcome_image_login"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/titleTextView"
@@ -38,7 +38,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="352dp"
         android:fontFamily="@font/nunito_extrabold"
-        android:text="Login"
+        android:text="@string/login"
         android:textSize="20sp"
         app:flow_horizontalBias="0.0"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -52,7 +52,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:hint="Masukkan Email"
+        android:hint="@string/email_hint"
         app:layout_constraintEnd_toEndOf="@id/imageViewLogin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/titleTextView"
@@ -73,7 +73,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:hint="Masukkan Password"
+        android:hint="@string/password_hint"
         app:layout_constraintEnd_toEndOf="@+id/imageViewLogin"
         app:layout_constraintStart_toStartOf="@id/emailEditTextLayout"
         app:layout_constraintTop_toBottomOf="@id/emailEditTextLayout"
@@ -96,7 +96,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:text="Masuk"
+        android:text="@string/button_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.600"
         app:layout_constraintStart_toStartOf="parent"
@@ -108,7 +108,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/nunito_regular"
-        android:text="Belum punya akun?"
+        android:text="@string/dont_have_acc"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -118,7 +118,7 @@
         android:id="@+id/tv_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign Up"
+        android:text="@string/sign_up"
         android:fontFamily="@font/nunito_bold"
         android:textColor="@color/blue_ivy"
         android:textSize="14sp"

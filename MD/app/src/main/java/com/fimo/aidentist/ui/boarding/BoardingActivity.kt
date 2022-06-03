@@ -4,11 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.fimo.aidentist.MainActivity
-import com.fimo.aidentist.R
 import com.fimo.aidentist.databinding.ActivityBoardingBinding
-import com.fimo.aidentist.ui.auth.LoginActivity
-import com.fimo.aidentist.ui.auth.SignUpActivity
+import com.fimo.aidentist.ui.menu.auth.LoginActivity
 
 class BoardingActivity : AppCompatActivity() {
 

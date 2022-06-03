@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.consultation.OnlineConsultationActivity">
+    tools:context=".ui.menu.consultation.OnlineConsultationActivity">
 
 
     <androidx.appcompat.widget.Toolbar
@@ -22,7 +22,8 @@
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:src="@drawable/ic_arrow_back"
-            app:tint="@color/black">
+            app:tint="@color/black"
+            android:contentDescription="@string/back_button">
         </ImageButton>
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -40,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:fontFamily="@font/nunito_bold"
-            android:text="Dr. Jokowi"
+            android:text="@string/doctor_name"
             android:textColor="@color/black">
         </TextView>
 
@@ -50,7 +51,8 @@
             android:background="@color/white"
             android:layout_gravity="end"
             android:layout_marginEnd="24dp"
-            android:src="@drawable/ic_baseline_call_24">
+            android:src="@drawable/ic_baseline_call_24"
+            android:contentDescription="@string/phone">
         </ImageButton>
 
         <ImageButton
@@ -59,7 +61,8 @@
             android:background="@color/white"
             android:layout_marginEnd="18dp"
             android:layout_gravity="end"
-            android:src="@drawable/ic_baseline_videocam_24">
+            android:src="@drawable/ic_baseline_videocam_24"
+            android:contentDescription="@string/phone_call">
         </ImageButton>
 
     </androidx.appcompat.widget.Toolbar>
@@ -92,7 +95,8 @@
                 android:layout_weight="1"
                 android:background="@drawable/edit_text_shadow"
                 android:elevation="8dp"
-                android:hint="Say something..."
+                android:autofillHints="name"
+                android:hint="@string/hint_chat"
                 android:inputType="text"
                 android:minHeight="48dp"
                 android:padding="10dp" />
@@ -104,7 +108,8 @@
                 android:layout_gravity="center"
                 android:enabled="false"
                 android:layout_marginStart="5dp"
-                android:src="@drawable/ic_baseline_camera_alt_24" />
+                android:src="@drawable/ic_baseline_camera_alt_24"
+                android:contentDescription="@string/open_camera"/>
             <ImageView
                 android:id="@+id/sendButton"
                 android:layout_width="wrap_content"
@@ -112,7 +117,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:enabled="false"
-                android:src="@drawable/ic_baseline_send_24" />
+                android:src="@drawable/ic_baseline_send_24"
+                android:contentDescription="@string/send_message"/>
 
         </LinearLayout>
 

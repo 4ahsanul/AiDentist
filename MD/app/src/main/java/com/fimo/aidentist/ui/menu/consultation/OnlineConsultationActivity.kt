@@ -1,4 +1,4 @@
-package com.fimo.aidentist.ui.consultation
+package com.fimo.aidentist.ui.menu.consultation
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,13 +7,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
-import com.fimo.aidentist.R
 import com.fimo.aidentist.data.Doctor
-import com.fimo.aidentist.databinding.ActivityDoctorProfileBinding
 import com.fimo.aidentist.databinding.ActivityOnlineConsultationBinding
 import com.fimo.aidentist.ui.adapter.MessageAdapter
-import com.fimo.aidentist.ui.doctor.DoctorActivity
-import com.fimo.aidentist.ui.doctor.DoctorProfileActivity
+import com.fimo.aidentist.ui.menu.doctor.DoctorProfileActivity
 
 class OnlineConsultationActivity : AppCompatActivity() {
 
