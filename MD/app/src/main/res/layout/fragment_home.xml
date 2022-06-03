@@ -39,7 +39,7 @@
                 <TextView
                     android:id="@+id/user_location"
                     android:layout_width="match_parent"
-                    android:gravity="right"
+                    android:gravity="end"
                     android:layout_height="wrap_content"
                     android:text="Jalan Haengnidan "
                     android:layout_marginEnd="20dp"
@@ -62,7 +62,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="10dp">
 
@@ -94,7 +94,8 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:src="@drawable/ic_image_preview_hd" />
+                            android:src="@drawable/ic_image_preview_hd"
+                            android:contentDescription="Gambar Arahan"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -186,7 +187,8 @@
                             android:layout_height="64dp"
                             android:layout_marginTop="10dp"
                             android:padding="10dp"
-                            android:src="@drawable/ic_dentist_hd" />
+                            android:src="@drawable/ic_dentist_hd"
+                            android:contentDescription="Dentist Appointment"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -224,7 +226,8 @@
                             android:layout_marginTop="10dp"
                             android:padding="10dp"
                             android:src="@drawable/ic_cup_coco"
-                            app:tint="@color/white" />
+                            app:tint="@color/white"
+                            android:contentDescription="Self Care"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -260,7 +263,8 @@
                             android:layout_height="64dp"
                             android:layout_marginTop="10dp"
                             android:padding="10dp"
-                            android:src="@drawable/ic_time_service" />
+                            android:src="@drawable/ic_time_service"
+                            android:contentDescription="Medicine Reminder"/>
 
                         <TextView
                             android:layout_width="wrap_content"

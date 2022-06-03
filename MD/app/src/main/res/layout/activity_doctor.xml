@@ -33,6 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/white"
+            android:contentDescription="Tombol Kembali"
             android:src="@drawable/ic_arrow_back"
             app:tint="@color/black" />
 

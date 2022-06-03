@@ -54,7 +54,8 @@
                 card_view:layout_constraintBottom_toBottomOf="parent"
                 card_view:layout_constraintStart_toStartOf="parent"
                 card_view:layout_constraintTop_toTopOf="parent"
-                tools:src="@tools:sample/avatars" />
+                tools:src="@tools:sample/avatars"
+                android:contentDescription="Gambar Dokter"/>
 
             <TextView
                 android:id="@+id/itemName"

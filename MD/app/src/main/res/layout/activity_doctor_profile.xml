@@ -20,6 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/white"
+            android:contentDescription="Tombol Kembali"
             android:src="@drawable/ic_arrow_back"
             app:tint="@color/black">
 
@@ -75,52 +76,54 @@
 
         <TextView
             android:id="@+id/verified"
-            android:layout_width="83dp"
+            android:layout_width="85dp"
             android:layout_height="match_parent"
             android:background="@drawable/border_medium_radius"
-            android:drawableLeft="@drawable/ic_baseline_verified_24"
-            android:text="Verified"
             android:gravity="center"
+            android:text="Verified"
             app:layout_constraintEnd_toStartOf="@+id/treatment_goals"
             app:layout_constraintHorizontal_bias="0.48"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/progressBar">
+            app:layout_constraintTop_toBottomOf="@+id/progressBar"
+            app:drawableLeftCompat="@drawable/ic_baseline_verified_24">
 
         </TextView>
 
         <TextView
             android:id="@+id/rating"
-            android:layout_width="83dp"
-            android:layout_gravity="center"
-            android:paddingStart="15dp"
-            android:drawablePadding="5dp"
-            android:gravity="center|left"
+            android:layout_width="85dp"
             android:layout_height="match_parent"
+            android:layout_gravity="center"
             android:layout_marginHorizontal="45dp"
             android:background="@drawable/border_medium_radius"
-            android:drawableLeft="@drawable/ic_rating_coco_19"
+            android:drawablePadding="5dp"
+            android:gravity="center|start"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
             android:text="4.9"
             android:textSize="15sp"
             app:layout_constraintEnd_toStartOf="@+id/treatment_goals"
             app:layout_constraintHorizontal_bias="0.48"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/progressBar">
+            app:layout_constraintTop_toBottomOf="@+id/progressBar"
+            app:drawableLeftCompat="@drawable/ic_rating_coco_19">
 
         </TextView>
 
         <TextView
             android:id="@+id/isOnline"
-            android:layout_width="83dp"
+            android:layout_width="85dp"
             android:layout_height="match_parent"
             android:background="@drawable/border_medium_radius"
             android:gravity="center"
-            android:drawableLeft="@drawable/ic_baseline_circle_19_green"
-            android:paddingLeft="15dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
             android:text="Online"
             app:layout_constraintEnd_toStartOf="@+id/treatment_goals"
             app:layout_constraintHorizontal_bias="0.48"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/progressBar">
+            app:layout_constraintTop_toBottomOf="@+id/progressBar"
+            app:drawableLeftCompat="@drawable/ic_baseline_circle_19_green">
 
         </TextView>
 
@@ -178,8 +181,7 @@ Etiam quis pharetra enim. Morbi tempus posuere arcu, ut mattis mi accumsan nec. 
             android:text="Online\nConsultation"
             android:textAllCaps="false"
             android:textColor="@color/black"
-            android:textSize="13sp">
-        </Button>
+            android:textSize="13sp"/>
 
         <Button
             android:id="@+id/offline_consultation"
@@ -200,9 +202,9 @@ Etiam quis pharetra enim. Morbi tempus posuere arcu, ut mattis mi accumsan nec. 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="22dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginStart="24dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -213,8 +215,8 @@ Etiam quis pharetra enim. Morbi tempus posuere arcu, ut mattis mi accumsan nec. 
             android:layout_height="30dp"
             android:layout_gravity="top"
             android:paddingBottom="10dp"
-            android:src="@drawable/ic_baseline_circle_24_black">
-
+            android:src="@drawable/ic_baseline_circle_24_black"
+            android:contentDescription="Poin">
         </ImageView>
 
         <TextView

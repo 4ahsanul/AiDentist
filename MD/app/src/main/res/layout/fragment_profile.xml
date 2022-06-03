@@ -74,7 +74,8 @@
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_marginEnd="10dp"
-                        android:src="@drawable/ic_email_coco" />
+                        android:src="@drawable/ic_email_coco"
+                        android:contentDescription="Email"/>
 
                     <TextView
                         android:id="@+id/tv_location"
@@ -94,7 +95,8 @@
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_marginEnd="10dp"
-                        android:src="@drawable/ic_phone_coco" />
+                        android:src="@drawable/ic_phone_coco"
+                        android:contentDescription="Telepon"/>
 
                     <TextView
                         android:id="@+id/tv_phone"
@@ -114,7 +116,8 @@
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_marginEnd="10dp"
-                        android:src="@drawable/ic_user_coco" />
+                        android:src="@drawable/ic_user_coco"
+                        android:contentDescription="Jenis Kelamin"/>
 
                     <TextView
                         android:id="@+id/tv_gender"
@@ -147,7 +150,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:backgroundTint="@color/light_cornflower"
-        android:drawableLeft="@drawable/ic_history_coco"
+        android:drawableStart="@drawable/ic_history_coco"
         android:fontFamily="@font/nunito_medium"
         android:text="Transaction History"
         android:textAllCaps="false"
@@ -165,7 +168,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:backgroundTint="@color/light_cornflower"
-        android:drawableLeft="@drawable/ic_other_coco"
+        android:drawableStart="@drawable/ic_other_coco"
         android:fontFamily="@font/nunito_medium"
         android:text="Other"
         android:textAllCaps="false"

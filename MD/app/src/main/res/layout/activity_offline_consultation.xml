@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.menu.consultation.OfflineConsultationActivity">
 
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -63,7 +62,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
+            android:layout_gravity="start"
             android:layout_marginStart="80dp"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/nunito_bold"
@@ -88,7 +87,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
+            android:layout_gravity="start"
             android:layout_marginStart="80dp"
             android:layout_marginTop="45dp"
             android:fontFamily="@font/nunito_semibold"
@@ -102,7 +101,7 @@
             android:layout_height="wrap_content"
             android:numStars="5"
             android:rating="3"
-            android:layout_gravity="left"
+            android:layout_gravity="start"
             android:layout_marginStart="80dp"
             android:layout_marginTop="70dp"
             android:theme="@style/RatingBar">
@@ -162,7 +161,7 @@
             android:layout_height="wrap_content"
             android:numStars="5"
             android:rating="3"
-            android:layout_gravity="left"
+            android:layout_gravity="start"
             android:layout_marginStart="18dp"
             android:layout_marginTop="82dp"
             android:theme="@style/RatingBar">
@@ -177,6 +176,7 @@
             app:cardElevation="9dp"
             android:layout_marginEnd="24dp">
             <ImageView
+                android:contentDescription="Rumah Sakit"
                 android:layout_width="66dp"
                 android:layout_height="66dp"
                 android:scaleType="centerCrop"
