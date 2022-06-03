@@ -33,7 +33,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="25dp"
-                    android:text=" Hi Joko Santoso"
+                    android:text="@string/greetings_user"
                     android:fontFamily="@font/nunito_bold">
                 </TextView>
                 <TextView
@@ -41,7 +41,7 @@
                     android:layout_width="match_parent"
                     android:gravity="end"
                     android:layout_height="wrap_content"
-                    android:text="Jalan Haengnidan "
+                    android:text="@string/user_location"
                     android:layout_marginEnd="20dp"
                     android:fontFamily="@font/nunito_bold"
                     app:drawableRightCompat="@drawable/ic_location">
@@ -95,7 +95,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:src="@drawable/ic_image_preview_hd"
-                            android:contentDescription="Gambar Arahan"/>
+                            android:contentDescription="@string/image_guide"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -108,7 +108,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/nunito_regular"
-                            android:text="• Pastikan Anda mengunggah foto gigi yang diambil menggunakan kamera." />
+                            android:text="@string/guide1" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -121,7 +121,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/nunito_regular"
-                            android:text="• Gambar yang akan digunakan adalah bagian depan gigi." />
+                            android:text="@string/guide2" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -134,7 +134,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/nunito_regular"
-                            android:text="• Pastikan saat pengambilan gambar mengikuti guideline." />
+                            android:text="@string/guide3" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -147,7 +147,7 @@
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="318dp"
                 android:fontFamily="@font/nunito_extrabold"
-                android:text="Services"
+                android:text="@string/services"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toTopOf="@+id/menu"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -188,7 +188,7 @@
                             android:layout_marginTop="10dp"
                             android:padding="10dp"
                             android:src="@drawable/ic_dentist_hd"
-                            android:contentDescription="Dentist Appointment"/>
+                            android:contentDescription="@string/dentist_appointment"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -196,7 +196,7 @@
                             android:layout_marginTop="10dp"
                             android:fontFamily="@font/nunito_regular"
                             android:padding="10dp"
-                            android:text="Dentist\nAppointment"
+                            android:text="@string/dentist_appointment"
                             android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textSize="14sp" />
@@ -227,7 +227,7 @@
                             android:padding="10dp"
                             android:src="@drawable/ic_cup_coco"
                             app:tint="@color/white"
-                            android:contentDescription="Self Care"/>
+                            android:contentDescription="@string/self_care"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -235,7 +235,7 @@
                             android:layout_marginTop="10dp"
                             android:fontFamily="@font/nunito_regular"
                             android:padding="10dp"
-                            android:text="Self\nCare"
+                            android:text="@string/self_care"
                             android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textSize="14sp" />
@@ -264,7 +264,7 @@
                             android:layout_marginTop="10dp"
                             android:padding="10dp"
                             android:src="@drawable/ic_time_service"
-                            android:contentDescription="Medicine Reminder"/>
+                            android:contentDescription="@string/medicine_reminder"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -272,7 +272,7 @@
                             android:layout_marginTop="10dp"
                             android:fontFamily="@font/nunito_regular"
                             android:padding="10dp"
-                            android:text="Medicine\nReminder"
+                            android:text="@string/medicine_reminder"
                             android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textSize="14sp" />

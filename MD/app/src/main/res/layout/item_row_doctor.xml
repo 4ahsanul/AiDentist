@@ -29,7 +29,7 @@
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toTopOf="parent"
             tools:src="@tools:sample/avatars"
-            android:contentDescription="Gambar Dokter"/>
+            android:contentDescription="@string/doctor_image"/>
 
         <TextView
             android:id="@+id/itemName"
@@ -95,7 +95,7 @@
             card_view:layout_constraintBottom_toBottomOf="@+id/itemRating"
             card_view:layout_constraintStart_toEndOf="@+id/itemRating"
             card_view:layout_constraintTop_toBottomOf="@+id/itemCategory"
-            android:contentDescription="Rating"/>
+            android:contentDescription="@string/rate"/>
 
 
         <ImageView
@@ -109,7 +109,7 @@
             card_view:layout_constraintBottom_toBottomOf="@+id/itemSchedule"
             card_view:layout_constraintStart_toStartOf="@+id/itemRating"
             card_view:layout_constraintTop_toBottomOf="@+id/itemRating"
-            android:contentDescription="Schedule"/>
+            android:contentDescription="@string/schedule"/>
 
         <TextView
             android:id="@+id/itemSchedule"

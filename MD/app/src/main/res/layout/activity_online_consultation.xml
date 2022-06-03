@@ -23,7 +23,7 @@
             android:background="@color/white"
             android:src="@drawable/ic_arrow_back"
             app:tint="@color/black"
-            android:contentDescription="Tombol Kembali">
+            android:contentDescription="@string/back_button">
         </ImageButton>
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:fontFamily="@font/nunito_bold"
-            android:text="Dr. Jokowi"
+            android:text="@string/doctor_name"
             android:textColor="@color/black">
         </TextView>
 
@@ -52,7 +52,7 @@
             android:layout_gravity="end"
             android:layout_marginEnd="24dp"
             android:src="@drawable/ic_baseline_call_24"
-            android:contentDescription="Telepon">
+            android:contentDescription="@string/phone">
         </ImageButton>
 
         <ImageButton
@@ -62,7 +62,7 @@
             android:layout_marginEnd="18dp"
             android:layout_gravity="end"
             android:src="@drawable/ic_baseline_videocam_24"
-            android:contentDescription="Panggilan Video">
+            android:contentDescription="@string/phone_call">
         </ImageButton>
 
     </androidx.appcompat.widget.Toolbar>
@@ -96,7 +96,7 @@
                 android:background="@drawable/edit_text_shadow"
                 android:elevation="8dp"
                 android:autofillHints="name"
-                android:hint="Say something..."
+                android:hint="@string/hint_chat"
                 android:inputType="text"
                 android:minHeight="48dp"
                 android:padding="10dp" />
@@ -109,7 +109,7 @@
                 android:enabled="false"
                 android:layout_marginStart="5dp"
                 android:src="@drawable/ic_baseline_camera_alt_24"
-                android:contentDescription="Buka Kamera"/>
+                android:contentDescription="@string/open_camera"/>
             <ImageView
                 android:id="@+id/sendButton"
                 android:layout_width="wrap_content"
@@ -118,7 +118,7 @@
                 android:layout_gravity="center"
                 android:enabled="false"
                 android:src="@drawable/ic_baseline_send_24"
-                android:contentDescription="Kirim Pesan"/>
+                android:contentDescription="@string/send_message"/>
 
         </LinearLayout>
 

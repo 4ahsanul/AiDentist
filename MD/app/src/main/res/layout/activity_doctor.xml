@@ -33,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/white"
-            android:contentDescription="Tombol Kembali"
+            android:contentDescription="@string/back_button"
             android:src="@drawable/ic_arrow_back"
             app:tint="@color/black" />
 
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:fontFamily="@font/nunito_bold"
-            android:text="Dentist Appointment"
+            android:text="@string/dentist_appointment"
             android:textColor="@color/black" />
     </androidx.appcompat.widget.Toolbar>
 

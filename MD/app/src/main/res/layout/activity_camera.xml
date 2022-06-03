@@ -21,7 +21,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_capture"
-        android:contentDescription="Kamera" />
+        android:contentDescription="@string/camera" />
 
     <ImageView
         android:id="@+id/switchCamera"
@@ -32,6 +32,6 @@
         app:layout_constraintEnd_toEndOf="@+id/viewFinder"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_switch_camera"
-        android:contentDescription="Ganti Kamera" />
+        android:contentDescription="@string/switch_camera" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:fontFamily="@font/nunito_bold"
-            android:text="Information"
+            android:text="@string/information"
             android:textColor="@color/black">
 
         </TextView>
@@ -57,7 +57,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:src="@drawable/ic_image_preview_hd"
-                    android:contentDescription="Gambar Informasi"/>
+                    android:contentDescription="@string/information_image"/>
             </LinearLayout>
 
             <LinearLayout
@@ -70,7 +70,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito_bold"
-                    android:text="Judul"
+                    android:text="@string/information_title"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -84,7 +84,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito_regular"
-                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet diam massa, id ultrices metus." />
+                    android:text="@string/lorem_less" />
             </LinearLayout>
 
             <LinearLayout
@@ -95,7 +95,7 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Selengkapnya"
+                    android:text="@string/see_more"
                     android:textAllCaps="false" />
             </LinearLayout>
         </LinearLayout>

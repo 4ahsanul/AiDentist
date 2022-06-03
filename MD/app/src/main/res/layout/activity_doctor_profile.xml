@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/white"
-            android:contentDescription="Tombol Kembali"
+            android:contentDescription="@string/back_button"
             android:src="@drawable/ic_arrow_back"
             app:tint="@color/black">
 
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:fontFamily="@font/nunito_bold"
-            android:text="Doctor Profile"
+            android:text="@string/doctor_profile"
             android:textColor="@color/black">
 
         </TextView>
@@ -55,7 +55,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/nunito_bold"
-        android:text="Doctor Strange"
+        android:text="@string/doctor_name"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,12 +80,12 @@
             android:layout_height="match_parent"
             android:background="@drawable/border_medium_radius"
             android:gravity="center"
-            android:text="Verified"
+            android:text="@string/verified"
+            app:drawableLeftCompat="@drawable/ic_baseline_verified_24"
             app:layout_constraintEnd_toStartOf="@+id/treatment_goals"
             app:layout_constraintHorizontal_bias="0.48"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/progressBar"
-            app:drawableLeftCompat="@drawable/ic_baseline_verified_24">
+            app:layout_constraintTop_toBottomOf="@+id/progressBar">
 
         </TextView>
 
@@ -100,13 +100,13 @@
             android:gravity="center|start"
             android:paddingStart="15dp"
             android:paddingEnd="15dp"
-            android:text="4.9"
             android:textSize="15sp"
+            app:drawableLeftCompat="@drawable/ic_rating_coco_19"
             app:layout_constraintEnd_toStartOf="@+id/treatment_goals"
             app:layout_constraintHorizontal_bias="0.48"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/progressBar"
-            app:drawableLeftCompat="@drawable/ic_rating_coco_19">
+            tools:text="4.9">
 
         </TextView>
 
@@ -118,12 +118,12 @@
             android:gravity="center"
             android:paddingStart="15dp"
             android:paddingEnd="15dp"
-            android:text="Online"
+            android:text="@string/online"
+            app:drawableLeftCompat="@drawable/ic_baseline_circle_19_green"
             app:layout_constraintEnd_toStartOf="@+id/treatment_goals"
             app:layout_constraintHorizontal_bias="0.48"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/progressBar"
-            app:drawableLeftCompat="@drawable/ic_baseline_circle_19_green">
+            app:layout_constraintTop_toBottomOf="@+id/progressBar">
 
         </TextView>
 
@@ -137,8 +137,7 @@
         android:layout_marginTop="18dp"
         android:fontFamily="@font/nunito_semibold"
         android:lineSpacingExtra="4dp"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae euismod quam. Praesent non ultricies purus, tristique fringilla turpis. Curabitur rhoncus lacinia nibh nec eleifend. Vivamus sed placerat neque, non varius lectus. Mauris leo ligula, rhoncus eu ipsum vitae, scelerisque egestas tortor\n\n. Phasellus scelerisque sodales ante sollicitudin fringilla. In tempor massa nec nulla volutpat dignissim ac in sem.
-Etiam quis pharetra enim. Morbi tempus posuere arcu, ut mattis mi accumsan nec. Proin venenatis bibendum massa. Integer gravida, dolor vel fringilla lacinia."
+        android:text="@string/lorem"
         android:textColor="@color/cloudy_grey"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         tools:layout_editor_absoluteX="0dp" />
@@ -178,10 +177,10 @@ Etiam quis pharetra enim. Morbi tempus posuere arcu, ut mattis mi accumsan nec. 
             android:background="@drawable/background_button_accent_v2"
             android:backgroundTint="@color/cloudy_grey"
             android:fontFamily="@font/nunito_regular"
-            android:text="Online\nConsultation"
+            android:text="@string/online_consultation"
             android:textAllCaps="false"
             android:textColor="@color/black"
-            android:textSize="13sp"/>
+            android:textSize="13sp" />
 
         <Button
             android:id="@+id/offline_consultation"
@@ -190,7 +189,7 @@ Etiam quis pharetra enim. Morbi tempus posuere arcu, ut mattis mi accumsan nec. 
             android:layout_marginStart="30dp"
             android:background="@drawable/background_button_accent_v2"
             android:fontFamily="@font/nunito_regular"
-            android:text="Offline\nConsultation"
+            android:text="@string/offline_consultation"
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:textSize="13sp">
@@ -214,16 +213,15 @@ Etiam quis pharetra enim. Morbi tempus posuere arcu, ut mattis mi accumsan nec. 
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_gravity="top"
+            android:contentDescription="@string/poin"
             android:paddingBottom="10dp"
-            android:src="@drawable/ic_baseline_circle_24_black"
-            android:contentDescription="Poin">
-        </ImageView>
+            android:src="@drawable/ic_baseline_circle_24_black"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:text="Sebelum melakukan konsultasi, pastikan jenis konsultasi yang anda pilih berdasarkan kebutuhan anda.">
+            android:text="@string/tos_cosultation">
 
         </TextView>
 

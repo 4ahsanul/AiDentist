@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:fontFamily="@font/nunito_bold"
-            android:text="Message"
+            android:text="@string/message"
             android:textColor="@color/black">
 
         </TextView>
@@ -55,7 +55,7 @@
                 card_view:layout_constraintStart_toStartOf="parent"
                 card_view:layout_constraintTop_toTopOf="parent"
                 tools:src="@tools:sample/avatars"
-                android:contentDescription="Gambar Dokter"/>
+                android:contentDescription="@string/doctor_image"/>
 
             <TextView
                 android:id="@+id/itemName"
