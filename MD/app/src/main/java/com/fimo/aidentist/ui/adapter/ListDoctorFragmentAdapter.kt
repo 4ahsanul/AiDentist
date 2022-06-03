@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.fimo.aidentist.R
-import com.fimo.aidentist.ui.doctor.DoctorProfileActivity
+import com.fimo.aidentist.ui.menu.doctor.DoctorProfileActivity
 
 class ListDoctorFragmentAdapter : RecyclerView.Adapter<ListDoctorFragmentAdapter.ViewHolder>() {
     private val name = arrayOf(

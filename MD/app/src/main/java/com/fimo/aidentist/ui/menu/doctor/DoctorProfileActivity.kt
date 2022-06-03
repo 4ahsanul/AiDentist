@@ -1,4 +1,4 @@
-package com.fimo.aidentist.ui.doctor
+package com.fimo.aidentist.ui.menu.doctor
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,10 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.fimo.aidentist.data.Doctor
 import com.fimo.aidentist.databinding.ActivityDoctorProfileBinding
-import com.fimo.aidentist.ui.adapter.ListDoctorAdapter
 import com.fimo.aidentist.ui.adapter.MessageAdapter
-import com.fimo.aidentist.ui.consultation.OfflineConsultationActivity
-import com.fimo.aidentist.ui.consultation.OnlineConsultationActivity
+import com.fimo.aidentist.ui.menu.consultation.OfflineConsultationActivity
+import com.fimo.aidentist.ui.menu.consultation.OnlineConsultationActivity
 
 class DoctorProfileActivity : AppCompatActivity() {
 

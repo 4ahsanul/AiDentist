@@ -1,6 +1,5 @@
-package com.fimo.aidentist.ui.home
+package com.fimo.aidentist.ui.navigation.home
 
-import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
@@ -8,11 +7,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import com.fimo.aidentist.R
 import com.fimo.aidentist.databinding.FragmentHomeBinding
-import com.fimo.aidentist.ui.auth.LoginActivity
-import com.fimo.aidentist.ui.doctor.DoctorActivity
+import com.fimo.aidentist.ui.menu.doctor.DoctorActivity
 import com.fimo.aidentist.ui.treatment.DailyTreatmentActivity
 
 class HomeFragment : Fragment(), DialogInterface.OnClickListener {

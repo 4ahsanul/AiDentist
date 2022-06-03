@@ -1,4 +1,4 @@
-package com.fimo.aidentist.ui.information
+package com.fimo.aidentist.ui.navigation.information
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

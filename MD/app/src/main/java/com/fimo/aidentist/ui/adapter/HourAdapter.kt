@@ -1,15 +1,11 @@
 package com.fimo.aidentist.ui.adapter
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.fimo.aidentist.R
-import com.fimo.aidentist.ui.camera.CameraActivity
-import java.time.LocalDateTime
 
 class HourAdapter : RecyclerView.Adapter<HourAdapter.ViewHolder>(){
 

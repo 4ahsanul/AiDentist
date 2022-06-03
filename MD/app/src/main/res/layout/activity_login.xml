@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="40dp"
-    tools:context=".ui.auth.LoginActivity">
+    tools:context=".ui.menu.auth.LoginActivity">
 
     <ProgressBar
         android:id="@+id/loadingProgress"

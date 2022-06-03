@@ -1,4 +1,4 @@
-package com.fimo.aidentist.ui.message
+package com.fimo.aidentist.ui.navigation.message
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,12 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.fimo.aidentist.R
-import com.fimo.aidentist.databinding.FragmentHomeBinding
 import com.fimo.aidentist.databinding.FragmentMessageBinding
-import com.fimo.aidentist.ui.consultation.OnlineConsultationActivity
-import com.fimo.aidentist.ui.doctor.DoctorActivity
-import com.fimo.aidentist.ui.treatment.DailyTreatmentActivity
+import com.fimo.aidentist.ui.menu.consultation.OnlineConsultationActivity
 
 class MessageFragment : Fragment() {
 
