@@ -123,8 +123,6 @@
                         android:fontFamily="@font/nunito_light"
                         android:text="Jenis Kelamin" />
                 </LinearLayout>
-
-
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
