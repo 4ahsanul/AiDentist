@@ -28,7 +28,7 @@
 (MD) A2120F1521 - [Filfimo Yulfiz Ahsanul Hulqi](https://github.com/4ahsanul) - Institut Teknologi Telkom Purwokerto </br>
 (MD) A2272J2365 - [A.Aksa Nur Irwan](https://github.com/aaksa) - Universitas Muslim Indonesia</br></br>
 ![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)</br>
-(CC) C2272J2366 - A. Muh. Fitrah Asfar  - Universitas Muslim Indonesia</br>
+(CC) C2272J2366 - [A. Muh. Fitrah Asfar](https://github.com/AMuhFitrahAsfar) - Universitas Muslim Indonesia</br>
 (CC) C2135J1624 - Muhammad Zulfikar Novaly Rahman  - Politeknik Negeri Ujung Pandang</br>
 
 ## Introduction
