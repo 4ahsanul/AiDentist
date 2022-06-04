@@ -1,5 +1,6 @@
 package com.fimo.aidentist.ui.navigation.camera
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.view.WindowInsets
@@ -11,6 +12,7 @@ import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
 import com.fimo.aidentist.databinding.ActivityCameraBinding
+import com.fimo.aidentist.utils.createFile
 import com.fimo.aidentist.utils.showToast
 import java.io.File
 import java.lang.Exception
@@ -34,7 +36,7 @@ class CameraActivity : AppCompatActivity() {
         cameraExecutor = Executors.newSingleThreadExecutor()
 
         binding.captureImage.setOnClickListener {
-            //TODO IS TAKE PHOTO
+            takePhoto()
         }
 
         binding.switchCamera.setOnClickListener {
@@ -78,6 +80,27 @@ class CameraActivity : AppCompatActivity() {
                 showToast(this@CameraActivity, "Failed open camera")
             }
         }, ContextCompat.getMainExecutor(this))
+    }
+
+    //Take image from camera
+    private fun takePhoto() {
+        val imageCapture = imageCapture ?: return
+        photoFile = createFile(application)
+        val outputOptions = ImageCapture.OutputFileOptions.Builder(photoFile).build()
+
+        imageCapture.takePicture(
+            outputOptions,
+            ContextCompat.getMainExecutor(this),
+            mImageCapture
+        )
+    }
+
+    private val mImageCapture = object : ImageCapture.OnImageSavedCallback {
+        //onImageSaved to handle taking image process is succes
+        override fun onImageSaved(outputFileResults: ImageCapture.OutputFileResults) {
+            val intent = Intent()
+            //intent.putExtra()
+        }
     }
 
     private fun setupView() {

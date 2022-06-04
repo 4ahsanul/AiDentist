@@ -17,11 +17,6 @@ class SignUpActivity : AppCompatActivity() {
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.tvLogin.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
-            finish()
-        }
-
         emailFocusListener()
         passwordFocusListener()
         phoneFocusListener()
@@ -63,20 +58,27 @@ class SignUpActivity : AppCompatActivity() {
     private fun phoneFocusListener(){
         binding.phoneEditText.setOnFocusChangeListener { _, focused ->
             if (!focused) {
-                binding.passwordEditTextLayout.helperText = validPhone()
+                binding.phoneEditTextLayout.helperText = validPhone()
             }
         }
     }
 
     private fun validPhone(): String? {
         val phoneText = binding.phoneEditText.text.toString()
-        if (phoneText.length > 12 || phoneText.length > 13) {
-            return "Pastikan nomer sesuai"
-        }
         if (!phoneText.matches(".*[0-9].*".toRegex())) {
+            return "Pastikan nomer menggunakan angka"
+        }
+        if (phoneText.length != 12){
             return "Pastikan nomer sesuai"
         }
         return null
+    }
+
+    private fun setupAction() {
+        binding.tvLogin.setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
+        }
     }
 
     private fun setupView() {

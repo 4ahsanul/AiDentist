@@ -25,6 +25,29 @@ class LoginActivity : AppCompatActivity() {
 
         sharedPref = PreferenceHelper(this)
 
+        setupAction()
+        setupView()
+    }
+
+    override fun onStart() {
+        super.onStart()
+        if (sharedPref.getBoolean(Constant.PREF_IS_LOGIN)){
+            startActivity(Intent(this, MainActivity::class.java))
+            Toast.makeText(applicationContext, "LOGIN SUCCESS WITH PREFERENCE", Toast.LENGTH_SHORT).show()
+            finish()
+        }
+    }
+
+    private fun isInputReady(): Boolean {
+        val isDataInputReady =
+            binding.emailEditText.text.toString()
+                .isNotEmpty() && binding.passwordEditText.text.toString().isNotEmpty()
+        val isPassValidation =
+            binding.emailEditText.error.isNullOrBlank() && binding.passwordEditText.error.isNullOrEmpty()
+        return isDataInputReady && isPassValidation
+    }
+
+    private fun setupAction(){
         binding.buttonLogin.setOnClickListener {
             if (binding.emailEditText.text.toString()
                     .isNotEmpty() && binding.passwordEditText.text.toString().isNotEmpty()
@@ -40,17 +63,6 @@ class LoginActivity : AppCompatActivity() {
 
         binding.tvSignup.setOnClickListener {
             startActivity(Intent(this, SignUpActivity::class.java))
-            finish()
-        }
-
-        setupView()
-    }
-
-    override fun onStart() {
-        super.onStart()
-        if (sharedPref.getBoolean(Constant.PREF_IS_LOGIN)){
-            startActivity(Intent(this, MainActivity::class.java))
-            Toast.makeText(applicationContext, "LOGIN SUCCESS WITH PREFERENCE", Toast.LENGTH_SHORT).show()
             finish()
         }
     }
