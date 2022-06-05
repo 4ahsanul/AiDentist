@@ -29,4 +29,8 @@
         android:name="com.fimo.aidentist.ui.navigation.message.MessageFragment"
         android:label="fragment_message"
         tools:layout="@layout/fragment_message" />
+    <fragment
+        android:id="@+id/analisisFragment2"
+        android:name="com.fimo.aidentist.ui.analisis.AnalisisFragment"
+        android:label="AnalisisFragment" />
 </navigation>
