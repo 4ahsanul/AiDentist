@@ -5,6 +5,15 @@
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
 
     <application
         android:allowBackup="true"
@@ -13,6 +22,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AIDentist">
+        <activity
+            android:name=".ui.navigation.camera.CameraResultActivity"
+            android:exported="false" />
         <activity
             android:name="com.fimo.aidentist.ui.menu.doctor.DoctorActivity"
             android:exported="false" />
@@ -40,7 +52,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.fimo.aidentist.ui.navigation.camera.CameraActivity"
+            android:name=".ui.navigation.camera.CameraActivity"
             android:exported="false" />
         <activity
             android:name="com.fimo.aidentist.ui.menu.auth.SignUpActivity"
