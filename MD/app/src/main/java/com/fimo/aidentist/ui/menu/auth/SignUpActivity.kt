@@ -1,16 +1,23 @@
 package com.fimo.aidentist.ui.menu.auth
 
+import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.util.Patterns
 import android.view.WindowInsets
 import android.view.WindowManager
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import androidx.appcompat.app.AppCompatActivity
+import com.fimo.aidentist.R
 import com.fimo.aidentist.databinding.ActivitySignUpBinding
+import java.util.*
 
 class SignUpActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignUpBinding
+
+    private val genderItems = listOf("Laki - Laki", "Perempuan")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,7 +27,13 @@ class SignUpActivity : AppCompatActivity() {
         emailFocusListener()
         passwordFocusListener()
         phoneFocusListener()
+        setForm()
         setupView()
+    }
+
+    private fun setForm() {
+        val genderAdapter = ArrayAdapter(this, R.layout.item_list_dropdown, genderItems)
+        (binding.jenisEditTextLayout.editText as? AutoCompleteTextView)?.setAdapter(genderAdapter)
     }
 
     private fun emailFocusListener() {

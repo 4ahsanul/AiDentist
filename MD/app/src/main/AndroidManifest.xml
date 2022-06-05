@@ -20,7 +20,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AIDentist">
         <activity
-            android:name=".CameraResultActivity"
+            android:name=".ui.navigation.camera.CameraResultActivity"
             android:exported="false" />
         <activity
             android:name="com.fimo.aidentist.ui.menu.doctor.DoctorActivity"
@@ -49,7 +49,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CameraActivity"
+            android:name=".ui.navigation.camera.CameraActivity"
             android:exported="false" />
         <activity
             android:name="com.fimo.aidentist.ui.menu.auth.SignUpActivity"

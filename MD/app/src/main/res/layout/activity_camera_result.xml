@@ -35,9 +35,9 @@
                 <ImageView
                     android:id="@+id/previewImageView"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="200dp"
                     android:contentDescription="@string/image_guide"
-                    android:src="@drawable/ic_image_preview_hd" />
+                    android:src="@drawable/image_upload" />
             </LinearLayout>
 
             <LinearLayout

@@ -12,6 +12,7 @@ import androidx.camera.core.ImageCaptureException
 import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
+import com.fimo.aidentist.R
 import com.fimo.aidentist.databinding.ActivityCameraBinding
 import com.fimo.aidentist.utils.createFile
 import com.fimo.aidentist.utils.showToast
@@ -34,7 +35,7 @@ class CameraActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         cameraExecutor = Executors.newSingleThreadExecutor()
-
+        //Using cameraSelector can be set in onClick button SwitchCamera
         binding.captureImage.setOnClickListener {
             takePhoto()
         }
@@ -52,6 +53,37 @@ class CameraActivity : AppCompatActivity() {
         super.onResume()
         setupView()
         startCamera()
+    }
+
+    //Take image from camera
+    private fun takePhoto() {
+        val imageCapture = imageCapture ?: return
+        photoFile = createFile(application)
+        val outputOptions = ImageCapture.OutputFileOptions.Builder(photoFile).build()
+
+        imageCapture.takePicture(
+            outputOptions,
+            ContextCompat.getMainExecutor(this),
+            mImageCapture
+        )
+    }
+
+    private val mImageCapture = object : ImageCapture.OnImageSavedCallback {
+        //onImageSaved to handle taking image process is success
+        override fun onImageSaved(outputFileResults: ImageCapture.OutputFileResults) {
+            val intent = Intent()
+            intent.putExtra(CameraResultActivity.EXTRA_PHOTO, photoFile)
+            intent.putExtra(
+                CameraResultActivity.BACK_CAMERA,
+                cameraSelector == CameraSelector.DEFAULT_BACK_CAMERA
+            )
+            setResult(CameraResultActivity.CAMERA_X_RESULT, intent)
+            finish()
+        }
+
+        override fun onError(exception: ImageCaptureException) {
+            showToast(this@CameraActivity, getString(R.string.failed_taken))
+        }
     }
 
     //Start Camera
@@ -80,37 +112,6 @@ class CameraActivity : AppCompatActivity() {
                 showToast(this@CameraActivity, "Failed open camera")
             }
         }, ContextCompat.getMainExecutor(this))
-    }
-
-    //Take image from camera
-    private fun takePhoto() {
-        val imageCapture = imageCapture ?: return
-        photoFile = createFile(application)
-        val outputOptions = ImageCapture.OutputFileOptions.Builder(photoFile).build()
-
-        imageCapture.takePicture(
-            outputOptions,
-            ContextCompat.getMainExecutor(this),
-            mImageCapture
-        )
-    }
-
-    private val mImageCapture = object : ImageCapture.OnImageSavedCallback {
-        //onImageSaved to handle taking image process is succes
-        override fun onImageSaved(outputFileResults: ImageCapture.OutputFileResults) {
-            val intent = Intent()
-            intent.putExtra(CameraResultActivity.EXTRA_PHOTO, photoFile)
-            intent.putExtra(
-                CameraResultActivity.BACK_CAMERA,
-                cameraSelector == CameraSelector.DEFAULT_BACK_CAMERA
-            )
-            setResult(CameraResultActivity.CAMERA_X_RESULT, intent)
-            finish()
-        }
-
-        override fun onError(exception: ImageCaptureException) {
-            //showToast(this@CameraActivity, getString())
-        }
     }
 
     private fun setupView() {

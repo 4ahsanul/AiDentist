@@ -102,6 +102,7 @@
     <string name="days">Sun</string>
     <string name="date">2</string>
     <string name="clock">08:00</string>
+    <string name="failed_taken">Gagal menagambil gambar</string>
 
     <!--  Database Local  -->
     <string-array name="name">
