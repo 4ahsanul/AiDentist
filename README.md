@@ -28,11 +28,12 @@
 (MD) A2120F1521 - [Filfimo Yulfiz Ahsanul Hulqi](https://github.com/4ahsanul) - Institut Teknologi Telkom Purwokerto </br>
 (MD) A2272J2365 - [A.Aksa Nur Irwan](https://github.com/aaksa) - Universitas Muslim Indonesia</br></br>
 ![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)</br>
-(CC) C2272J2366 - A. Muh. Fitrah Asfar  - Universitas Muslim Indonesia</br>
+(CC) C2272J2366 - [A. Muh. Fitrah Asfar](https://github.com/AMuhFitrahAsfar) - Universitas Muslim Indonesia</br>
 (CC) C2135J1624 - Muhammad Zulfikar Novaly Rahman  - Politeknik Negeri Ujung Pandang</br>
 
 ## Introduction
-**SOON**
+We see that the prevalence of oral diseases in Indonesia continues to grow due to the lack of access to examinations and treatment of oral diseases in various regions in Indonesia especially in rural areas. Seeing the needs for an inclusive, outreaching, and easy to use dental services we decided to create this project. A mobile application using machine learning to classify and identify oral diseases, and give appropriate suggestions or direction based on the results of the classification and/or identification of mouth image/scan sent by the user into the application.
+
 ## Installation
 **SOON**
 
