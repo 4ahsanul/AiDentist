@@ -10,7 +10,7 @@
         android:icon="@drawable/ic_chat_hd"
         android:title="Message" />
     <item
-        android:id="@+id/cameraActivity"
+        android:id="@+id/cameraResultActivity"
         android:icon="@drawable/ic_camera_hd"
         android:title="Camera" />
     <item

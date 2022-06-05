@@ -1,5 +1,6 @@
 package com.fimo.aidentist.ui.navigation.camera
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.view.WindowInsets
@@ -7,13 +8,15 @@ import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.ImageCapture
+import androidx.camera.core.ImageCaptureException
 import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
+import com.fimo.aidentist.R
 import com.fimo.aidentist.databinding.ActivityCameraBinding
+import com.fimo.aidentist.utils.createFile
 import com.fimo.aidentist.utils.showToast
 import java.io.File
-import java.lang.Exception
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
@@ -32,9 +35,9 @@ class CameraActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         cameraExecutor = Executors.newSingleThreadExecutor()
-
+        //Using cameraSelector can be set in onClick button SwitchCamera
         binding.captureImage.setOnClickListener {
-            //TODO IS TAKE PHOTO
+            takePhoto()
         }
 
         binding.switchCamera.setOnClickListener {
@@ -50,6 +53,37 @@ class CameraActivity : AppCompatActivity() {
         super.onResume()
         setupView()
         startCamera()
+    }
+
+    //Take image from camera
+    private fun takePhoto() {
+        val imageCapture = imageCapture ?: return
+        photoFile = createFile(application)
+        val outputOptions = ImageCapture.OutputFileOptions.Builder(photoFile).build()
+
+        imageCapture.takePicture(
+            outputOptions,
+            ContextCompat.getMainExecutor(this),
+            mImageCapture
+        )
+    }
+
+    private val mImageCapture = object : ImageCapture.OnImageSavedCallback {
+        //onImageSaved to handle taking image process is success
+        override fun onImageSaved(outputFileResults: ImageCapture.OutputFileResults) {
+            val intent = Intent()
+            intent.putExtra(CameraResultActivity.EXTRA_PHOTO, photoFile)
+            intent.putExtra(
+                CameraResultActivity.BACK_CAMERA,
+                cameraSelector == CameraSelector.DEFAULT_BACK_CAMERA
+            )
+            setResult(CameraResultActivity.CAMERA_X_RESULT, intent)
+            finish()
+        }
+
+        override fun onError(exception: ImageCaptureException) {
+            showToast(this@CameraActivity, getString(R.string.failed_taken))
+        }
     }
 
     //Start Camera
