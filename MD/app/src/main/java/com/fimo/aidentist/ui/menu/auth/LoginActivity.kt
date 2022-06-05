@@ -12,9 +12,13 @@ import com.fimo.aidentist.MainActivity
 import com.fimo.aidentist.databinding.ActivityLoginBinding
 import com.fimo.aidentist.helper.Constant
 import com.fimo.aidentist.helper.PreferenceHelper
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
+    private lateinit var fAuth :FirebaseAuth
 
     lateinit var sharedPref: PreferenceHelper
 
@@ -24,6 +28,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         sharedPref = PreferenceHelper(this)
+        fAuth = Firebase.auth
 
         setupAction()
         setupView()
@@ -52,12 +57,8 @@ class LoginActivity : AppCompatActivity() {
             if (binding.emailEditText.text.toString()
                     .isNotEmpty() && binding.passwordEditText.text.toString().isNotEmpty()
             ){
-                sharedPref.put(Constant.PREF_EMAIL, binding.emailEditText.text.toString())
-                sharedPref.put(Constant.PREF_PASSWORD, binding.passwordEditText.text.toString())
-                sharedPref.put(Constant.PREF_IS_LOGIN, true)
-                Toast.makeText(applicationContext, "LOGIN SUCCESS", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this, MainActivity::class.java))
-                finish()
+                firebaseSignIn()
+
             }
         }
 
@@ -65,6 +66,33 @@ class LoginActivity : AppCompatActivity() {
             startActivity(Intent(this, SignUpActivity::class.java))
             finish()
         }
+
+        setupView()
+    }
+
+    private fun firebaseSignIn() {
+        fAuth.signInWithEmailAndPassword(binding.emailEditText.text.toString(), binding.passwordEditText.text.toString()).addOnCompleteListener {
+            if (it.isSuccessful) {
+                sharedPref.put(Constant.PREF_EMAIL, binding.emailEditText.text.toString())
+                sharedPref.put(Constant.PREF_PASSWORD, binding.passwordEditText.text.toString())
+                sharedPref.put(Constant.PREF_IS_LOGIN, true)
+                Toast.makeText(applicationContext, "LOGIN SUCCESS", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this, MainActivity::class.java))
+                finish()
+            }else{
+                Toast.makeText(this, it.exception?.message,Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        if (sharedPref.getBoolean(Constant.PREF_IS_LOGIN)){
+            startActivity(Intent(this, MainActivity::class.java))
+            Toast.makeText(applicationContext, "LOGIN SUCCESS WITH PREFERENCE", Toast.LENGTH_SHORT).show()
+            finish()
+        }
+
     }
 
     private fun setupView() {

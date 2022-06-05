@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1021716318925",
+    "project_id": "aidentist-a2de3",
+    "storage_bucket": "aidentist-a2de3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1021716318925:android:b8fd69e0965e1f8ba37784",
+        "android_client_info": {
+          "package_name": "com.fimo.aidentist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1021716318925-ntu858l668hb3oq5r3its1i6be12lp8n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGxll2IokKxWHZqhDUoZ2QGeRLe4XG4yI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1021716318925-ntu858l668hb3oq5r3its1i6be12lp8n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

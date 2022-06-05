@@ -1,5 +1,6 @@
 package com.fimo.aidentist.ui.menu.auth
 
+import android.content.Context
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Build
@@ -7,6 +8,11 @@ import android.os.Bundle
 import android.util.Patterns
 import android.view.WindowInsets
 import android.view.WindowManager
+import android.widget.Toast
+import com.fimo.aidentist.databinding.ActivitySignUpBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import androidx.appcompat.app.AppCompatActivity
@@ -16,6 +22,7 @@ import java.util.*
 
 class SignUpActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignUpBinding
+    private lateinit var fAuth :FirebaseAuth
 
     private val genderItems = listOf("Laki - Laki", "Perempuan")
 
@@ -23,6 +30,8 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        fAuth = Firebase.auth
 
         emailFocusListener()
         passwordFocusListener()
@@ -91,6 +100,23 @@ class SignUpActivity : AppCompatActivity() {
         binding.tvLogin.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
+        }
+        binding.buttonSignUp.setOnClickListener {
+            firebaseSignUp()
+        }
+
+
+        setupView()
+    }
+
+    private fun firebaseSignUp() {
+        fAuth.createUserWithEmailAndPassword(binding.emailEditText.text.toString(),binding.passwordEditText.text.toString()).addOnCompleteListener {
+            if (it.isSuccessful) {
+                Toast.makeText(this, "Register Success",Toast.LENGTH_SHORT).show()
+            }else{
+                Toast.makeText(this, it.exception?.message ,Toast.LENGTH_SHORT).show()
+
+            }
         }
     }
 
