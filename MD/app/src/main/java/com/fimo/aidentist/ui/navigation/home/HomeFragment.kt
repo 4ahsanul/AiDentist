@@ -38,7 +38,7 @@ class HomeFragment : Fragment(), DialogInterface.OnClickListener {
         }
 
         binding.medicineReminder.setOnClickListener{
-            
+
         }
 
         binding.dentistAppointment.setOnClickListener{

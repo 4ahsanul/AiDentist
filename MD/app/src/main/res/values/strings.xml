@@ -102,6 +102,7 @@
     <string name="days">Sun</string>
     <string name="date">2</string>
     <string name="clock">08:00</string>
+    <string name="failed_taken">Gagal menagambil gambar</string>
     <string name="early_screening">Early Screening</string>
     <string name="discoloration">Discoloration</string>
     <string name="periodontal">Periodontal</string>

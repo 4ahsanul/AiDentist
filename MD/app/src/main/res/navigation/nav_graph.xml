@@ -20,7 +20,7 @@
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <activity
-        android:id="@+id/cameraActivity"
+        android:id="@+id/cameraResultActivity"
         android:name="com.fimo.aidentist.ui.navigation.camera.CameraActivity"
         android:label="activity_camera"
         tools:layout="@layout/activity_camera" />
@@ -29,4 +29,13 @@
         android:name="com.fimo.aidentist.ui.navigation.message.MessageFragment"
         android:label="fragment_message"
         tools:layout="@layout/fragment_message" />
+    <fragment
+        android:id="@+id/analisisFragment2"
+        android:name="com.fimo.aidentist.ui.analisis.AnalisisFragment"
+        android:label="AnalisisFragment" />
+    <activity
+        android:id="@+id/cameraResultActivity"
+        android:name="com.fimo.aidentist.ui.navigation.camera.CameraResultActivity"
+        android:label="activity_camera_result"
+        tools:layout="@layout/activity_camera_result" />
 </navigation>
