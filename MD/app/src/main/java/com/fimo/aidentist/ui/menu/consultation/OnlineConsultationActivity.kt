@@ -41,10 +41,11 @@ class OnlineConsultationActivity : AppCompatActivity() {
         dataName.text = nameDoctor
 
         binding.buttonBack.setOnClickListener {
-            val intent = Intent(this, DoctorProfileActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT or Intent.FLAG_ACTIVITY_PREVIOUS_IS_TOP
-            startActivity(intent)
-            finish()
+            super.onBackPressed()
+//            val intent = Intent(this, DoctorProfileActivity::class.java)
+//            intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT or Intent.FLAG_ACTIVITY_PREVIOUS_IS_TOP
+//            startActivity(intent)
+//            finish()
         }
 
         binding.messageRecyclerView.apply {

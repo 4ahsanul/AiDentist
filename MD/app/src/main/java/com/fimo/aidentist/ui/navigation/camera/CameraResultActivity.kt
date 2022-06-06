@@ -49,7 +49,7 @@ class CameraResultActivity : AppCompatActivity() {
         }
     }
 
-    //Sart CameraX
+    //Start CameraX
     private fun startCameraX() {
         val intent = Intent(this, CameraActivity::class.java)
         launcherIntentCameraX.launch(intent)

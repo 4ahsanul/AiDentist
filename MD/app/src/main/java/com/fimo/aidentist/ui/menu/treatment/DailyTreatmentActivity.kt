@@ -31,6 +31,6 @@ class DailyTreatmentActivity : AppCompatActivity() {
 
 
     fun updateProgress() {
-        binding.progressBar.progress = 10;
+        binding.progressBar.progress = 10
     }
 }

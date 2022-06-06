@@ -1,5 +1,6 @@
 package com.fimo.aidentist.ui.boarding
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,6 +8,7 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.fimo.aidentist.MainActivity
 import com.fimo.aidentist.databinding.ActivityBoardingBinding
 import com.fimo.aidentist.ui.menu.auth.LoginActivity
+import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth

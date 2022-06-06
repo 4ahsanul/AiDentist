@@ -1,28 +1,24 @@
 package com.fimo.aidentist.ui.menu.auth
 
-import android.content.Context
-import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.util.Patterns
 import android.view.WindowInsets
 import android.view.WindowManager
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.fimo.aidentist.R
 import com.fimo.aidentist.databinding.ActivitySignUpBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import android.widget.ArrayAdapter
-import android.widget.AutoCompleteTextView
-import androidx.appcompat.app.AppCompatActivity
-import com.fimo.aidentist.R
-import com.fimo.aidentist.databinding.ActivitySignUpBinding
-import java.util.*
 
 class SignUpActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignUpBinding
-    private lateinit var fAuth :FirebaseAuth
+    private lateinit var fAuth: FirebaseAuth
 
     private val genderItems = listOf("Laki - Laki", "Perempuan")
 
@@ -37,6 +33,7 @@ class SignUpActivity : AppCompatActivity() {
         passwordFocusListener()
         phoneFocusListener()
         setForm()
+        setupAction()
         setupView()
     }
 
@@ -77,7 +74,7 @@ class SignUpActivity : AppCompatActivity() {
         return null
     }
 
-    private fun phoneFocusListener(){
+    private fun phoneFocusListener() {
         binding.phoneEditText.setOnFocusChangeListener { _, focused ->
             if (!focused) {
                 binding.phoneEditTextLayout.helperText = validPhone()
@@ -90,7 +87,7 @@ class SignUpActivity : AppCompatActivity() {
         if (!phoneText.matches(".*[0-9].*".toRegex())) {
             return "Pastikan nomer menggunakan angka"
         }
-        if (phoneText.length != 12){
+        if (phoneText.length != 12) {
             return "Pastikan nomer sesuai"
         }
         return null
@@ -110,11 +107,14 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     private fun firebaseSignUp() {
-        fAuth.createUserWithEmailAndPassword(binding.emailEditText.text.toString(),binding.passwordEditText.text.toString()).addOnCompleteListener {
+        fAuth.createUserWithEmailAndPassword(
+            binding.emailEditText.text.toString(),
+            binding.passwordEditText.text.toString()
+        ).addOnCompleteListener {
             if (it.isSuccessful) {
-                Toast.makeText(this, "Register Success",Toast.LENGTH_SHORT).show()
-            }else{
-                Toast.makeText(this, it.exception?.message ,Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Register Success", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
 
             }
         }
