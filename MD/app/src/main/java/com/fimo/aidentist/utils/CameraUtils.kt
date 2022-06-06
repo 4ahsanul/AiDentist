@@ -87,7 +87,7 @@ fun reduceFileImage(file: File): File {
 fun rotateBitmap(bitmap: Bitmap, isBackCamera: Boolean = false): Bitmap {
     val matrix = Matrix()
     return if (isBackCamera) {
-        matrix.postRotate(90F)
+        matrix.postRotate(360F)
         Bitmap.createBitmap(
             bitmap,
             0,
