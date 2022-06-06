@@ -1,5 +1,6 @@
 package com.fimo.aidentist.ui.navigation.camera
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
@@ -57,6 +58,7 @@ class CameraActivity : AppCompatActivity() {
     //Take image from camera
     private fun takePhoto() {
         val imageCapture = imageCapture ?: return
+
         photoFile = createFile(application)
         val outputOptions = ImageCapture.OutputFileOptions.Builder(photoFile).build()
 
@@ -86,6 +88,7 @@ class CameraActivity : AppCompatActivity() {
     }
 
     //Start Camera
+    @SuppressLint("UnsafeExperimentalUsageError")
     private fun startCamera() {
         val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
 
@@ -94,18 +97,30 @@ class CameraActivity : AppCompatActivity() {
             val preview = Preview.Builder()
                 .build()
                 .also {
-                    it.setSurfaceProvider(binding.viewFinder.surfaceProvider)
+                    it.setSurfaceProvider(binding.viewFinder.createSurfaceProvider())
                 }
 
             //ImageCapture can be used by takePhoto function to taking an image from camera
             imageCapture = ImageCapture.Builder().build()
+
+            val viewPort = ViewPort.Builder(Rational(350, 170), Surface.ROTATION_0).build()
+            val useCaseGroup = UseCaseGroup.Builder()
+                .addUseCase(preview)
+                .addUseCase(imageCapture!!)
+                .setViewPort(viewPort)
+                .build()
+
             try {
                 cameraProvider.unbindAll()
                 cameraProvider.bindToLifecycle(
                     this,
                     cameraSelector,
-                    preview,
-                    imageCapture
+                    useCaseGroup
+//                    preview,
+//                    imageCapture
+                )
+                cameraProvider.bindToLifecycle(
+                    this, cameraSelector, preview, imageCapture
                 )
             } catch (exc: Exception) {
                 showToast(this@CameraActivity, "Failed open camera")
