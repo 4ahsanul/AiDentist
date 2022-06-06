@@ -4,18 +4,28 @@ import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.BitmapFactory
+import android.graphics.drawable.BitmapDrawable
 import android.os.Build
 import android.os.Bundle
+import android.view.View
+import android.widget.ImageView
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.fimo.aidentist.R
 import com.fimo.aidentist.databinding.ActivityCameraResultBinding
+import com.fimo.aidentist.ml.Classifier
 import com.fimo.aidentist.utils.rotateBitmap
 import java.io.File
 
-class CameraResultActivity : AppCompatActivity() {
+class CameraResultActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityCameraResultBinding
+    private val mInputSize = 150
+    private val mModelPath = "model.tflite"
+    private val mLabelPath = "label.txt"
+    private lateinit var classifier: Classifier
 
     private var getFile: File? = null
 
@@ -35,6 +45,8 @@ class CameraResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityCameraResultBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        initViews()
+        initClassifier()
 
         binding.openCamera.setOnClickListener {
             if (!allPermissionGranted()) {
@@ -47,6 +59,23 @@ class CameraResultActivity : AppCompatActivity() {
             }
             startCameraX()
         }
+
+    }
+
+    private fun initViews() {
+        findViewById<ImageView>(R.id.previewImageView).setOnClickListener(this)
+    }
+
+    private fun initClassifier() {
+        classifier = Classifier(assets, mModelPath, mLabelPath, mInputSize)
+    }
+
+    override fun onClick(view: View?) {
+        val bitmap = ((view as ImageView).drawable as BitmapDrawable).bitmap
+
+        val result = classifier.recognizeImage(bitmap)
+
+        runOnUiThread { Toast.makeText(this, result.get(0).title, Toast.LENGTH_SHORT).show() }
     }
 
     //Start CameraX
