@@ -93,6 +93,8 @@ dependencies {
 
     //Tensor Flow
     implementation 'org.tensorflow:tensorflow-lite:2.9.0'
+    implementation 'org.tensorflow:tensorflow-lite-gpu:2.8.0'
+//    implementation 'org.tensorflow:tensorflow-lite-support:2.8.0'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

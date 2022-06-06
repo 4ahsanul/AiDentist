@@ -18,13 +18,14 @@ import com.fimo.aidentist.R
 import com.fimo.aidentist.databinding.ActivityCameraResultBinding
 import com.fimo.aidentist.ml.Classifier
 import com.fimo.aidentist.utils.rotateBitmap
+import org.tensorflow.lite.Interpreter
 import java.io.File
 
 class CameraResultActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityCameraResultBinding
     private val mInputSize = 150
     private val mModelPath = "model.tflite"
-    private val mLabelPath = "label.txt"
+    private val mLabelPath = "labels.txt"
     private lateinit var classifier: Classifier
 
     private var getFile: File? = null
