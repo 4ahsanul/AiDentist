@@ -76,7 +76,7 @@
 
         <TextView
             android:id="@+id/verified"
-            android:layout_width="85dp"
+            android:layout_width="86dp"
             android:layout_height="match_parent"
             android:background="@drawable/border_medium_radius"
             android:gravity="center"
@@ -91,7 +91,7 @@
 
         <TextView
             android:id="@+id/rating"
-            android:layout_width="85dp"
+            android:layout_width="86dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_marginHorizontal="45dp"
@@ -112,7 +112,7 @@
 
         <TextView
             android:id="@+id/isOnline"
-            android:layout_width="85dp"
+            android:layout_width="86dp"
             android:layout_height="match_parent"
             android:background="@drawable/border_medium_radius"
             android:gravity="center"

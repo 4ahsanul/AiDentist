@@ -52,6 +52,7 @@ dependencies {
     //Navigation
     implementation 'androidx.navigation:navigation-fragment-ktx:2.4.2'
     implementation 'androidx.navigation:navigation-ui-ktx:2.4.2'
+    implementation 'com.google.firebase:firebase-auth-ktx:21.0.1'
 
     //Camera
     def camerax_version = "1.2.0-alpha01"
@@ -92,4 +93,6 @@ dependencies {
 
     //CircleImageview
     implementation "de.hdodenhof:circleimageview:3.1.0"
+
+    apply plugin: 'com.google.gms.google-services'
 }
