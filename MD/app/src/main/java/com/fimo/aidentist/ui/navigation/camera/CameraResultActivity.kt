@@ -14,11 +14,15 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.fimo.aidentist.MainActivity
 import com.fimo.aidentist.R
 import com.fimo.aidentist.databinding.ActivityCameraResultBinding
 import com.fimo.aidentist.ml.Classifier
+import com.fimo.aidentist.ui.analisis.AnalisisFragment
+import com.fimo.aidentist.ui.menu.doctor.DoctorProfileActivity
+import com.fimo.aidentist.ui.navigation.home.HomeFragment
+import com.fimo.aidentist.ui.navigation.profile.ProfileFragment
 import com.fimo.aidentist.utils.rotateBitmap
-import org.tensorflow.lite.Interpreter
 import java.io.File
 
 class CameraResultActivity : AppCompatActivity(), View.OnClickListener {
@@ -59,6 +63,25 @@ class CameraResultActivity : AppCompatActivity(), View.OnClickListener {
                 return@setOnClickListener
             }
             startCameraX()
+        }
+
+        binding.checkButton.setOnClickListener {
+            val bitmap = ((binding.previewImageView).drawable as BitmapDrawable).bitmap
+
+            val result = classifier.recognizeImage(bitmap)
+            runOnUiThread { Toast.makeText(this, result.get(0).title, Toast.LENGTH_SHORT).show() }
+
+//            val intent = Intent(this, MainActivity::class.java)
+//            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+//            startActivity(intent)
+//            finish()
+//
+//            val analisisFragment = AnalisisFragment()
+//            val manager = supportFragmentManager
+//            val transaction = manager.beginTransaction()
+//            transaction.replace(R.id.homeFragment, analisisFragment)
+//            transaction.addToBackStack(null)
+//            transaction.commit()
         }
 
     }

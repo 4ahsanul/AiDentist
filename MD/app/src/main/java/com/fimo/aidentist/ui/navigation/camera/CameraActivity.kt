@@ -88,7 +88,7 @@ class CameraActivity : AppCompatActivity() {
     }
 
     //Start Camera
-    @SuppressLint("UnsafeExperimentalUsageError")
+    @SuppressLint("UnsafeExperimentalUsageError", "UnsafeOptInUsageError")
     private fun startCamera() {
         val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
 
