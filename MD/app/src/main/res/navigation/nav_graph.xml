@@ -20,7 +20,7 @@
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <activity
-        android:id="@+id/cameraResultActivity"
+        android:id="@+id/cameraActivity"
         android:name="com.fimo.aidentist.ui.navigation.camera.CameraActivity"
         android:label="activity_camera"
         tools:layout="@layout/activity_camera" />

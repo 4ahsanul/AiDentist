@@ -13,8 +13,8 @@
         android:layout_height="match_parent" />
 
     <ImageView
-        android:layout_width="345dp"
-        android:layout_height="300dp"
+        android:layout_width="350dp"
+        android:layout_height="170dp"
         android:background="@drawable/box_accent"
         app:layout_constraintBottom_toBottomOf="@+id/viewFinder"
         app:layout_constraintEnd_toEndOf="@+id/viewFinder"

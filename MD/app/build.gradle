@@ -29,6 +29,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    aaptOptions {
+        noCompress "tflite"
+        noCompress "lite"
+    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -55,10 +59,10 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth-ktx:21.0.1'
 
     //Camera
-    def camerax_version = "1.2.0-alpha01"
+    def camerax_version = "1.0.0-beta07"
     implementation "androidx.camera:camera-camera2:${camerax_version}"
     implementation "androidx.camera:camera-lifecycle:${camerax_version}"
-    implementation "androidx.camera:camera-view:${camerax_version}"
+    implementation "androidx.camera:camera-view:1.0.0-alpha14"
 
     //DataStore
     implementation "androidx.datastore:datastore-preferences:1.0.0"
@@ -86,6 +90,11 @@ dependencies {
     //RV
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation "androidx.recyclerview:recyclerview:1.2.1"
+
+    //Tensor Flow
+    implementation 'org.tensorflow:tensorflow-lite:2.9.0'
+    implementation 'org.tensorflow:tensorflow-lite-gpu:2.8.0'
+//    implementation 'org.tensorflow:tensorflow-lite-support:2.8.0'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
