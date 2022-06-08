@@ -29,19 +29,7 @@ class AnalisisFragment : Fragment() {
         _binding = FragmentAnalisisBinding.inflate(inflater, container, false)
          val view = binding.root
 
-        binding.dailyTreatment.setOnClickListener{
-            val intent = Intent (activity, DailyTreatmentActivity::class.java)
-            activity?.startActivity(intent)
-        }
 
-        binding.medicineReminder.setOnClickListener{
-
-        }
-
-        binding.dentistAppointment.setOnClickListener{
-            val intent = Intent (activity, DoctorActivity::class.java)
-            activity?.startActivity(intent)
-        }
         return  view
     }
 

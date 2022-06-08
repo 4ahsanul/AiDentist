@@ -24,8 +24,7 @@ import com.google.firebase.ktx.Firebase
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
-    private var db = Firebase.firestore
-    private lateinit var fAuth: FirebaseAuth
+
 
     companion object {
         const val CAMERA_X_RESULT = 200
@@ -56,7 +55,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        fAuth = Firebase.auth
+
         if (!allPermissionsGranted()) {
             ActivityCompat.requestPermissions(
                 this, REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSIONS
@@ -69,19 +68,6 @@ class MainActivity : AppCompatActivity() {
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         setupWithNavController(bottomNavigationView, navController)
 
-
-        val docRef = db.collection("users").document(fAuth.currentUser?.uid.toString())
-        docRef.get()
-            .addOnSuccessListener { document ->
-                if (document.data?.get("disease") != null) {
-
-                } else {
-                    Log.d(TAG, "No such document")
-                }
-            }
-            .addOnFailureListener { exception ->
-                Log.d(TAG, "get failed with ", exception)
-            }
 
 
     }
