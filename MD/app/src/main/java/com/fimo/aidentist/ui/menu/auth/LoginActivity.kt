@@ -1,8 +1,11 @@
 package com.fimo.aidentist.ui.menu.auth
 
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Toast
@@ -31,6 +34,7 @@ class LoginActivity : AppCompatActivity() {
 
         setupAction()
         setupView()
+        playAnimation()
     }
 
     override fun onStart() {
@@ -40,6 +44,28 @@ class LoginActivity : AppCompatActivity() {
             Toast.makeText(applicationContext, "LOGIN SUCCESS WITH PREFERENCE", Toast.LENGTH_SHORT)
                 .show()
             finish()
+        }
+    }
+
+    private fun playAnimation() {
+        ObjectAnimator.ofFloat(binding.imageViewLogin, View.TRANSLATION_X, -30F, 30F).apply {
+            duration = 6000
+            repeatCount = ObjectAnimator.INFINITE
+            repeatMode = ObjectAnimator.REVERSE
+            startDelay = 500
+        }.start()
+
+        val title = ObjectAnimator.ofFloat(binding.titleTextView, View.ALPHA, 1F).setDuration(500)
+        val emailInput =
+            ObjectAnimator.ofFloat(binding.emailEditTextLayout, View.ALPHA, 1F).setDuration(500)
+        val passwordInput =
+            ObjectAnimator.ofFloat(binding.passwordEditTextLayout, View.ALPHA, 1F).setDuration(500)
+        val button = ObjectAnimator.ofFloat(binding.buttonLogin, View.ALPHA, 1F).setDuration(500)
+
+        //Show animation alternate
+        AnimatorSet().apply {
+            playSequentially(title, emailInput, passwordInput, button)
+            start()
         }
     }
 
