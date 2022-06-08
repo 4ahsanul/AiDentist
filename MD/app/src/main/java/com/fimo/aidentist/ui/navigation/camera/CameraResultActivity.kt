@@ -8,7 +8,7 @@ import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
 import android.os.Build
 import android.os.Bundle
-
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
@@ -33,7 +33,6 @@ class CameraResultActivity : AppCompatActivity() {
     private lateinit var fAuth: FirebaseAuth
     private lateinit var classifier: Classifier
     private val db = Firebase.firestore
-    private lateinit var disease : Disease
 
     private var getFile: File? = null
 
@@ -72,6 +71,20 @@ class CameraResultActivity : AppCompatActivity() {
             val bitmap = ((binding.previewImageView).drawable as BitmapDrawable).bitmap
 
             val result = classifier.recognizeImage(bitmap)
+            runOnUiThread { Toast.makeText(this, result.toString(), Toast.LENGTH_SHORT).show() }
+            db.collection("users").document(fAuth.currentUser?.uid.toString())
+                .update("disease" ,result[0].title,"confidence",result[0].confidence.toDouble())
+                .addOnSuccessListener {
+                    Log.d(ContentValues.TAG, "Berhasil Menyimpan Data")
+                }
+                .addOnFailureListener { e ->
+                    Log.w(ContentValues.TAG, "Error adding document", e)
+                }
+
+            val intent = Intent(this, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+            finish()
 
         }
 
