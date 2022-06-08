@@ -127,6 +127,8 @@
     <string name="desc_berbahaya">Jika dibiarkan terus menerus, bercak putih akan berubah menjadi bercak kecoklatan yang menyebar dan membentuk lubang pada gigi. Jika tidak ditangani, karies ini dapat menyebabkan nyeri, gigi tanggal, infeksi berbahaya, dan bahkan kematian.</string>
     <string name="disease">Disease</string>
     <string name="upload_teeth">Upload Teeth</string>
+    <string name="daily_treatment">Daily Treatment</string>
+    <string name="treatment_warn">Harap lakukan scan gigi terlebih dahulu untuk mendapatkan rekomendasi perawatan harian</string>
 
     <!--  Database Local  -->
     <string-array name="name">
