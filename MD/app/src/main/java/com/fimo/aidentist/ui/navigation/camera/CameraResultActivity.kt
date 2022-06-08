@@ -21,8 +21,8 @@ import java.io.File
 class CameraResultActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCameraResultBinding
     private val mInputSize = 150
-    private val mModelPath = "model.tflite"
-    private val mLabelPath = "labels.txt"
+    private val mModelPath = "modelGigiBukanGigiv2.tflite"
+    private val mLabelPath = "labelsGigiBukanGigi.txt"
     private lateinit var classifier: Classifier
 
     private var getFile: File? = null

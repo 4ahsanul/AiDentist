@@ -27,7 +27,7 @@ class CameraActivity : AppCompatActivity() {
     private lateinit var photoFile: File
 
     private val nInputSize = 150
-    private val nModelPath = "modelGigiBukanGigi.tflite"
+    private val nModelPath = "modelGigiBukanGigiv2.tflite"
     private val nLabelPath = "labelsGigiBukanGigi.txt"
     private lateinit var classifier: Classifier
 
