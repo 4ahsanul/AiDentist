@@ -26,6 +26,7 @@ class CameraResultActivity : AppCompatActivity() {
     private lateinit var classifier: Classifier
 
     private var getFile: File? = null
+    private fun isFileNotNull() = getFile != null
 
     //User give permission
     private fun allPermissionGranted() = REQUIRED_PERMISSIONS.all {
@@ -58,6 +59,11 @@ class CameraResultActivity : AppCompatActivity() {
         }
 
         binding.checkButton.setOnClickListener {
+            if (!isFileNotNull()) {
+                Toast.makeText(this, "Tolong foto gigi terlebih dahulu.", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
             val bitmap = ((binding.previewImageView).drawable as BitmapDrawable).bitmap
 
             val result = classifier.recognizeImage(bitmap)
