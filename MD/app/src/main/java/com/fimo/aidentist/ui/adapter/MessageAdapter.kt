@@ -13,10 +13,10 @@ class MessageAdapter(private val currentUserName: String?) :
     RecyclerView.Adapter<MessageAdapter.ViewHolder>() {
 
 
-    private val userName = "Dr. Jung Jae-Sung"
+    private val userName = "Doctor Name"
 
 
-    private val avatar = R.drawable.avatar10
+    private val avatar = R.drawable.ic_avatar_profile_hd
 
     private val timestamp = arrayOf(
         "10.22",
