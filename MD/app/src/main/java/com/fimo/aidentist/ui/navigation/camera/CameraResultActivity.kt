@@ -91,10 +91,10 @@ class CameraResultActivity : AppCompatActivity(), View.OnClickListener {
                     Log.w(ContentValues.TAG, "Error adding document", e)
                 }
 
-//            val intent = Intent(this, MainActivity::class.java)
-//            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-//            startActivity(intent)
-//            finish()
+            val intent = Intent(this, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+            finish()
 //
 //            val analisisFragment = AnalisisFragment()
 //            val manager = supportFragmentManager
