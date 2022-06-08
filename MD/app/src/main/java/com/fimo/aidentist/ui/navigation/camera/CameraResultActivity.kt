@@ -1,21 +1,28 @@
 package com.fimo.aidentist.ui.navigation.camera
 
 import android.Manifest
+import android.content.ContentValues
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
 import android.os.Build
 import android.os.Bundle
+
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.fimo.aidentist.MainActivity
+
 import com.fimo.aidentist.databinding.ActivityCameraResultBinding
 import com.fimo.aidentist.ml.Classifier
 import com.fimo.aidentist.utils.rotateBitmap
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import java.io.File
 
 class CameraResultActivity : AppCompatActivity() {
@@ -23,7 +30,10 @@ class CameraResultActivity : AppCompatActivity() {
     private val mInputSize = 150
     private val mModelPath = "model.tflite"
     private val mLabelPath = "labels.txt"
+    private lateinit var fAuth: FirebaseAuth
     private lateinit var classifier: Classifier
+    private val db = Firebase.firestore
+    private lateinit var disease : Disease
 
     private var getFile: File? = null
 
@@ -37,6 +47,7 @@ class CameraResultActivity : AppCompatActivity() {
         binding = ActivityCameraResultBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initClassifier()
+        fAuth = Firebase.auth
 
         binding.buttonBack.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
@@ -61,7 +72,7 @@ class CameraResultActivity : AppCompatActivity() {
             val bitmap = ((binding.previewImageView).drawable as BitmapDrawable).bitmap
 
             val result = classifier.recognizeImage(bitmap)
-            runOnUiThread { Toast.makeText(this, result.get(0).title, Toast.LENGTH_SHORT).show() }
+
         }
 
     }

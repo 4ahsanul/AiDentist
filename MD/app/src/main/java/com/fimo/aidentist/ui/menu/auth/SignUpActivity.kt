@@ -1,8 +1,10 @@
 package com.fimo.aidentist.ui.menu.auth
 
+import android.content.ContentValues
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.util.Patterns
 import android.view.WindowInsets
 import android.view.WindowManager
@@ -10,15 +12,19 @@ import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.fimo.aidentist.MainActivity
 import com.fimo.aidentist.R
 import com.fimo.aidentist.databinding.ActivitySignUpBinding
+import com.fimo.aidentist.helper.Constant
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 class SignUpActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignUpBinding
     private lateinit var fAuth: FirebaseAuth
+    private val db = Firebase.firestore
 
     private val genderItems = listOf("Laki - Laki", "Perempuan")
 
@@ -113,12 +119,42 @@ class SignUpActivity : AppCompatActivity() {
         ).addOnCompleteListener {
             if (it.isSuccessful) {
                 Toast.makeText(this, "Register Success", Toast.LENGTH_SHORT).show()
+                firebaseSignIn()
+
             } else {
                 Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
 
             }
         }
     }
+
+    private fun firebaseSignIn() {
+        fAuth.signInWithEmailAndPassword(
+            binding.emailEditText.text.toString(),
+            binding.passwordEditText.text.toString()
+        ).addOnCompleteListener {
+            if (it.isSuccessful) {
+                val nama = hashMapOf(
+                    "nama" to binding.nameEditText.text.toString()
+                )
+                db.collection("users").document(fAuth.currentUser?.uid.toString())
+                    .set(nama)
+                    .addOnSuccessListener {
+                        Log.d(ContentValues.TAG, "Berhasil Menyimpan Data")
+                    }
+                    .addOnFailureListener { e ->
+                        Log.w(ContentValues.TAG, "Error adding document", e)
+                    }
+
+                Toast.makeText(applicationContext, "Berhasil Membuat Akun", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this, LoginActivity::class.java))
+                finish()
+            } else {
+                Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
 
     private fun setupView() {
         @Suppress("DEPRECATION")
