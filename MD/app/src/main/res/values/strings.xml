@@ -18,6 +18,15 @@
     <string name="guide1">• Pastikan Anda mengunggah foto gigi yang diambil menggunakan kamera.</string>
     <string name="guide2">• Gambar yang akan digunakan adalah bagian depan gigi.</string>
     <string name="guide3">• Pastikan saat pengambilan gambar mengikuti guideline.</string>
+    <string name="guide4">• Pastikan saat mengambil gambar memiliki pencahayan yang cukup.</string>
+
+    <string name="app_member">AiDentist Member</string>
+    <string name="member1">• Andre Citro Febriliyan Lanyak (M2120J1528)  </string>
+    <string name="member2">• Muhammad Rahaji Jhaerol (M2120F1522) </string>
+    <string name="member3">• Filfimo Yulfiz Ahsanul Hulqi (A2120F1521) </string>
+    <string name="member4">• A.Aksa Nur Irwan (A2272J2365) </string>
+    <string name="member5">• A. Muh. Fitrah Asfar (C2272J2366) </string>
+    <string name="member6">• M. Zulfikar Novaly Rahman (C2135J1624) </string>
 
     <string name="services">Services</string>
     <string name="self_care">Self\nCare</string>
@@ -45,7 +54,7 @@
     <string name="dentist_appointment">Dentist Appointment</string>
     <string name="doctor_image">Gambar Dokter</string>
     <string name="doctor_profile">Doctor Profile</string>
-    <string name="doctor_name">Doctor Strange</string>
+    <string name="doctor_name">Doctor Name</string>
     <string name="verified">Verified</string>
     <string name="online">Online</string>
     <string name="rate">Rating</string>
@@ -102,7 +111,7 @@
     <string name="days">Sun</string>
     <string name="date">2</string>
     <string name="clock">08:00</string>
-    <string name="failed_taken">Gagal menagambil gambar</string>
+    <string name="failed_taken">Gagal mengambil gambar</string>
     <string name="early_screening">Early Screening</string>
     <string name="discoloration">Discoloration</string>
     <string name="periodontal">Periodontal</string>
@@ -117,6 +126,9 @@
     <string name="desc_disease_string">Cavities are permanently damaged areas in the hard surface of your teeth that develop into tiny openings or holes.</string>
     <string name="desc_berbahaya">Jika dibiarkan terus menerus, bercak putih akan berubah menjadi bercak kecoklatan yang menyebar dan membentuk lubang pada gigi. Jika tidak ditangani, karies ini dapat menyebabkan nyeri, gigi tanggal, infeksi berbahaya, dan bahkan kematian.</string>
     <string name="disease">Disease</string>
+    <string name="upload_teeth">Upload Teeth</string>
+    <string name="daily_treatment">Daily Treatment</string>
+    <string name="treatment_warn">Harap lakukan scan gigi terlebih dahulu untuk mendapatkan rekomendasi perawatan harian</string>
 
     <!--  Database Local  -->
     <string-array name="name">

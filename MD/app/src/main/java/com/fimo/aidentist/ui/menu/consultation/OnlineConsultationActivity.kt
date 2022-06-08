@@ -28,17 +28,17 @@ class OnlineConsultationActivity : AppCompatActivity() {
         binding = ActivityOnlineConsultationBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val dataAvatar: ImageView = binding.doctorProfile
-        val dataName: TextView = binding.doctorName
-
-        val doctor = intent.getParcelableExtra(EXTRA_USER) as Doctor?
-        val image = doctor?.avatar
-        nameDoctor = doctor?.name.toString()
-        Glide.with(this)
-            .load(image)
-            .circleCrop()
-            .into(dataAvatar)
-        dataName.text = nameDoctor
+//        val dataAvatar: ImageView = binding.doctorProfile
+//        val dataName: TextView = binding.doctorName
+//
+//        val doctor = intent.getParcelableExtra(EXTRA_USER) as Doctor?
+//        val image = doctor?.avatar
+//        nameDoctor = doctor?.name.toString()
+//        Glide.with(this)
+//            .load(image)
+//            .circleCrop()
+//            .into(dataAvatar)
+//        dataName.text = nameDoctor
 
         binding.buttonBack.setOnClickListener {
             super.onBackPressed()
@@ -50,7 +50,7 @@ class OnlineConsultationActivity : AppCompatActivity() {
 
         binding.messageRecyclerView.apply {
             layoutManager = LinearLayoutManager(this@OnlineConsultationActivity)
-            adapter = MessageAdapter("Hand Oko")
+            adapter = MessageAdapter("Doctor Name")
         }
 
 
