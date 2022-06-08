@@ -7,6 +7,37 @@
     android:orientation="horizontal"
     tools:context=".ui.menu.treatment.DailyTreatmentActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/button_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:contentDescription="@string/back_button"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="@color/black">
+
+        </ImageButton>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/nunito_bold"
+            android:text="@string/daily_treatment"
+            android:textColor="@color/black">
+
+        </TextView>
+    </androidx.appcompat.widget.Toolbar>
+
     <TextView
         android:id="@+id/month_year"
         android:layout_width="match_parent"
@@ -16,10 +47,9 @@
         android:text="@string/month_year"
         android:textColor="@color/black"
         android:textSize="21sp"
-        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
     </TextView>
     <androidx.recyclerview.widget.RecyclerView
@@ -182,6 +212,18 @@
                 android:text="@string/today_treatment"
                 android:gravity="center"
                 android:fontFamily="@font/nunito_semibold"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp">
+            </TextView>
+
+            <TextView
+                android:layout_margin="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/treatment_warn"
+                android:gravity="center"
+                android:fontFamily="@font/nunito_light"
                 android:textSize="16sp"
                 android:textColor="@color/black"
                 android:layout_marginTop="15dp">
