@@ -123,7 +123,8 @@ class CameraActivity : AppCompatActivity() {
                     this, cameraSelector, preview, imageCapture
                 )
             } catch (exc: Exception) {
-                showToast(this@CameraActivity, "Failed open camera")
+                //TODO
+                //showToast(this@CameraActivity, "Failed open camera")
             }
         }, ContextCompat.getMainExecutor(this))
     }

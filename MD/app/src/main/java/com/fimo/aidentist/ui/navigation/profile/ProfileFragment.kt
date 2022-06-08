@@ -37,7 +37,6 @@ class ProfileFragment : Fragment() {
             sharedPref.clear()
             fAuth.signOut()
             activity?.finish()
-
         }
         return binding.root
     }
