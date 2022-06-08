@@ -1,21 +1,31 @@
 package com.fimo.aidentist
 
 import android.Manifest
+import android.content.ContentValues.TAG
 import android.content.pm.PackageManager
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.Transformations.map
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI.setupWithNavController
 import com.fimo.aidentist.databinding.ActivityMainBinding
+import com.fimo.aidentist.ui.analisis.AnalisisFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
+    private var db = Firebase.firestore
+    private lateinit var fAuth: FirebaseAuth
 
     companion object {
         const val CAMERA_X_RESULT = 200
@@ -46,7 +56,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        fAuth = Firebase.auth
         if (!allPermissionsGranted()) {
             ActivityCompat.requestPermissions(
                 this, REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSIONS
@@ -59,5 +69,47 @@ class MainActivity : AppCompatActivity() {
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         setupWithNavController(bottomNavigationView, navController)
 
+
+        val docRef = db.collection("users").document(fAuth.currentUser?.uid.toString())
+        docRef.get()
+            .addOnSuccessListener { document ->
+                if (document.data?.get("disease") != null) {
+
+                } else {
+                    Log.d(TAG, "No such document")
+                }
+            }
+            .addOnFailureListener { exception ->
+                Log.d(TAG, "get failed with ", exception)
+            }
+
+
     }
+
+    private fun checkData() {
+//        val docRef = db.collection("users").document(fAuth.currentUser?.uid.toString())
+//        docRef.get()
+//            .addOnSuccessListener { document ->
+//                if (document.data?.get("disease") != null) {
+//                    val mCategoryFragment = AnalisisFragment()
+//                    navController.beginTransaction().apply {
+//                        replace(R.id.mainContainer, mCategoryFragment, AnalisisFragment::class.java.simpleName)
+//                        addToBackStack(null)
+//                        commit()
+//                    }
+//
+//                } else {
+//                    Log.d(TAG, "No such document")
+//                }
+//            }
+//            .addOnFailureListener { exception ->
+//                Log.d(TAG, "get failed with ", exception)
+//            }
+    }
+
+//    private fun checkup(){
+//        if () {
+//
+//        }
+//    }
 }
