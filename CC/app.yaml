@@ -1,1 +1,3 @@
 runtime: nodejs16
+
+app_engine_apis: true
