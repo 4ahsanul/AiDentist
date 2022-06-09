@@ -126,6 +126,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:drawableLeft="@drawable/ic_baseline_camera_alt_24"
+        android:drawableTint="@color/white"
         android:text="Ambil Gambar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -135,12 +136,11 @@
         android:id="@+id/checkButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
         android:text="Check"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintEnd_toEndOf="@+id/openCamera"
+        app:layout_constraintStart_toStartOf="@+id/openCamera" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

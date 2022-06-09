@@ -1,11 +1,14 @@
 package com.fimo.aidentist.ui.menu.auth
 
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
 import android.content.ContentValues
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.util.Patterns
+import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.ArrayAdapter
@@ -38,9 +41,51 @@ class SignUpActivity : AppCompatActivity() {
         emailFocusListener()
         passwordFocusListener()
         phoneFocusListener()
+        playAnimation()
         setForm()
         setupAction()
         setupView()
+    }
+
+    private fun playAnimation() {
+        ObjectAnimator.ofFloat(binding.imageViewSignup, View.TRANSLATION_X, -30F, 30F).apply {
+            duration = 6000
+            repeatCount = ObjectAnimator.INFINITE
+            repeatMode = ObjectAnimator.REVERSE
+            startDelay = 500
+        }.start()
+
+        val title = ObjectAnimator.ofFloat(binding.titleTextView, View.ALPHA, 1F).setDuration(500)
+        val nameInput =
+            ObjectAnimator.ofFloat(binding.nameEditTextLayout, View.ALPHA, 1F).setDuration(500)
+        val emailInput =
+            ObjectAnimator.ofFloat(binding.emailEditTextLayout, View.ALPHA, 1F).setDuration(500)
+        val genderInput =
+            ObjectAnimator.ofFloat(binding.jenisEditTextLayout, View.ALPHA, 1F).setDuration(500)
+        val telephoneInput =
+            ObjectAnimator.ofFloat(binding.phoneEditTextLayout, View.ALPHA, 1F).setDuration(500)
+        val passwordInput =
+            ObjectAnimator.ofFloat(binding.passwordEditTextLayout, View.ALPHA, 1F).setDuration(500)
+        val button = ObjectAnimator.ofFloat(binding.buttonSignUp, View.ALPHA, 1F).setDuration(500)
+        val signupTitle =
+            ObjectAnimator.ofFloat(binding.tvTittleLogin, View.ALPHA, 15F).setDuration(500)
+        val signUpButton = ObjectAnimator.ofFloat(binding.tvLogin, View.ALPHA, 15F).setDuration(500)
+
+        //Show animate alternate
+        AnimatorSet().apply {
+            playSequentially(
+                title,
+                nameInput,
+                emailInput,
+                genderInput,
+                telephoneInput,
+                passwordInput,
+                button,
+                signupTitle,
+                signUpButton
+            )
+            start()
+        }
     }
 
     private fun setForm() {

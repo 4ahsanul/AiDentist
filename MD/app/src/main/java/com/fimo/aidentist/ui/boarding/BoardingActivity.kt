@@ -16,11 +16,8 @@ import com.google.firebase.ktx.Firebase
 
 class BoardingActivity : AppCompatActivity() {
 
-
-
     private lateinit var binding:ActivityBoardingBinding
     private lateinit var auth: FirebaseAuth
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

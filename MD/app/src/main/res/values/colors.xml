@@ -20,4 +20,10 @@
     <color name="rangoon_green">#171717</color>
     <color name="black_eel">#444444</color>
     <color name="rich_carmine">#DA0037</color>
+
+    <!--  Extra Color  -->
+    <color name="lovely_purple">#764AF1</color>
+    <color name="crocus_purple">#9772FB</color>
+    <color name="cyan">#40DFEF</color>
+    <color name="orange_yellow">#FFB72B</color>
 </resources>

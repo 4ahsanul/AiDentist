@@ -14,6 +14,7 @@ import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
 import com.fimo.aidentist.R
 import com.fimo.aidentist.databinding.ActivityCameraBinding
+import com.fimo.aidentist.ml.Classifier
 import com.fimo.aidentist.utils.createFile
 import com.fimo.aidentist.utils.showToast
 import java.io.File
@@ -25,6 +26,11 @@ class CameraActivity : AppCompatActivity() {
     private lateinit var cameraExecutor: ExecutorService
     private lateinit var photoFile: File
 
+    private val nInputSize = 150
+    private val nModelPath = "modelGigiBukanGigiv2.tflite"
+    private val nLabelPath = "labelsGigiBukanGigi.txt"
+    private lateinit var classifier: Classifier
+
     private var imageCapture: ImageCapture? = null
     private var cameraSelector: CameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
 
@@ -33,6 +39,7 @@ class CameraActivity : AppCompatActivity() {
 
         binding = ActivityCameraBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        initClassifier()
 
         cameraExecutor = Executors.newSingleThreadExecutor()
         //Using cameraSelector can be set in onClick button SwitchCamera
@@ -47,6 +54,10 @@ class CameraActivity : AppCompatActivity() {
 
             startCamera()
         }
+    }
+
+    private fun initClassifier() {
+        classifier = Classifier(assets, nModelPath, nLabelPath, nInputSize)
     }
 
     public override fun onResume() {

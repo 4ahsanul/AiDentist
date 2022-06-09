@@ -9,10 +9,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.FragmentTransaction
-import com.fimo.aidentist.R
+import androidx.fragment.app.Fragment
 import com.fimo.aidentist.databinding.FragmentHomeBinding
-import com.fimo.aidentist.ui.analisis.AnalisisFragment
 import com.fimo.aidentist.ui.menu.doctor.DoctorActivity
 import com.fimo.aidentist.ui.menu.treatment.DailyTreatmentActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -32,7 +30,6 @@ class HomeFragment : Fragment(), DialogInterface.OnClickListener {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val view = binding.root
         fAuth = Firebase.auth
@@ -55,19 +52,17 @@ class HomeFragment : Fragment(), DialogInterface.OnClickListener {
             }
 
 
-        binding.dailyTreatment.setOnClickListener{
-            val intent = Intent (activity, DailyTreatmentActivity::class.java)
+        binding.dailyTreatment.setOnClickListener {
+            val intent = Intent(activity, DailyTreatmentActivity::class.java)
             activity?.startActivity(intent)
         }
-
-
 
         binding.medicineReminder.setOnClickListener{
 
         }
 
-        binding.dentistAppointment.setOnClickListener{
-            val intent = Intent (activity, DoctorActivity::class.java)
+        binding.dentistAppointment.setOnClickListener {
+            val intent = Intent(activity, DoctorActivity::class.java)
             activity?.startActivity(intent)
         }
         return view
@@ -82,9 +77,6 @@ class HomeFragment : Fragment(), DialogInterface.OnClickListener {
         super.onDestroy()
         _binding = null
     }
-
-
-
 
     override fun onClick(dialog: DialogInterface?, which: Int) {
 
