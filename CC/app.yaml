@@ -1,3 +1,4 @@
 runtime: nodejs16
+env: standard
 
 app_engine_apis: true
