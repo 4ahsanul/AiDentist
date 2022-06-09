@@ -2,20 +2,24 @@ package com.fimo.aidentist.ui.menu.auth
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
+import android.view.View
+import android.content.ContentValues
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.view.View
+import android.util.Log
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.fimo.aidentist.MainActivity
+import com.fimo.aidentist.data.UserSign
 import com.fimo.aidentist.databinding.ActivityLoginBinding
 import com.fimo.aidentist.helper.Constant
 import com.fimo.aidentist.helper.PreferenceHelper
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 class LoginActivity : AppCompatActivity() {
@@ -23,6 +27,9 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var fAuth: FirebaseAuth
 
     lateinit var sharedPref: PreferenceHelper
+    private val db = Firebase.firestore
+    private lateinit var new : UserSign
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -109,6 +116,15 @@ class LoginActivity : AppCompatActivity() {
                 sharedPref.put(Constant.PREF_EMAIL, binding.emailEditText.text.toString())
                 sharedPref.put(Constant.PREF_PASSWORD, binding.passwordEditText.text.toString())
                 sharedPref.put(Constant.PREF_IS_LOGIN, true)
+                db.collection("users").document(fAuth.currentUser?.uid.toString())
+                    .update("id",fAuth.currentUser?.uid,"email",binding.emailEditText.text.toString() )
+                    .addOnSuccessListener {
+                        Log.d(ContentValues.TAG, "Berhasil Menyimpan Data")
+                    }
+                    .addOnFailureListener { e ->
+                        Log.w(ContentValues.TAG, "Error adding document", e)
+                    }
+
                 Toast.makeText(applicationContext, "LOGIN SUCCESS", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this, MainActivity::class.java))
                 finish()
