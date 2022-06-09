@@ -2,7 +2,10 @@ package com.fimo.aidentist.ui.navigation.camera
 
 import android.Manifest
 import android.annotation.SuppressLint
+import android.content.ContentValues
+import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -16,9 +19,12 @@ import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
+import com.fimo.aidentist.MainActivity
 import com.fimo.aidentist.R
 import com.fimo.aidentist.databinding.ActivityCameraBinding
 import com.fimo.aidentist.databinding.LayoutCameraBinding
+import com.fimo.aidentist.ml.Classifier
+import com.google.firebase.auth.FirebaseAuth
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
@@ -33,10 +39,17 @@ class CameraActivity : AppCompatActivity() {
     private var imageCapture: ImageCapture? = null
     private lateinit var cameraBinding: LayoutCameraBinding
 
+    private val mInputSize = 150
+    private val mModelPath = "model.tflite"
+    private val mLabelPath = "labels.txt"
+    private lateinit var classifier: Classifier
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCameraBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        initClassifier()
+        binding.check.visibility = View.GONE
 
         cameraBinding = binding.cameraView
 
@@ -46,6 +59,19 @@ class CameraActivity : AppCompatActivity() {
             binding.borderView.visibility = View.VISIBLE
         }
         binding.btnCancel.setOnClickListener { finish() }
+
+        binding.check.setOnClickListener {
+
+            val bitmap = ((binding.image).drawable as BitmapDrawable).bitmap
+
+            val result = classifier.recognizeImage(bitmap)
+            runOnUiThread { Toast.makeText(this, result.toString(), Toast.LENGTH_SHORT).show() }
+
+            val intent = Intent(this, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+            finish()
+        }
 
         //Request Camera Permissions
         if (allPermissionGranted()) {
@@ -58,10 +84,17 @@ class CameraActivity : AppCompatActivity() {
             )
         }
         cameraBinding = binding.cameraView
-        cameraBinding.cameraCaptureButton.setOnClickListener { takePhoto() }
+        cameraBinding.cameraCaptureButton.setOnClickListener {
+            takePhoto()
+            binding.check.visibility = View.VISIBLE
+        }
 
         outputDirectory = getOutputDirectory()
         cameraExecutor = Executors.newSingleThreadExecutor()
+    }
+
+    private fun initClassifier() {
+        classifier = Classifier(assets, mModelPath, mLabelPath, mInputSize)
     }
 
     private fun takePhoto() {
@@ -200,7 +233,6 @@ class CameraActivity : AppCompatActivity() {
         binding.borderView.visibility = View.GONE
         binding.cameraView.root.visibility = View.GONE
         binding.image.visibility = View.VISIBLE
-        //binding.text.visibility = View.VISIBLE
     }
 
     override fun onDestroy() {
