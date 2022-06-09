@@ -9,7 +9,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentManager
+import com.fimo.aidentist.R
 import com.fimo.aidentist.databinding.FragmentHomeBinding
+import com.fimo.aidentist.ui.analisis.AnalisisFragment
+import com.fimo.aidentist.ui.analisis.BlankAnalisisFragment
+import com.fimo.aidentist.ui.analisis.ShimmerFragment
 import com.fimo.aidentist.ui.menu.doctor.DoctorActivity
 import com.fimo.aidentist.ui.menu.treatment.DailyTreatmentActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -29,8 +34,10 @@ class HomeFragment : Fragment(), DialogInterface.OnClickListener {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
+        replaceFragment(ShimmerFragment())
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val view = binding.root
+
         fAuth = Firebase.auth
 
 
@@ -38,16 +45,15 @@ class HomeFragment : Fragment(), DialogInterface.OnClickListener {
         docRef.get()
             .addOnSuccessListener { document ->
                 if (document.data?.get("disease") != null) {
-                    binding.infoData.displayedChild = 2
-                    binding.infoData.stopFlipping()
+                    replaceFragment(AnalisisFragment())
                 } else {
                     Log.d(ContentValues.TAG, "No such document")
-                    binding.infoData.displayedChild = 1
+                    replaceFragment(BlankAnalisisFragment())
                 }
             }
             .addOnFailureListener { exception ->
                 Log.d(ContentValues.TAG, "get failed with ", exception)
-                binding.infoData.displayedChild = 1
+                replaceFragment(BlankAnalisisFragment())
             }
 
 
@@ -66,6 +72,13 @@ class HomeFragment : Fragment(), DialogInterface.OnClickListener {
         }
         return view
 
+    }
+
+    private fun  replaceFragment(fragment: Fragment) {
+        val nav = parentFragmentManager
+        val trans = nav.beginTransaction()
+        trans.replace(R.id.infoData,fragment)
+        trans.commit()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
