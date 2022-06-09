@@ -14,6 +14,7 @@
     <string name="description_on_boarding_second_slide">Daily Treatment Suggestion Before and After Dental-Checkup</string>
     <string name="description_on_boarding_third_slide">Get Dentist Appointment  anytime and anywhere you like</string>
 
+    <!--  Button  -->
     <string name="back_button">Tombol Kembali</string>
     <string name="edit_button">Edit Button</string>
 
@@ -44,6 +45,7 @@
     <string name="medicine_reminder">Medicine\nReminder</string>
     <string name="information">Information</string>
 
+    <!-- Information   -->
     <string name="information_image">Gambar Informasi</string>
     <string name="information_title">Judul</string>
     <string name="see_more">Selengkapnya</string>
@@ -54,6 +56,7 @@
     <!--  Camera  -->
     <string name="camera">Kamera</string>
     <string name="switch_camera">Ganti Kamera</string>
+    <string name="failed_taken">Gagal mengambil gambar</string>
 
     <!--  Self Care  -->
     <string name="month_year">May 2020</string>
@@ -118,18 +121,22 @@
     <string name="send_message">Kirim Pesan</string>
     <string name="message">Message</string>
 
+    <!--  Profile  -->
     <string name="gender">Jenis Kelamin</string>
     <string name="transaction_history">Transaction History</string>
     <string name="other">Other</string>
     <string name="log_out">Log Out</string>
 
+    <!--  Time  -->
     <string name="days">Sun</string>
     <string name="date">2</string>
     <string name="clock">08:00</string>
-    <string name="failed_taken">Gagal mengambil gambar</string>
+
+    <!--  Disease  -->
     <string name="discoloration">Discoloration</string>
     <string name="periodontal">Periodontal</string>
 
+    <!--  Analysis  -->
     <string name="early_screening">Early Screening</string>
     <string name="_35">35%</string>
     <string name="_66">66%</string>
