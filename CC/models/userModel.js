@@ -7,6 +7,12 @@ const userSchema = new mongoose.Schema({
     email: {
         type: String
     },
+    jenis_kelamin: {
+        type: String
+    },
+    telepon: {
+        type: String
+    },
     password: {
         type: String
     }
