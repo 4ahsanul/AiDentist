@@ -7,6 +7,8 @@ const dotenv = require('dotenv');
 
 app.use(bodyParser.json())
 
+app.use(express.urlencoded({extended: true}))
+
 //connect to mongodb
 dotenv.config();
 mongoose 
