@@ -25,6 +25,9 @@ import com.fimo.aidentist.databinding.ActivityCameraBinding
 import com.fimo.aidentist.databinding.LayoutCameraBinding
 import com.fimo.aidentist.ml.Classifier
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
@@ -43,20 +46,27 @@ class CameraActivity : AppCompatActivity() {
     private val mModelPath = "model.tflite"
     private val mLabelPath = "labels.txt"
     private lateinit var classifier: Classifier
+    private lateinit var fAuth: FirebaseAuth
+    private val db = Firebase.firestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCameraBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initClassifier()
+        fAuth = Firebase.auth
+        
         binding.check.visibility = View.GONE
+        binding.retake.visibility = View.GONE
 
         cameraBinding = binding.cameraView
 
-        binding.btnOk.setOnClickListener {
+        binding.retake.setOnClickListener {
             binding.cameraView.root.visibility = View.VISIBLE
             binding.image.visibility = View.GONE
             binding.borderView.visibility = View.VISIBLE
+            binding.check.visibility = View.GONE
+            binding.retake.visibility = View.GONE
         }
         binding.btnCancel.setOnClickListener { finish() }
 
@@ -66,6 +76,15 @@ class CameraActivity : AppCompatActivity() {
 
             val result = classifier.recognizeImage(bitmap)
             runOnUiThread { Toast.makeText(this, result.toString(), Toast.LENGTH_SHORT).show() }
+
+            db.collection("users").document(fAuth.currentUser?.uid.toString())
+                .update("disease", result[0].title, "confidence", result[0].confidence.toDouble())
+                .addOnSuccessListener {
+                    Log.d(ContentValues.TAG, "Berhasil Menyimpan Data")
+                }
+                .addOnFailureListener { e ->
+                    Log.w(ContentValues.TAG, "Error adding document", e)
+                }
 
             val intent = Intent(this, MainActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
@@ -87,6 +106,7 @@ class CameraActivity : AppCompatActivity() {
         cameraBinding.cameraCaptureButton.setOnClickListener {
             takePhoto()
             binding.check.visibility = View.VISIBLE
+            binding.retake.visibility = View.VISIBLE
         }
 
         outputDirectory = getOutputDirectory()
@@ -191,7 +211,7 @@ class CameraActivity : AppCompatActivity() {
             } catch (exc: Exception) {
                 Log.e(TAG, "Use case binding failed", exc)
             }
-        }, ContextCompat. getMainExecutor(this))
+        }, ContextCompat.getMainExecutor(this))
     }
 
     override fun onRequestPermissionsResult(

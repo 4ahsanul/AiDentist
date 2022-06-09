@@ -17,7 +17,7 @@
             android:id="@+id/card_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:backgroundTint="#F4F4F4">
+            android:backgroundTint="@color/water">
 
             <include
                 android:id="@+id/camera_view"
@@ -67,7 +67,7 @@
 
 
         <Button
-            android:id="@+id/btnOk"
+            android:id="@+id/retake"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
