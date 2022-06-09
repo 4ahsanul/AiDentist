@@ -61,10 +61,14 @@ class LoginActivity : AppCompatActivity() {
         val passwordInput =
             ObjectAnimator.ofFloat(binding.passwordEditTextLayout, View.ALPHA, 1F).setDuration(500)
         val button = ObjectAnimator.ofFloat(binding.buttonLogin, View.ALPHA, 1F).setDuration(500)
+        val signupTitle =
+            ObjectAnimator.ofFloat(binding.tvTittleSignup, View.ALPHA, 15F).setDuration(500)
+        val signUpButton =
+            ObjectAnimator.ofFloat(binding.tvSignup, View.ALPHA, 15F).setDuration(500)
 
         //Show animation alternate
         AnimatorSet().apply {
-            playSequentially(title, emailInput, passwordInput, button)
+            playSequentially(title, emailInput, passwordInput, button, signupTitle, signUpButton)
             start()
         }
     }

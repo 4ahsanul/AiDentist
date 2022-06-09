@@ -16,8 +16,6 @@ class OfflineConsultationActivity : AppCompatActivity() {
     private lateinit var adapter : DateAdapter
     private lateinit var adapter2 : HourAdapter
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityOfflineConsultationBinding.inflate(layoutInflater)
@@ -41,7 +39,5 @@ class OfflineConsultationActivity : AppCompatActivity() {
             layoutManager = LinearLayoutManager(this@OfflineConsultationActivity, RecyclerView.HORIZONTAL,false)
             adapter = HourAdapter()
         }
-
-
     }
 }

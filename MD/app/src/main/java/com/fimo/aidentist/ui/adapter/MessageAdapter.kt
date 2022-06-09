@@ -43,7 +43,6 @@ class MessageAdapter(private val currentUserName: String?) :
         return ViewHolder(binding)
     }
 
-
     override fun onBindViewHolder(holder: MessageAdapter.ViewHolder, position: Int) {
 
         Glide.with(holder.itemView.context)
@@ -57,7 +56,6 @@ class MessageAdapter(private val currentUserName: String?) :
     }
 
     override fun getItemCount(): Int = message.size
-
 
     private fun setTextColor(userName: String?, textView: TextView) {
         if (currentUserName == userName && userName != null) {

@@ -34,11 +34,8 @@ class DateAdapter : RecyclerView.Adapter<DateAdapter.ViewHolder>(){
         val tanggalItem:TextView = view.findViewById(R.id.tanggal)
     }
 
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DateAdapter.ViewHolder =
         ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_row_date,parent,false))
-
 
     override fun onBindViewHolder(holder: DateAdapter.ViewHolder, position: Int) {
         holder.dateItem.text = hari[position]
