@@ -108,4 +108,7 @@ dependencies {
     implementation "de.hdodenhof:circleimageview:3.1.0"
 
     apply plugin: 'com.google.gms.google-services'
+
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
 }

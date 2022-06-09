@@ -149,6 +149,7 @@
     <string name="desc_disease_string">Cavities are permanently damaged areas in the hard surface of your teeth that develop into tiny openings or holes.</string>
     <string name="desc_berbahaya">Jika dibiarkan terus menerus, bercak putih akan berubah menjadi bercak kecoklatan yang menyebar dan membentuk lubang pada gigi. Jika tidak ditangani, karies ini dapat menyebabkan nyeri, gigi tanggal, infeksi berbahaya, dan bahkan kematian.</string>
     <string name="disease">Disease</string>
+    <string name="check_oral_health">Check Oral Health!</string>
 
     <!--  Database Local  -->
     <string-array name="name">
