@@ -49,13 +49,15 @@ class CameraActivity : AppCompatActivity() {
     private lateinit var fAuth: FirebaseAuth
     private val db = Firebase.firestore
 
+    private var cameraSelector: CameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCameraBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initClassifier()
         fAuth = Firebase.auth
-        
+
         binding.check.visibility = View.GONE
         binding.retake.visibility = View.GONE
 
@@ -107,6 +109,14 @@ class CameraActivity : AppCompatActivity() {
             takePhoto()
             binding.check.visibility = View.VISIBLE
             binding.retake.visibility = View.VISIBLE
+        }
+
+        cameraBinding.switchCamera.setOnClickListener {
+            cameraSelector =
+                if (cameraSelector.equals(CameraSelector.DEFAULT_BACK_CAMERA)) CameraSelector.DEFAULT_FRONT_CAMERA
+                else CameraSelector.DEFAULT_BACK_CAMERA
+
+            startCamera()
         }
 
         outputDirectory = getOutputDirectory()
@@ -187,7 +197,7 @@ class CameraActivity : AppCompatActivity() {
                 .build()
 
             //Select back camera as a default
-            val cameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
+            //val cameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
 
             val viewPort = ViewPort.Builder(Rational(350, 170), Surface.ROTATION_0).build()
             val useCaseGroup = UseCaseGroup.Builder()

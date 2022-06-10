@@ -68,6 +68,7 @@ class CameraResultActivity : AppCompatActivity() {
             startCameraX()
         }
 
+        /*
         binding.checkButton.setOnClickListener {
             if (!isFileNotNull()) {
                 Toast.makeText(this, "Tolong foto gigi terlebih dahulu.", Toast.LENGTH_SHORT).show()
@@ -93,6 +94,7 @@ class CameraResultActivity : AppCompatActivity() {
             finish()
 
         }
+        */
 
     }
 
