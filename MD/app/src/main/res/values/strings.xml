@@ -60,11 +60,11 @@
 
     <!--  Self Care  -->
     <string name="month_year">May 2020</string>
-    <string name="days_progress">4 Days</string>
+    <string name="days_progress">∞ Days</string>
     <string name="estimated_time">Estimated Time</string>
-    <string name="estimated_days">5 Days</string>
+    <string name="estimated_days">∞ Days</string>
     <string name="treatment">Treatment</string>
-    <string name="estimated_goals">5 Goals</string>
+    <string name="estimated_goals">∞ Goals</string>
     <string name="estimated_warn">VISIT THE DENTIST IF IT STILL CONTINUE PAST THE ESTIMATED TIME</string>
 
     <!--  Consultation & Doctor  -->
