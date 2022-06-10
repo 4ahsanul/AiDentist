@@ -4,196 +4,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     tools:context=".ui.analisis.AnalisisFragment">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:fontFamily="@font/nunito_bold"
-            android:text="@string/early_screening"
-            android:textColor="@color/black">
-        </TextView>
-
-    </androidx.appcompat.widget.Toolbar>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/dental_statistik_card"
-        android:layout_width="match_parent"
-        android:layout_height="156dp"
-        android:layout_marginHorizontal="20dp"
-        app:cardCornerRadius="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/list_treatment_layout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/card_border"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/nunito_black"
-                android:gravity="center"
-                android:text="@string/dental_statistik"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-            </TextView>
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="76dp"
-                android:layout_height="76dp"
-                android:layout_marginStart="22dp"
-                android:layout_marginTop="12dp"
-                android:contentDescription="@string/icon_dental_statistik"
-                android:src="@drawable/statistik"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView5">
-
-            </ImageView>
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/nunito_bold"
-                android:text="@string/discoloration"
-                android:textColor="@color/black"
-                android:textSize="13sp"
-                app:layout_constraintEnd_toEndOf="@+id/periodental_statistik"
-                app:layout_constraintHorizontal_bias="0.02"
-                app:layout_constraintStart_toStartOf="@+id/periodental_statistik"
-                app:layout_constraintTop_toTopOf="@+id/imageView">
-
-            </TextView>
-
-            <TextView
-                android:id="@+id/discoloration_percentage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/nunito_bold"
-                android:text="@string/_35"
-                android:textColor="@color/black"
-                android:textSize="13sp"
-                app:layout_constraintEnd_toEndOf="@+id/periodental_statistik"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/textView3"
-                app:layout_constraintTop_toTopOf="@+id/textView3">
-
-            </TextView>
-
-            <TextView
-                android:id="@+id/periodontal_percentage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/nunito_bold"
-                android:text="@string/_66"
-                android:textColor="@color/black"
-                android:textSize="13sp"
-                app:layout_constraintEnd_toEndOf="@+id/Discoloration_statistik"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/textView4"
-                app:layout_constraintTop_toTopOf="@+id/textView4">
-
-            </TextView>
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:fontFamily="@font/nunito_bold"
-                android:text="@string/periodontal"
-                android:textColor="@color/black"
-                android:textSize="13sp"
-                app:layout_constraintEnd_toEndOf="@+id/Discoloration_statistik"
-                app:layout_constraintHorizontal_bias="0.018"
-                app:layout_constraintStart_toStartOf="@+id/Discoloration_statistik"
-                app:layout_constraintTop_toBottomOf="@+id/periodental_statistik">
-
-            </TextView>
-
-            <TextView
-                android:id="@+id/identification"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/nunito_semibold"
-                android:text="@string/likely_periodontal"
-                android:textColor="@color/black"
-                android:textSize="13sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/Discoloration_statistik"
-                app:layout_constraintHorizontal_bias="0.461"
-                app:layout_constraintStart_toStartOf="@+id/Discoloration_statistik"
-                app:layout_constraintTop_toBottomOf="@+id/Discoloration_statistik"
-                app:layout_constraintVertical_bias="0.3">
-
-            </TextView>
-
-            <ProgressBar
-                android:id="@+id/periodental_statistik"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="200dp"
-                android:layout_height="6.84dp"
-                android:layout_marginStart="28dp"
-                android:progress="37"
-                android:progressDrawable="@drawable/custom_progress_bg"
-                app:layout_constraintStart_toEndOf="@+id/imageView"
-                app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-            <ProgressBar
-                android:id="@+id/Discoloration_statistik"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="200dp"
-                android:layout_height="6.84dp"
-                android:layout_marginStart="28dp"
-                android:progress="67"
-                android:progressDrawable="@drawable/custom_progress_bg_light"
-                app:layout_constraintStart_toEndOf="@+id/imageView"
-                app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/prediction_card"
         android:layout_width="match_parent"
         android:layout_height="156dp"
-        android:layout_marginHorizontal="20dp"
+        android:layout_marginHorizontal="8dp"
         app:cardCornerRadius="16dp"
-        android:layout_marginTop="13dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toBottomOf="@+id/dental_statistik_card">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -214,13 +42,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
+
             </TextView>
 
             <TextView
                 android:id="@+id/disease_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="8dp"
                 android:fontFamily="@font/nunito_bold"
                 android:text="@string/periodontal"
                 android:textColor="@color/black"
@@ -275,7 +104,7 @@
         android:id="@+id/disease_desc_card"
         android:layout_width="match_parent"
         android:layout_height="156dp"
-        android:layout_marginHorizontal="20dp"
+        android:layout_marginHorizontal="8dp"
         app:cardCornerRadius="16dp"
         android:layout_marginTop="13dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -331,7 +160,7 @@
         android:id="@+id/similiar_card"
         android:layout_width="match_parent"
         android:layout_height="156dp"
-        android:layout_marginHorizontal="20dp"
+        android:layout_marginHorizontal="8dp"
         app:cardCornerRadius="16dp"
         android:layout_marginTop="13dp"
         app:layout_constraintEnd_toEndOf="parent"

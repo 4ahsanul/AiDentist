@@ -3,23 +3,34 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!--  OnBoarding Title  -->
     <string name="title_button_get_started">Get Started</string>
     <string name="title_on_boarding_first_slide">Early Screening</string>
     <string name="title_on_boarding_second_slide">Daily Treatment</string>
     <string name="title_on_boarding_third_slide">Appointment</string>
 
+    <!--  OnBoarding Description  -->
     <string name="description_on_boarding_first_slide">Identify The Type of Oral Disease  by Taking a Photo, Ai Dentist  Will Screening and Analyse</string>
     <string name="description_on_boarding_second_slide">Daily Treatment Suggestion Before and After Dental-Checkup</string>
     <string name="description_on_boarding_third_slide">Get Dentist Appointment  anytime and anywhere you like</string>
 
+    <!--  Button  -->
     <string name="back_button">Tombol Kembali</string>
+    <string name="edit_button">Edit Button</string>
 
+    <!--  Extra  -->
+    <string name="poin">Poin</string>
+    <string name="doctor_name_dummy">Hand Oko</string>
+    <string name="dummy_user_name">Joko Santoso</string>
+
+    <!--  Guide Photo  -->
     <string name="image_guide">Gambar Arahan</string>
     <string name="guide1">• Pastikan Anda mengunggah foto gigi yang diambil menggunakan kamera.</string>
     <string name="guide2">• Gambar yang akan digunakan adalah bagian depan gigi.</string>
     <string name="guide3">• Pastikan saat pengambilan gambar mengikuti guideline.</string>
     <string name="guide4">• Pastikan saat mengambil gambar memiliki pencahayan yang cukup.</string>
 
+    <!--  Member List  -->
     <string name="app_member">AiDentist Member</string>
     <string name="member1">• Andre Citro Febriliyan Lanyak (M2120J1528)  </string>
     <string name="member2">• Muhammad Rahaji Jhaerol (M2120F1522) </string>
@@ -28,19 +39,26 @@
     <string name="member5">• A. Muh. Fitrah Asfar (C2272J2366) </string>
     <string name="member6">• M. Zulfikar Novaly Rahman (C2135J1624) </string>
 
+    <!--  Service  -->
     <string name="services">Services</string>
     <string name="self_care">Self\nCare</string>
     <string name="medicine_reminder">Medicine\nReminder</string>
     <string name="information">Information</string>
 
+    <!-- Information   -->
     <string name="information_image">Gambar Informasi</string>
     <string name="information_title">Judul</string>
     <string name="see_more">Selengkapnya</string>
+    <string name="upload_teeth">Upload Teeth</string>
+    <string name="daily_treatment">Daily Treatment</string>
+    <string name="treatment_warn">Harap lakukan scan gigi terlebih dahulu untuk mendapatkan rekomendasi perawatan harian</string>
 
-    <string name="edit_button">Edit Button</string>
+    <!--  Camera  -->
     <string name="camera">Kamera</string>
     <string name="switch_camera">Ganti Kamera</string>
+    <string name="failed_taken">Gagal mengambil gambar</string>
 
+    <!--  Self Care  -->
     <string name="month_year">May 2020</string>
     <string name="days_progress">4 Days</string>
     <string name="estimated_time">Estimated Time</string>
@@ -49,6 +67,7 @@
     <string name="estimated_goals">5 Goals</string>
     <string name="estimated_warn">VISIT THE DENTIST IF IT STILL CONTINUE PAST THE ESTIMATED TIME</string>
 
+    <!--  Consultation & Doctor  -->
     <string name="available_consultation">Available Consultation</string>
     <string name="today_treatment">Today Treatment</string>
     <string name="dentist_appointment">Dentist Appointment</string>
@@ -61,12 +80,12 @@
     <string name="schedule">Schedule</string>
     <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae euismod quam. Praesent non ultricies purus, tristique fringilla turpis. Curabitur rhoncus lacinia nibh nec eleifend. Vivamus sed placerat neque, non varius lectus. Mauris leo ligula, rhoncus eu ipsum vitae, scelerisque egestas tortor\n\n. Phasellus scelerisque sodales ante sollicitudin fringilla. In tempor massa nec nulla volutpat dignissim ac in sem. Etiam quis pharetra enim. Morbi tempus posuere arcu, ut mattis mi accumsan nec. Proin venenatis bibendum massa. Integer gravida, dolor vel fringilla lacinia.</string>
     <string name="lorem_less">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet diam massa, id ultrices metus.</string>
-
     <string name="online_consultation">Online\nConsultation</string>
     <string name="offline_consultation">Offline\nConsultation</string>
-    <string name="poin">Poin</string>
+    <string name="offline_consultation_toolbar">Offline Consultation</string>
     <string name="tos_cosultation">Sebelum melakukan konsultasi, pastikan jenis konsultasi yang anda pilih berdasarkan kebutuhan anda.</string>
 
+    <!--  Login  -->
     <string name="welcome_image_login">Welcome Image Login</string>
     <string name="login">Login</string>
     <string name="email_hint">Email</string>
@@ -74,9 +93,8 @@
     <string name="button_login">Masuk</string>
     <string name="dont_have_acc">Belum punya akun?</string>
     <string name="sign_up">Sign Up</string>
-    <string name="offline_consultation_toolbar">Offline Consultation</string>
-    <string name="doctor_name_dummy">Hand Oko</string>
 
+    <!--  Home Welcome  -->
     <string name="welcome_image_signup">Welcome Image SignUp</string>
     <string name="name_hint">Nama</string>
     <string name="button_signup">Daftar</string>
@@ -84,6 +102,7 @@
     <string name="greetings_user">Hi Joko Santoso</string>
     <string name="user_location">Jalan Haengnidan</string>
 
+    <!--  Offline Consultation  -->
     <string name="endodontist">Endodontist</string>
     <string name="location">Lokasi</string>
     <string name="clinic_name">Klinik Denta Medica</string>
@@ -94,27 +113,31 @@
     <string name="choose_date">Pilih slot waktu</string>
     <string name="book">Book</string>
 
+    <!--  Online Consultation  -->
     <string name="phone">Telepon</string>
     <string name="phone_call">Panggilan Video</string>
     <string name="hint_chat">Say something...</string>
     <string name="open_camera">Buka Kamera</string>
     <string name="send_message">Kirim Pesan</string>
-
     <string name="message">Message</string>
 
-    <string name="dummy_user_name">Joko Santoso</string>
+    <!--  Profile  -->
     <string name="gender">Jenis Kelamin</string>
     <string name="transaction_history">Transaction History</string>
     <string name="other">Other</string>
     <string name="log_out">Log Out</string>
 
+    <!--  Time  -->
     <string name="days">Sun</string>
     <string name="date">2</string>
     <string name="clock">08:00</string>
-    <string name="failed_taken">Gagal mengambil gambar</string>
-    <string name="early_screening">Early Screening</string>
+
+    <!--  Disease  -->
     <string name="discoloration">Discoloration</string>
     <string name="periodontal">Periodontal</string>
+
+    <!--  Analysis  -->
+    <string name="early_screening">Early Screening</string>
     <string name="_35">35%</string>
     <string name="_66">66%</string>
     <string name="dental_statistik">Dental Statistik</string>
@@ -126,9 +149,7 @@
     <string name="desc_disease_string">Cavities are permanently damaged areas in the hard surface of your teeth that develop into tiny openings or holes.</string>
     <string name="desc_berbahaya">Jika dibiarkan terus menerus, bercak putih akan berubah menjadi bercak kecoklatan yang menyebar dan membentuk lubang pada gigi. Jika tidak ditangani, karies ini dapat menyebabkan nyeri, gigi tanggal, infeksi berbahaya, dan bahkan kematian.</string>
     <string name="disease">Disease</string>
-    <string name="upload_teeth">Upload Teeth</string>
-    <string name="daily_treatment">Daily Treatment</string>
-    <string name="treatment_warn">Harap lakukan scan gigi terlebih dahulu untuk mendapatkan rekomendasi perawatan harian</string>
+    <string name="check_oral_health">Check Oral Health!</string>
 
     <!--  Database Local  -->
     <string-array name="name">

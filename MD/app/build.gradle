@@ -58,13 +58,13 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui-ktx:2.4.2'
 
     //Firebase
+    implementation platform('com.google.firebase:firebase-bom:29.0.1')
     implementation 'com.google.firebase:firebase-auth-ktx:21.0.1'
     implementation 'com.google.firebase:firebase-firestore-ktx:24.1.2'
 
-    //Camera
     def camerax_version = "1.0.0-beta07"
-    implementation "androidx.camera:camera-camera2:${camerax_version}"
-    implementation "androidx.camera:camera-lifecycle:${camerax_version}"
+    implementation "androidx.camera:camera-camera2:$camerax_version"
+    implementation "androidx.camera:camera-lifecycle:$camerax_version"
     implementation "androidx.camera:camera-view:1.0.0-alpha14"
 
     //DataStore
@@ -107,4 +107,7 @@ dependencies {
     implementation "de.hdodenhof:circleimageview:3.1.0"
 
     apply plugin: 'com.google.gms.google-services'
+
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
 }

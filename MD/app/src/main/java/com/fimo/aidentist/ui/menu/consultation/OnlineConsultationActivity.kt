@@ -52,7 +52,5 @@ class OnlineConsultationActivity : AppCompatActivity() {
             layoutManager = LinearLayoutManager(this@OnlineConsultationActivity)
             adapter = MessageAdapter("Doctor Name")
         }
-
-
     }
 }

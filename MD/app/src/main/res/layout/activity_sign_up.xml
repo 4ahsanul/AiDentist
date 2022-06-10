@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageViewLogin"
+        android:id="@+id/imageViewSignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -40,6 +40,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="352dp"
+        android:alpha="0"
         android:fontFamily="@font/nunito_extrabold"
         android:text="@string/sign_up"
         android:textSize="20sp"
@@ -52,6 +53,7 @@
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:scrollbarSize="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,6 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:alpha="0"
                 android:hint="@string/name_hint"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -89,6 +92,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:alpha="0"
                 android:hint="@string/email_hint"
                 app:helperTextTextColor="@color/red"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -112,6 +116,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:alpha="0"
                 android:hint="@string/gender"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -132,6 +137,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:alpha="0"
                 android:hint="@string/phone"
                 app:helperTextTextColor="@color/red"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -154,6 +160,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:alpha="0"
                 android:hint="@string/password_hint"
                 app:helperTextTextColor="@color/red"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -178,6 +185,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
+                android:alpha="0"
                 android:text="@string/button_signup"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.600"
@@ -185,11 +193,12 @@
                 app:layout_constraintTop_toBottomOf="@id/passwordEditTextLayout" />
 
             <TextView
-                android:id="@+id/tv_tittle_signup"
+                android:id="@+id/tv_tittle_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"
+                android:alpha="0"
                 android:fontFamily="@font/nunito_regular"
                 android:text="@string/have_acc"
                 android:textSize="14sp"
@@ -199,9 +208,10 @@
 
             <TextView
                 android:id="@+id/tv_login"
-                android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:alpha="0"
                 android:fontFamily="@font/nunito_bold"
                 android:text="@string/login"
                 android:textColor="@color/blue_ivy"
