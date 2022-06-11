@@ -48,6 +48,11 @@
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/layout_camera.xml" value="0.2" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/menu/bottom_nav_menu.xml" value="0.264" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/mipmap-anydpi-v26/ic_launcher_aidentist_round.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.12864583333333332" />
+        <entry key="app/src/main/res/layout/fragment_analisis.xml" value="0.210442384899172" />
+        <entry key="app/src/main/res/layout/fragment_analisis2.xml" value="0.31348419189453125" />
+        <entry key="app/src/main/res/layout/fragment_blank_analisis.xml" value="0.10462962962962963" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.12864583333333332" />
       </map>
     </option>
   </component>

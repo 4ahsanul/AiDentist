@@ -1,7 +1,9 @@
 package com.fimo.aidentist.ui.navigation.profile
 
+import android.content.ContentValues
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,6 +15,7 @@ import com.fimo.aidentist.helper.PreferenceHelper
 import com.fimo.aidentist.ui.menu.auth.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 class ProfileFragment : Fragment() {
@@ -20,6 +23,7 @@ class ProfileFragment : Fragment() {
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
     private lateinit var fAuth: FirebaseAuth
+    private val db = Firebase.firestore
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,9 +39,26 @@ class ProfileFragment : Fragment() {
             startActivity(intent)
             Toast.makeText(activity, "LOGOUT PREFERENCE SUCCESS", Toast.LENGTH_SHORT).show()
             sharedPref.clear()
+            resetData()
             fAuth.signOut()
+
             activity?.finish()
         }
         return binding.root
     }
+
+
+    private fun resetData() {
+
+        db.collection("users").document("user")
+            .update("disease",null,"confidence",null)
+            .addOnSuccessListener {
+                Log.d(ContentValues.TAG, "Berhasil Menyimpan Data")
+            }
+            .addOnFailureListener { e ->
+                Log.w(ContentValues.TAG, "Error adding document", e)
+            }
+
+    }
+
 }

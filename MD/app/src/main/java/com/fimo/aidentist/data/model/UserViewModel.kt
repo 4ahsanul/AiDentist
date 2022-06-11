@@ -33,6 +33,7 @@ class UserViewModel(private val userRepo: UserRepository): ViewModel() {
         }
     }
 
+
     //LogOut user
     fun logout(pref: UserPreference) {
         viewModelScope.launch {
@@ -44,4 +45,9 @@ class UserViewModel(private val userRepo: UserRepository): ViewModel() {
     fun loadUser(pref: UserPreference): LiveData<UserDataModel> {
         return pref.getUser().asLiveData()
     }
+
+
+
+
+
 }

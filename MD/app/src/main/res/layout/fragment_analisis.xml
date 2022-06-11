@@ -16,7 +16,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/prediction_card"
         android:layout_width="match_parent"
-        android:layout_height="156dp"
+        android:layout_height="wrap_content"
         android:layout_marginHorizontal="8dp"
         app:cardCornerRadius="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,20 +61,20 @@
 
             <TextView
                 android:id="@+id/desc_disease"
-                android:layout_width="200dp"
+                android:layout_width="260dp"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:paddingEnd="25dp"
+                android:paddingStart="5dp"
                 android:fontFamily="@font/nunito_regular"
                 android:justificationMode="inter_word"
-                android:text="@string/desc_disease_string"
-
+                android:text="@string/periodontal_desc"
                 android:textColor="@color/black"
-                android:textSize="13sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/disease_title"
-                app:layout_constraintTop_toBottomOf="@+id/disease_title"
-                app:layout_constraintVertical_bias="0.0">
+                app:layout_constraintTop_toBottomOf="@+id/disease_title">
 
             </TextView>
 
@@ -103,7 +103,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/disease_desc_card"
         android:layout_width="match_parent"
-        android:layout_height="156dp"
+        android:layout_height="wrap_content"
         android:layout_marginHorizontal="8dp"
         app:cardCornerRadius="16dp"
         android:layout_marginTop="13dp"
@@ -135,14 +135,16 @@
 
             <TextView
                 android:id="@+id/desc_tingkat_bahaya"
-                android:layout_width="295dp"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="20dp"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
                 android:fontFamily="@font/nunito_regular"
                 android:justificationMode="inter_word"
-                android:text="@string/desc_berbahaya"
+                android:text="@string/Risk_Perio"
                 android:textColor="@color/black"
-                android:layout_marginTop="6dp"
-                android:textSize="13sp"
+
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -189,43 +191,71 @@
                 app:layout_constraintTop_toTopOf="parent">
             </TextView>
 
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
                 android:layout_marginStart="40dp"
-                android:contentDescription="@string/image_guide"
-                android:src="@drawable/defaul_preview"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/imageView2"
-                app:layout_constraintVertical_bias="0.0" />
+                android:layout_marginTop="10dp"
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginTop="8dp"
-                android:contentDescription="@string/image_guide"
-                android:src="@drawable/defaul_preview"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageView5"
-                app:layout_constraintHorizontal_bias="0.491"
-                app:layout_constraintStart_toEndOf="@+id/imageView6"
-                app:layout_constraintTop_toBottomOf="@+id/similiar_photos"
-                app:layout_constraintVertical_bias="0.25" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginEnd="40dp"
-                android:contentDescription="@string/image_guide"
-                android:src="@drawable/defaul_preview"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:contentDescription="@string/image_guide"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/perio1" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/cardView3"
+                app:layout_constraintStart_toEndOf="@+id/cardView4"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:contentDescription="@string/image_guide"
+                    android:src="@drawable/perio2" />
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/imageView2"
-                app:layout_constraintVertical_bias="0.0" />
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="40dp">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:contentDescription="@string/image_guide"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/perio3"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageView2"
+                    app:layout_constraintVertical_bias="0.0" />
+            </androidx.cardview.widget.CardView>
+
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
