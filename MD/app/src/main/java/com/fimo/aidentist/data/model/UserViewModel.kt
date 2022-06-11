@@ -1,11 +1,10 @@
 package com.fimo.aidentist.data.model
 
 import androidx.lifecycle.*
-import com.fimo.aidentist.data.remote.response.LoginResponse
-import com.fimo.aidentist.data.remote.response.SignUpResponse
 import com.fimo.aidentist.data.local.UserPreference
 import com.fimo.aidentist.data.remote.UserRepository
-import kotlinx.coroutines.flow.collect
+import com.fimo.aidentist.data.remote.response.LoginResponse
+import com.fimo.aidentist.data.remote.response.SignUpResponse
 import kotlinx.coroutines.launch
 
 class UserViewModel(private val userRepo: UserRepository): ViewModel() {

@@ -150,6 +150,7 @@
     <string name="desc_berbahaya">Jika dibiarkan terus menerus, bercak putih akan berubah menjadi bercak kecoklatan yang menyebar dan membentuk lubang pada gigi. Jika tidak ditangani, karies ini dapat menyebabkan nyeri, gigi tanggal, infeksi berbahaya, dan bahkan kematian.</string>
     <string name="disease">Disease</string>
     <string name="check_oral_health">Check Oral Health!</string>
+    <string name="input_error">Isi data terlebih dahulu</string>
     <string name="periodontal_desc">Periodontitis merupakan salah satu komplikasi dari radang gusi yang tidak terobati. Jika kondisi ini terjadi dalam jangka panjang, jaringan di sekitar gusi dan gigi akan rusak sehingga menyebabkan gigi tanggal.</string>
     <string name="Risk_Perio">Seiring waktu, bakteri di karang gigi tadi akan menghasilkan racun yang dapat menyebabkan peradangan dan iritasi gusi di sekitar gigi (gingiva). Jika tidak segera diobati, radang gusi tersebut dapat menyebabkan terbentuknya celah di gusi yang memisahkan jaringan gusi dengan gigi. Celah tersebut menyebabkan bakteri dapat menginfeksi lebih dalam lagi sehingga merusak jaringan dan tulang di dalam gusi.</string>
     <string name="discoloration_title">Discoloration</string>
