@@ -1,6 +1,6 @@
 package com.fimo.aidentist.data.model
 
-class DiseaseModel (
+class DiseaseModel(
     val disease: String,
-    val confidence:String
-        )
+    val confidence: String
+)

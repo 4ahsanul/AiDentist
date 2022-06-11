@@ -29,6 +29,9 @@
     <string name="guide2">• Gambar yang akan digunakan adalah bagian depan gigi.</string>
     <string name="guide3">• Pastikan saat pengambilan gambar mengikuti guideline.</string>
     <string name="guide4">• Pastikan saat mengambil gambar memiliki pencahayan yang cukup.</string>
+    <string name="guide_home1">• Mulai check kesehatan gigi sekarang juga.</string>
+    <string name="guide_home2">• Cegah kerusakan gigi lebih awal dengan perawatan mandiri.</string>
+    <string name="guide_home3">• Dapatkan perawatan mandiri sesuai dengan kesehatan gigi anda.</string>
 
     <!--  Member List  -->
     <string name="app_member">AiDentist Member</string>
@@ -59,7 +62,7 @@
     <string name="failed_taken">Gagal mengambil gambar</string>
 
     <!--  Self Care  -->
-    <string name="month_year">May 2020</string>
+    <string name="month_year">July 2022</string>
     <string name="days_progress">∞ Days</string>
     <string name="estimated_time">Estimated Time</string>
     <string name="estimated_days">∞ Days</string>
