@@ -62,7 +62,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito_regular"
-                    android:text="@string/guide1" />
+                    android:text="@string/guide_home1" />
             </LinearLayout>
 
             <LinearLayout
@@ -75,7 +75,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito_regular"
-                    android:text="@string/guide2" />
+                    android:text="@string/guide_home2" />
             </LinearLayout>
 
             <LinearLayout
@@ -88,7 +88,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito_regular"
-                    android:text="@string/guide3" />
+                    android:text="@string/guide_home3" />
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
