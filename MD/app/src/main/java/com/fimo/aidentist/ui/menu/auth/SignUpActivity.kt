@@ -113,7 +113,7 @@ class SignUpActivity : AppCompatActivity() {
         val newUser = UserSignUpModel(
             binding.nameEditText.text.toString().trim(),
             binding.emailEditText.text.toString().trim(),
-            binding.jenisEditText.toString().trim(),
+            binding.jenisEditText.text.toString().trim(),
             binding.phoneEditText.toString().trim(),
             binding.passwordEditText.text.toString().trim()
         )
