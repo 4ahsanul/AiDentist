@@ -5,11 +5,10 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.Fragment
 import com.fimo.aidentist.R
 import com.fimo.aidentist.databinding.FragmentHomeBinding
 import com.fimo.aidentist.ui.analisis.AnalisisFragment
@@ -62,7 +61,7 @@ class HomeFragment : Fragment(), DialogInterface.OnClickListener {
             activity?.startActivity(intent)
         }
 
-        binding.medicineReminder.setOnClickListener{
+        binding.medicineReminder.setOnClickListener {
 
         }
 
@@ -74,15 +73,11 @@ class HomeFragment : Fragment(), DialogInterface.OnClickListener {
 
     }
 
-    private fun  replaceFragment(fragment: Fragment) {
+    private fun replaceFragment(fragment: Fragment) {
         val nav = parentFragmentManager
         val trans = nav.beginTransaction()
-        trans.replace(R.id.infoData,fragment)
+        trans.replace(R.id.infoData, fragment)
         trans.commit()
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
     }
 
     override fun onDestroy() {

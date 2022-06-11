@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.fimo.aidentist.MainActivity
 import com.fimo.aidentist.R
-import com.fimo.aidentist.data.Doctor
+import com.fimo.aidentist.data.model.DoctorModel
 import com.fimo.aidentist.databinding.ActivityDoctorBinding
 import com.fimo.aidentist.ui.adapter.ListDoctorAdapter
 
@@ -22,7 +22,7 @@ class DoctorActivity : AppCompatActivity() {
     private lateinit var dataRating: Array<String>
     private lateinit var dataSchedule: Array<String>
     private lateinit var dataAvatar: TypedArray
-    private var list: ArrayList<Doctor> = arrayListOf()
+    private var list: ArrayList<DoctorModel> = arrayListOf()
     private var listDoctorAdapter = ListDoctorAdapter(list)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,7 +44,7 @@ class DoctorActivity : AppCompatActivity() {
         showRecyclerList()
     }
 
-    private fun showSelectedDoctor(data: Doctor) {
+    private fun showSelectedDoctor(data: DoctorModel) {
         val moveObjectWithIntent = Intent(this@DoctorActivity, DoctorProfileActivity::class.java)
         moveObjectWithIntent.putExtra(DoctorProfileActivity.EXTRA_USER, data)
         startActivity(moveObjectWithIntent)
@@ -58,10 +58,10 @@ class DoctorActivity : AppCompatActivity() {
         dataAvatar = resources.obtainTypedArray(R.array.avatar)
     }
 
-    private fun addItem(): ArrayList<Doctor> {
+    private fun addItem(): ArrayList<DoctorModel> {
         prepare()
         for (i in dataName.indices) {
-            val doctor = Doctor(
+            val doctor = DoctorModel(
                 dataName[i],
                 dataCategory[i],
                 dataRating[i],
@@ -77,8 +77,8 @@ class DoctorActivity : AppCompatActivity() {
     private fun showRecyclerList() {
         rvDoctors.layoutManager = LinearLayoutManager(this)
         rvDoctors.adapter = listDoctorAdapter
-        listDoctorAdapter.setOnItemClickCallback(object: ListDoctorAdapter.OnItemClickCallBack {
-            override fun onItemClicked(data: Doctor) = showSelectedDoctor(data)
+        listDoctorAdapter.setOnItemClickCallback(object : ListDoctorAdapter.OnItemClickCallBack {
+            override fun onItemClicked(data: DoctorModel) = showSelectedDoctor(data)
         })
     }
 }
