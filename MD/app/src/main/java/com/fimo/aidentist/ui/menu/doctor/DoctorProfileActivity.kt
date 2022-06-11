@@ -6,7 +6,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
-import com.fimo.aidentist.data.Doctor
+import com.fimo.aidentist.data.model.DoctorModel
 import com.fimo.aidentist.databinding.ActivityDoctorProfileBinding
 import com.fimo.aidentist.ui.adapter.MessageAdapter
 import com.fimo.aidentist.ui.menu.consultation.OfflineConsultationActivity
@@ -24,7 +24,6 @@ class DoctorProfileActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDoctorProfileBinding
     private lateinit var adapter: MessageAdapter
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDoctorProfileBinding.inflate(layoutInflater)
@@ -34,7 +33,7 @@ class DoctorProfileActivity : AppCompatActivity() {
         val dataName: TextView = binding.doctorName
         val dataRating: TextView = binding.rating
 
-        val doctor = intent.getParcelableExtra(EXTRA_USER) as Doctor?
+        val doctor = intent.getParcelableExtra(EXTRA_USER) as DoctorModel?
         val image = doctor?.avatar
         nameDoctor = doctor?.name.toString()
         doctorRating = doctor?.rating.toString()

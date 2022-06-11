@@ -8,10 +8,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.fimo.aidentist.R
-import com.fimo.aidentist.data.Doctor
+import com.fimo.aidentist.data.model.DoctorModel
 
 class ListDoctorAdapter(
-    private val listDoctor: ArrayList<Doctor>
+    private val listDoctor: ArrayList<DoctorModel>
 ) : RecyclerView.Adapter<ListDoctorAdapter.ListViewHolder>() {
 
     private lateinit var onItemClickDetail: OnItemClickCallBack
@@ -29,7 +29,7 @@ class ListDoctorAdapter(
     }
 
     interface OnItemClickCallBack {
-        fun onItemClicked(data: Doctor)
+        fun onItemClicked(data: DoctorModel)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {

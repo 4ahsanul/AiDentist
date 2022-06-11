@@ -8,10 +8,10 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
@@ -78,7 +78,7 @@ class HomeFragment : Fragment(), DialogInterface.OnClickListener {
             activity?.startActivity(intent)
         }
 
-        binding.medicineReminder.setOnClickListener{
+        binding.medicineReminder.setOnClickListener {
 
         }
 
@@ -94,10 +94,9 @@ class HomeFragment : Fragment(), DialogInterface.OnClickListener {
     private fun  replaceFragment(fragment: Fragment) {
         val nav = parentFragmentManager
         val trans = nav.beginTransaction()
-        trans.replace(R.id.infoData,fragment)
+        trans.replace(R.id.infoData, fragment)
         trans.commit()
     }
-
 
     private fun checkDisease() {
         val docRef = db.collection("users").document("user")

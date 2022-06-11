@@ -2,10 +2,10 @@ package com.fimo.aidentist.ui.navigation.message
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.fimo.aidentist.databinding.FragmentMessageBinding
 import com.fimo.aidentist.ui.menu.consultation.OnlineConsultationActivity
 
@@ -22,8 +22,8 @@ class MessageFragment : Fragment() {
         _binding = FragmentMessageBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        binding.cardView.setOnClickListener{
-            val intent = Intent (activity, OnlineConsultationActivity::class.java)
+        binding.cardView.setOnClickListener {
+            val intent = Intent(activity, OnlineConsultationActivity::class.java)
             activity?.startActivity(intent)
         }
         return view
