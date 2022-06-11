@@ -1,8 +1,10 @@
 package com.fimo.aidentist.ui.navigation.profile
 
 import android.content.Context
+import android.content.ContentValues
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,6 +25,7 @@ import com.fimo.aidentist.ui.menu.auth.LoginActivity
 import com.fimo.aidentist.ui.menu.treatment.DailyTreatmentActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")

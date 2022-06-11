@@ -23,6 +23,8 @@ import com.fimo.aidentist.MainActivity
 import com.fimo.aidentist.R
 import com.fimo.aidentist.databinding.ActivityCameraBinding
 import com.fimo.aidentist.databinding.LayoutCameraBinding
+import com.fimo.aidentist.helper.Constant
+import com.fimo.aidentist.helper.PreferenceHelper
 import com.fimo.aidentist.ml.Classifier
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -48,6 +50,7 @@ class CameraActivity : AppCompatActivity() {
     private lateinit var classifier: Classifier
     private lateinit var fAuth: FirebaseAuth
     private val db = Firebase.firestore
+    lateinit var sharedPref: PreferenceHelper
 
     private var cameraSelector: CameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
 
@@ -57,6 +60,7 @@ class CameraActivity : AppCompatActivity() {
         setContentView(binding.root)
         initClassifier()
         fAuth = Firebase.auth
+        sharedPref = PreferenceHelper(this)
 
         binding.check.visibility = View.GONE
         binding.retake.visibility = View.GONE
@@ -77,17 +81,21 @@ class CameraActivity : AppCompatActivity() {
             val bitmap = ((binding.image).drawable as BitmapDrawable).bitmap
 
             val result = classifier.recognizeImage(bitmap)
-            runOnUiThread { Toast.makeText(this, result.toString(), Toast.LENGTH_SHORT).show() }
+            runOnUiThread { Toast.makeText(this, result.get(0).title , Toast.LENGTH_SHORT).show() }
 
-            db.collection("users").document(fAuth.currentUser?.uid.toString())
-                .update("disease", result[0].title, "confidence", result[0].confidence.toDouble())
+            sharedPref.put(Constant.PREF_EMAIL, result.get(0).title)
+            val dis = hashMapOf(
+                "disease" to result.get(0).title,
+                "confidence" to result.get(0).confidence
+            )
+            db.collection("users").document("user")
+                .set(dis)
                 .addOnSuccessListener {
                     Log.d(ContentValues.TAG, "Berhasil Menyimpan Data")
                 }
                 .addOnFailureListener { e ->
                     Log.w(ContentValues.TAG, "Error adding document", e)
                 }
-
             val intent = Intent(this, MainActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)

@@ -35,6 +35,11 @@
 We see that the prevalence of oral diseases in Indonesia continues to grow due to the lack of access to examinations and treatment of oral diseases in various regions in Indonesia especially in rural areas. Seeing the needs for an inclusive, outreaching, and easy to use dental services we decided to create this project. A mobile application using machine learning to classify and identify oral diseases, and give appropriate suggestions or direction based on the results of the classification and/or identification of mouth image/scan sent by the user into the application.
 
 ## Installation
+Clone or Download and Open it into Android Studio for AiDentist App
+```
+https://github.com/4ahsanul/AiDentist.git
+```  
+Or you can download the APK here :
 **SOON**
 
 ## Demo

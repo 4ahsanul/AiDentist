@@ -1,17 +1,27 @@
 package com.fimo.aidentist
 
 import android.Manifest
+import android.content.ContentValues.TAG
+import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.preferencesDataStore
+import androidx.lifecycle.Transformations.map
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI.setupWithNavController
+import com.fimo.aidentist.data.local.UserPreference
+import com.fimo.aidentist.data.model.DiseaseModel
 import com.fimo.aidentist.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -56,7 +66,6 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         setupWithNavController(bottomNavigationView, navController)
-
 
     }
 }

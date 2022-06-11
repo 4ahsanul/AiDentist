@@ -5,6 +5,7 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
+import com.fimo.aidentist.data.model.DiseaseModel
 import com.fimo.aidentist.data.model.UserDataModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
@@ -20,6 +21,7 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
             )
         }
     }
+
 
     //Save User Login
     suspend fun saveUser(user: UserDataModel) {
@@ -43,6 +45,7 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
 
         private val TOKEN_KEY = stringPreferencesKey("token")
         private val STATE_KEY = booleanPreferencesKey("state")
+        private val DISEASE_KEY = stringPreferencesKey("disease")
 
         fun getInstance(dataStore: DataStore<Preferences>): UserPreference {
             return INSTANCE ?: synchronized(this) {
