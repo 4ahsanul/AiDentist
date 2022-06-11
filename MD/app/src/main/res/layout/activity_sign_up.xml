@@ -124,6 +124,7 @@
                 app:startIconDrawable="@drawable/ic_baseline_boy_24">
 
                 <AutoCompleteTextView
+                    android:id="@+id/jenisEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="none" />
