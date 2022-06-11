@@ -14,9 +14,14 @@ import android.view.WindowManager
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import com.fimo.aidentist.MainActivity
 import com.fimo.aidentist.R
+import com.fimo.aidentist.data.model.UserSignUpModel
+import com.fimo.aidentist.data.model.UserViewModel
+import com.fimo.aidentist.data.model.ViewModelFactory
 import com.fimo.aidentist.databinding.ActivitySignUpBinding
 import com.fimo.aidentist.helper.Constant
 import com.google.firebase.auth.FirebaseAuth
@@ -26,6 +31,8 @@ import com.google.firebase.ktx.Firebase
 
 class SignUpActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignUpBinding
+    private val signUpViewModel: UserViewModel by viewModels { ViewModelFactory.getInstance() }
+
     private lateinit var fAuth: FirebaseAuth
     private val db = Firebase.firestore
 
@@ -37,6 +44,19 @@ class SignUpActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         fAuth = Firebase.auth
+
+        signUpViewModel.signUpResponse.observe(this) { data ->
+            binding.loadingProgress.isVisible = data.messege.isEmpty()
+
+            if (!data.error && data.messege.isNotEmpty()) {
+                startActivity(Intent(this, LoginActivity::class.java))
+            }
+
+            if (data.error) {
+                Toast.makeText(this, data.messege, Toast.LENGTH_SHORT).show()
+                return@observe
+            }
+        }
 
         emailFocusListener()
         passwordFocusListener()
@@ -86,6 +106,18 @@ class SignUpActivity : AppCompatActivity() {
             )
             start()
         }
+    }
+
+    //Send request to server
+    private fun sendRequest() {
+        val newUser = UserSignUpModel(
+            binding.nameEditText.text.toString().trim(),
+            binding.emailEditText.text.toString().trim(),
+            binding.jenisEditText.text.toString().trim(),
+            binding.phoneEditText.toString().trim(),
+            binding.passwordEditText.text.toString().trim()
+        )
+        signUpViewModel.signUp(newUser)
     }
 
     private fun setForm() {
@@ -150,7 +182,8 @@ class SignUpActivity : AppCompatActivity() {
             finish()
         }
         binding.buttonSignUp.setOnClickListener {
-            firebaseSignUp()
+            sendRequest()
+            //firebaseSignUp()
         }
 
 
