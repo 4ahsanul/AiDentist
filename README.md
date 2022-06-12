@@ -39,7 +39,7 @@ Clone or Download and Open it into Android Studio for AiDentist App
 ```
 https://github.com/4ahsanul/AiDentist.git
 ```  
-Or you can download the APK here :
+Or you can download the APK here (Use Bangkit Email to Access) : [AiDentist App](https://drive.google.com/file/d/1jj6vbrXyviKLwSdsDIU-jEHC4dAc2pQv/view?usp=sharing)
 **SOON**
 
 ## Demo
