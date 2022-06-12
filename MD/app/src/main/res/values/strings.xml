@@ -64,8 +64,16 @@
     <!--  Self Care  -->
     <string name="month_year">July 2022</string>
     <string name="days_progress">∞ Days</string>
+    <string name="days_progress1">5 Days</string>
     <string name="estimated_time">Estimated Time</string>
     <string name="estimated_days">∞ Days</string>
+    <string name="estimated_time1">Estimated Time</string>
+    <string name="estimated_days1">5 Days</string>
+    <string name="estimated_goals1">5 Goals</string>
+    <string name="estimated_days2">5 Days</string>
+    <string name="estimated_goals2">5 Goals</string>
+    <string name="estimated_days3">5 Days</string>
+    <string name="estimated_goals3">5 Goals</string>
     <string name="treatment">Treatment</string>
     <string name="estimated_goals">∞ Goals</string>
     <string name="estimated_warn">VISIT THE DENTIST IF IT STILL CONTINUE PAST THE ESTIMATED TIME</string>
@@ -159,6 +167,7 @@
     <string name="discoloration_title">Discoloration</string>
     <string name="desc_disoloration">Diskolorasi ekstrinsik disebabkan karena adanya penodaan (staining) akibat warna bahan makanan dan minuman yang dikonsumsi. Penggunaan produk tembakau, teh, kopi, obat kumur tertentu, dan pigmen di dalam makanan menyebabkan terbentuknya noda yang menempel pada permukaan gigi maupun bahan tambal gigi.</string>
     <string name="risk_dicoloration">Diskolorasi pada gigi dapat diperbaiki dengan menggunakan bahan pemutih gigi atau yang disebut dengan bleaching. Bleaching adalah tindakan untuk meningkatkan warna gigi menjadi lebih putih dari sebelumnya. Jenisnya ada berbagai macam, antara lain menggunakan zat kimia hidrogen peroksida dan karbamid peroksida dengan berbagai konsentrasi.</string>
+    <string name="scan_first">Scan gigi terlebih dahulu ya</string>
 
     <!--  Database Local  -->
     <string-array name="name">

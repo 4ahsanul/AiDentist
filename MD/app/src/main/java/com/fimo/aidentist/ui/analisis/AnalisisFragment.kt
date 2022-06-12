@@ -10,12 +10,9 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 class AnalisisFragment : Fragment() {
-    // TODO: Rename and change types of parameters
     private var _binding: FragmentAnalisisBinding? = null
     public val binding get() = _binding!!
     private var db = Firebase.firestore
-
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

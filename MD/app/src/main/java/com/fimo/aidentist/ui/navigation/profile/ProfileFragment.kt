@@ -2,6 +2,7 @@ package com.fimo.aidentist.ui.navigation.profile
 
 import android.content.Context
 import android.content.ContentValues
+import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -33,6 +34,8 @@ private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(na
 class ProfileFragment : Fragment() {
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
+    private lateinit var fAuth: FirebaseAuth
+    private var db = Firebase.firestore
 
     private lateinit var preference: UserPreference
     private val userViewModel: UserViewModel by viewModels { ViewModelFactory.getInstance() }
@@ -43,12 +46,19 @@ class ProfileFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         _binding = FragmentProfileBinding.inflate(layoutInflater, container, false)
+        fAuth = Firebase.auth
+
         binding.buttonLogout.setOnClickListener {
             userViewModel.logout(preference)
             val intent = Intent(requireContext(), LoginActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             requireActivity().startActivity(intent)
             requireActivity().finish()
+            fAuth.signOut()
+            db.collection("users").document("user")
+                .delete()
+                .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully deleted!") }
+                .addOnFailureListener { e -> Log.w(TAG, "Error deleting document", e) }
         }
         return binding.root
     }
