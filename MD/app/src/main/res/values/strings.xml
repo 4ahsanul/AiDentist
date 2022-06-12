@@ -165,15 +165,18 @@
     <string name="periodontal_desc">Periodontitis merupakan salah satu komplikasi dari radang gusi yang tidak terobati. Jika kondisi ini terjadi dalam jangka panjang, jaringan di sekitar gusi dan gigi akan rusak sehingga menyebabkan gigi tanggal.</string>
     <string name="Risk_Perio">Seiring waktu, bakteri di karang gigi tadi akan menghasilkan racun yang dapat menyebabkan peradangan dan iritasi gusi di sekitar gigi (gingiva). Jika tidak segera diobati, radang gusi tersebut dapat menyebabkan terbentuknya celah di gusi yang memisahkan jaringan gusi dengan gigi. Celah tersebut menyebabkan bakteri dapat menginfeksi lebih dalam lagi sehingga merusak jaringan dan tulang di dalam gusi.</string>
     <string name="discoloration_title">Discoloration</string>
-    <string name="desc_disoloration">Diskolorasi ekstrinsik disebabkan karena adanya penodaan (staining) akibat warna bahan makanan dan minuman yang dikonsumsi. Penggunaan produk tembakau, teh, kopi, obat kumur tertentu, dan pigmen di dalam makanan menyebabkan terbentuknya noda yang menempel pada permukaan gigi maupun bahan tambal gigi.</string>
+    <string name="desc_discoloration">Diskolorasi ekstrinsik disebabkan karena adanya penodaan (staining) akibat warna bahan makanan dan minuman yang dikonsumsi. Sehingga menyebabkan terbentuknya noda yang menempel pada permukaan gigi maupun bahan tambal gigi.</string>
     <string name="risk_dicoloration">Diskolorasi pada gigi dapat diperbaiki dengan menggunakan bahan pemutih gigi atau yang disebut dengan bleaching. Bleaching adalah tindakan untuk meningkatkan warna gigi menjadi lebih putih dari sebelumnya. Jenisnya ada berbagai macam, antara lain menggunakan zat kimia hidrogen peroksida dan karbamid peroksida dengan berbagai konsentrasi.</string>
     <string name="scan_first">Scan gigi terlebih dahulu ya</string>
     <string name="healthy_title">Healthy</string>
     <string name="healthy_desc">Healthy Teeth, bagian atas dan bawah gigi tetap utuh, tidak ada lubang ataupun lekukan yang membuat kasar. Bebas plak, gigi yang putih dan tidak ada noda di sana-sini.</string>
-    <string name="risk_heath">Tentu tidak. Gigi anda termasuk dalam gigi sehat, untuk meningkatkanya, lakukan beberapa perawatan gigi seperti, gosok gigi secara teratur, dan menjaga makanan yang dimakan.</string>
+    <string name="risk_heath">Gigi anda termasuk dalam gigi sehat, untuk meningkatkanya, lakukan beberapa perawatan gigi seperti, gosok gigi secara teratur, dan menjaga makanan yang dimakan agar gigi anda tetap sehat.</string>
     <string name="logo_periodental">Logo Periodental</string>
     <string name="logo_discoloration">Logo Discoloration</string>
     <string name="logo_healthy">Logo Healhty</string>
+    <string name="retake">Retake</string>
+    <string name="check">Check</string>
+    <string name="close_camera">Close Camera</string>
 
     <!--  Database Local  -->
     <string-array name="name">

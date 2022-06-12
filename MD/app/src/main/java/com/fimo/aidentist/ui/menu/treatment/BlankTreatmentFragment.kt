@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import com.fimo.aidentist.R
 import com.fimo.aidentist.databinding.FragmentBlankTreatmentBinding

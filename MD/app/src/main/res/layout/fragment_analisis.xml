@@ -36,7 +36,7 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/nunito_bold"
                 android:gravity="center"
-                android:text="@string/prediction"
+                android:text="@string/periodontal"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -46,24 +46,13 @@
             </TextView>
 
             <TextView
-                android:id="@+id/disease_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/nunito_bold"
-                android:text="@string/periodontal"
-                android:textColor="@color/black"
-                android:textSize="13sp"
-                app:layout_constraintEnd_toEndOf="@+id/desc_disease"
-                app:layout_constraintStart_toStartOf="@+id/desc_disease"
-                app:layout_constraintTop_toTopOf="@+id/button">
-
-            </TextView>
-
-            <TextView
                 android:id="@+id/desc_disease"
                 android:layout_width="260dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="32dp"
                 android:fontFamily="@font/nunito_regular"
                 android:justificationMode="inter_word"
                 android:paddingStart="5dp"
@@ -74,26 +63,26 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/button"
-                app:layout_constraintTop_toBottomOf="@+id/disease_title">
+                app:layout_constraintTop_toBottomOf="@+id/dental_prediction">
 
             </TextView>
 
             <ImageView
-                android:contentDescription="@string/logo_periodental"
                 android:id="@+id/button"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
                 android:background="@drawable/background_button_accent_perio"
-                android:src="@drawable/ic_disease_teeth"
+                android:contentDescription="@string/logo_periodental"
                 android:fontFamily="@font/nunito_medium"
                 android:padding="10dp"
+                android:src="@drawable/ic_disease_teeth"
                 android:text="@string/disease"
                 android:textAllCaps="false"
                 android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="@+id/desc_disease"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/dental_prediction">
+                app:layout_constraintTop_toTopOf="@+id/desc_disease">
 
             </ImageView>
 
