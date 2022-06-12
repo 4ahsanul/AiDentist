@@ -50,24 +50,6 @@ class HomeFragment : Fragment(), DialogInterface.OnClickListener {
         val view = binding.root
         fAuth = Firebase.auth
 
-
-        val docRef = db.collection("users").document("user")
-        docRef.get()
-            .addOnSuccessListener { document ->
-                if (document.data?.get("disease") != null) {
-                    checkDisease()
-
-                } else {
-                    Log.d(ContentValues.TAG, "No such document")
-                    replaceFragment(BlankAnalisisFragment())
-                }
-            }
-            .addOnFailureListener { exception ->
-                Log.d(ContentValues.TAG, "get failed with ", exception)
-                replaceFragment(BlankAnalisisFragment())
-            }
-
-
         binding.dailyTreatment.setOnClickListener {
             val intent = Intent(activity, DailyTreatmentActivity::class.java)
             activity?.startActivity(intent)
@@ -83,6 +65,25 @@ class HomeFragment : Fragment(), DialogInterface.OnClickListener {
         }
         return view
 
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        val docRef = db.collection("users").document("user")
+        docRef.get()
+            .addOnSuccessListener { document ->
+                if (document.data?.get("disease") != null) {
+                    checkDisease()
+
+                } else {
+                    Log.d(ContentValues.TAG, "No such document")
+                    replaceFragment(BlankAnalisisFragment())
+                }
+            }
+            .addOnFailureListener { exception ->
+                Log.d(ContentValues.TAG, "get failed with ", exception)
+                replaceFragment(BlankAnalisisFragment())
+            }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
