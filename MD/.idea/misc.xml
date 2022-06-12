@@ -4,6 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/drawable/background_button_accent.xml" value="0.1" />
+        <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/drawable/background_button_accent_disco.xml" value="0.1" />
+        <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/drawable/background_button_accent_healt.xml" value="0.1" />
+        <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/drawable/background_button_accent_v2.xml" value="0.1" />
+        <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/drawable/background_indicator_disabled.xml" value="0.1" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/drawable/bottom_nav_colors.xml" value="0.1" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/drawable/box.xml" value="0.1" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/drawable/box_accent.xml" value="0.1" />
@@ -17,6 +21,8 @@
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/drawable/ic_camera_2_hd.xml" value="0.138" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/drawable/ic_camera_hd.xml" value="0.123" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/drawable/ic_chat_hd.xml" value="0.123" />
+        <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/drawable/ic_clean_teeth_hd.xml" value="0.1725" />
+        <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/drawable/ic_disease_teeth.xml" value="0.177" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/drawable/ic_lock.xml" value="0.1485" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout-v23/fragment_blank_analisis.xml" value="0.25" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/activity_boarding.xml" value="0.25104166666666666" />
@@ -34,15 +40,19 @@
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/activity_theme.xml" value="0.1" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/blank_home.xml" value="0.25104166666666666" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/blank_progress.xml" value="0.25104166666666666" />
-        <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/fragment_analisis.xml" value="0.35578947368421054" />
-        <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/fragment_analisis2.xml" value="0.25104166666666666" />
+        <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/fragment_analisis.xml" value="0.4" />
+        <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/fragment_analisis2.xml" value="0.36813922356091033" />
+        <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/fragment_analisis3.xml" value="0.4" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/fragment_blank_analisis.xml" value="0.25104166666666666" />
+        <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/fragment_blank_treatment.xml" value="0.25104166666666666" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/fragment_doctor.xml" value="0.264" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/fragment_home.xml" value="0.18596491228070175" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/fragment_information.xml" value="0.2662037037037037" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/fragment_message.xml" value="0.264" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
+        <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/fragment_scan_treatment.xml" value="0.25104166666666666" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/fragment_shimmer.xml" value="0.25104166666666666" />
+        <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/fragment_treatment.xml" value="0.264" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/item_list_dropdown.xml" value="0.1" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/item_message.xml" value="0.1453125" />
         <entry key="..\:/Users/yulfi/StudioProjects/Capstone/AiDentist/MD/app/src/main/res/layout/item_row_date.xml" value="0.6" />

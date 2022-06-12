@@ -15,10 +15,6 @@ import com.fimo.aidentist.data.model.UserViewModel
 import com.fimo.aidentist.data.model.ViewModelFactory
 import com.fimo.aidentist.databinding.ActivityBoardingBinding
 import com.fimo.aidentist.ui.menu.auth.LoginActivity
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
