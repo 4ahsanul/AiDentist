@@ -17,10 +17,7 @@ import com.fimo.aidentist.R
 import com.fimo.aidentist.data.local.UserPreference
 import com.fimo.aidentist.databinding.FragmentAnalisisBinding
 import com.fimo.aidentist.databinding.FragmentHomeBinding
-import com.fimo.aidentist.ui.analisis.AnalisisFragment
-import com.fimo.aidentist.ui.analisis.AnalisisFragment2
-import com.fimo.aidentist.ui.analisis.BlankAnalisisFragment
-import com.fimo.aidentist.ui.analisis.ShimmerFragment
+import com.fimo.aidentist.ui.analisis.*
 import com.fimo.aidentist.ui.menu.doctor.DoctorActivity
 import com.fimo.aidentist.ui.menu.treatment.DailyTreatmentActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -107,6 +104,9 @@ class HomeFragment : Fragment(), DialogInterface.OnClickListener {
                 if (document.data?.get("disease") != "null") {
 
                     when {
+                        document.data?.get("disease") == "Healthy" -> {
+                            replaceFragment(AnalisisFragment3())
+                        }
                         document.data?.get("disease") == "Dental Discoloration" -> {
                             replaceFragment(AnalisisFragment2())
                         }

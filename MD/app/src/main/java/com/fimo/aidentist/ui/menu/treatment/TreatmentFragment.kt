@@ -47,6 +47,7 @@ class TreatmentFragment : Fragment() {
             val intent = Intent(activity, MainActivity::class.java)
             activity?.startActivity(intent)
         }
+        binding.progressBar.progress = 100
         return view
     }
 }

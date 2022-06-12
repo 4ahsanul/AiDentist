@@ -65,6 +65,9 @@ class BlankTreatmentFragment : Fragment(), DialogInterface.OnClickListener {
                 if (document.data?.get("disease") != "null") {
 
                     when {
+                        document.data?.get("disease") == "Healthy" -> {
+                            replaceFragment(TreatmentFragment())
+                        }
                         document.data?.get("disease") == "Dental Discoloration" -> {
                             replaceFragment(TreatmentFragment())
                         }
