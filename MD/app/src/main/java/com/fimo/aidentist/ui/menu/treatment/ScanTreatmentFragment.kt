@@ -10,13 +10,11 @@ import com.fimo.aidentist.databinding.FragmentScanTreatmentBinding
 import com.fimo.aidentist.ui.navigation.camera.CameraResultActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 class ScanTreatmentFragment : Fragment() {
     private var _binding: FragmentScanTreatmentBinding? = null
     private val binding get() = _binding!!
-    private var db = Firebase.firestore
     private lateinit var fAuth: FirebaseAuth
 
     override fun onCreateView(

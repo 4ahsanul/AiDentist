@@ -7,12 +7,9 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import com.fimo.aidentist.R
 import com.fimo.aidentist.databinding.FragmentBlankTreatmentBinding
-import com.fimo.aidentist.ui.analisis.AnalisisFragment
-import com.fimo.aidentist.ui.analisis.AnalisisFragment2
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore

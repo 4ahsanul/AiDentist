@@ -16,7 +16,6 @@ import androidx.datastore.preferences.preferencesDataStore
 import androidx.fragment.app.Fragment
 import com.fimo.aidentist.R
 import com.fimo.aidentist.data.local.UserPreference
-import com.fimo.aidentist.databinding.FragmentAnalisisBinding
 import com.fimo.aidentist.databinding.FragmentHomeBinding
 import com.fimo.aidentist.ui.analisis.*
 import com.fimo.aidentist.ui.menu.doctor.DoctorActivity
@@ -31,7 +30,6 @@ private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(na
 class HomeFragment : Fragment(), DialogInterface.OnClickListener {
 
     private var _binding: FragmentHomeBinding? = null
-    private var _binding2: FragmentAnalisisBinding? = null
     private val binding get() = _binding!!
     private lateinit var preference: UserPreference
     private var db = Firebase.firestore
