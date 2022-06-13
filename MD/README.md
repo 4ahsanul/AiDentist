@@ -2,16 +2,26 @@
 This folder contain code of AiDentist Application
 
 **This App Using**
-- Retrofit
-- CameraX
+- Glide
 - Navigation
-- Android Architecture Component
-- Google Service
+- Firebase
+- CameraX
+- Datastore
+- Retrofit
+- Splash screen
+- RecyclerView
+- CardView
+- TFLite
+- Google Services
+- Shimmer
 
 **Project Structure**
-- App
 - Data
+- Data Injection
+- Helper
+- ML
 - UI
+- Utils
 
 **Notes**
 This app is under development
