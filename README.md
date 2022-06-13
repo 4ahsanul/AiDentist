@@ -48,6 +48,8 @@ Or you can download the APK here (Use Bangkit Email to Access) : [AiDentist App]
   <img src="assets/Andre Phone 2.jpg" width="200"/>
 </p>
 
+[Demo Video](https://www.youtube.com/watch?v=b02cU1wFW0k)
+
 ## Features
 - Early scanning oral disesae
 - Daily treatment & medicine reminder
