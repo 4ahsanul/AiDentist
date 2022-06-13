@@ -42,7 +42,15 @@ https://github.com/4ahsanul/AiDentist.git
 Or you can download the APK here (Use Bangkit Email to Access) : [AiDentist App](https://drive.google.com/file/d/1jj6vbrXyviKLwSdsDIU-jEHC4dAc2pQv/view?usp=sharing)
 
 ## Demo
-**SOON**
+<p align="center">
+  <img src="assets/Andre Phone 3.jpg" width="200"/>
+  <img src="assets/Andre Phone.jpg" width="200"/>
+  <img src="assets/Andre Phone 2.jpg" width="200"/>
+</p>
 
 ## Features
-**SOON**
+- Early scanning oral disesae
+- Daily treatment & medicine reminder
+- Dentist Appointment
+- Online Consultation
+- Offline Consultation
