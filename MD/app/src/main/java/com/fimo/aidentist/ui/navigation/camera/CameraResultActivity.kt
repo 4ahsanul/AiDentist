@@ -12,13 +12,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.fimo.aidentist.MainActivity
 import com.fimo.aidentist.databinding.ActivityCameraResultBinding
-import com.fimo.aidentist.helper.PreferenceHelper
-import com.fimo.aidentist.ml.Classifier
 import com.fimo.aidentist.utils.rotateBitmap
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
 import java.io.File
 
 class CameraResultActivity : AppCompatActivity() {

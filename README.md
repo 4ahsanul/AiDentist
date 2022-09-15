@@ -39,11 +39,20 @@ Clone or Download and Open it into Android Studio for AiDentist App
 ```
 https://github.com/4ahsanul/AiDentist.git
 ```  
-Or you can download the APK here :
-**SOON**
+Or you can download the APK here (Use Bangkit Email to Access) : [AiDentist App](https://drive.google.com/file/d/175OR8HIc52zmsc-ZUaW8HDjfSyivwmm9/view)
 
 ## Demo
-**SOON**
+<p align="center">
+  <img src="assets/Andre Phone 3.jpg" width="200"/>
+  <img src="assets/Andre Phone.jpg" width="200"/>
+  <img src="assets/Andre Phone 2.jpg" width="200"/>
+</p>
+
+[Demo Video](https://www.youtube.com/watch?v=b02cU1wFW0k)
 
 ## Features
-**SOON**
+- Early scanning oral disesae
+- Daily treatment & medicine reminder
+- Dentist Appointment
+- Online Consultation
+- Offline Consultation

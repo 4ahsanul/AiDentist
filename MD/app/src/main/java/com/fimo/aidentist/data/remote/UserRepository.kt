@@ -11,7 +11,6 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
 class UserRepository(private val apiService: ApiService) {
-    fun setupToken(token: String): String = "Bearer $token"
 
     fun authenticate(user: UserLoginModel, pref: UserPreference): Flow<LoginResponse> = flow {
         emit(LoginResponse(null, false, ""))
